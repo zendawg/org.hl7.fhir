@@ -16,7 +16,7 @@ package org.w3.x1999.xhtml;
 public interface Coords extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Coords.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("coords8a89type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Coords.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("coords8a89type");
     
     /**
      * A factory class with static methods for creating instances

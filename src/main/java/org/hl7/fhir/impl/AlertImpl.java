@@ -20,17 +20,132 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName CATEGORY$0 = 
+    private static final javax.xml.namespace.QName IDENTIFIER$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
+    private static final javax.xml.namespace.QName CATEGORY$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "category");
-    private static final javax.xml.namespace.QName STATUS$2 = 
+    private static final javax.xml.namespace.QName STATUS$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "status");
-    private static final javax.xml.namespace.QName SUBJECT$4 = 
+    private static final javax.xml.namespace.QName SUBJECT$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
-    private static final javax.xml.namespace.QName AUTHOR$6 = 
+    private static final javax.xml.namespace.QName AUTHOR$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "author");
-    private static final javax.xml.namespace.QName NOTE$8 = 
+    private static final javax.xml.namespace.QName NOTE$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "note");
     
+    
+    /**
+     * Gets array of all "identifier" elements
+     */
+    public org.hl7.fhir.Identifier[] getIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(IDENTIFIER$0, targetList);
+            org.hl7.fhir.Identifier[] result = new org.hl7.fhir.Identifier[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier getIdentifierArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "identifier" element
+     */
+    public int sizeOfIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(IDENTIFIER$0);
+        }
+    }
+    
+    /**
+     * Sets array of all "identifier" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray)
+    {
+        check_orphaned();
+        arraySetterHelper(identifierArray, IDENTIFIER$0);
+    }
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    public void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(identifier);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier insertNewIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().insert_element_user(IDENTIFIER$0, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
+     */
+    public org.hl7.fhir.Identifier addNewIdentifier()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().add_element_user(IDENTIFIER$0);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "identifier" element
+     */
+    public void removeIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(IDENTIFIER$0, i);
+        }
+    }
     
     /**
      * Gets the "category" element
@@ -41,7 +156,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CATEGORY$0, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CATEGORY$2, 0);
             if (target == null)
             {
                 return null;
@@ -58,7 +173,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CATEGORY$0) != 0;
+            return get_store().count_elements(CATEGORY$2) != 0;
         }
     }
     
@@ -67,7 +182,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setCategory(org.hl7.fhir.CodeableConcept category)
     {
-        generatedSetterHelperImpl(category, CATEGORY$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(category, CATEGORY$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -79,7 +194,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(CATEGORY$0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(CATEGORY$2);
             return target;
         }
     }
@@ -92,7 +207,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CATEGORY$0, 0);
+            get_store().remove_element(CATEGORY$2, 0);
         }
     }
     
@@ -105,7 +220,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.AlertStatus target = null;
-            target = (org.hl7.fhir.AlertStatus)get_store().find_element_user(STATUS$2, 0);
+            target = (org.hl7.fhir.AlertStatus)get_store().find_element_user(STATUS$4, 0);
             if (target == null)
             {
                 return null;
@@ -119,7 +234,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setStatus(org.hl7.fhir.AlertStatus status)
     {
-        generatedSetterHelperImpl(status, STATUS$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(status, STATUS$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -131,7 +246,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.AlertStatus target = null;
-            target = (org.hl7.fhir.AlertStatus)get_store().add_element_user(STATUS$2);
+            target = (org.hl7.fhir.AlertStatus)get_store().add_element_user(STATUS$4);
             return target;
         }
     }
@@ -145,7 +260,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$4, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$6, 0);
             if (target == null)
             {
                 return null;
@@ -159,7 +274,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setSubject(org.hl7.fhir.ResourceReference subject)
     {
-        generatedSetterHelperImpl(subject, SUBJECT$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(subject, SUBJECT$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -171,7 +286,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$4);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$6);
             return target;
         }
     }
@@ -185,7 +300,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(AUTHOR$6, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(AUTHOR$8, 0);
             if (target == null)
             {
                 return null;
@@ -202,7 +317,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(AUTHOR$6) != 0;
+            return get_store().count_elements(AUTHOR$8) != 0;
         }
     }
     
@@ -211,7 +326,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setAuthor(org.hl7.fhir.ResourceReference author)
     {
-        generatedSetterHelperImpl(author, AUTHOR$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(author, AUTHOR$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -223,7 +338,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(AUTHOR$6);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(AUTHOR$8);
             return target;
         }
     }
@@ -236,7 +351,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(AUTHOR$6, 0);
+            get_store().remove_element(AUTHOR$8, 0);
         }
     }
     
@@ -249,7 +364,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(NOTE$8, 0);
+            target = (org.hl7.fhir.String)get_store().find_element_user(NOTE$10, 0);
             if (target == null)
             {
                 return null;
@@ -263,7 +378,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setNote(org.hl7.fhir.String note)
     {
-        generatedSetterHelperImpl(note, NOTE$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(note, NOTE$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -275,7 +390,7 @@ public class AlertImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(NOTE$8);
+            target = (org.hl7.fhir.String)get_store().add_element_user(NOTE$10);
             return target;
         }
     }

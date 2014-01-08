@@ -17,7 +17,7 @@ package org.w3.x1999.xhtml;
 public interface DlDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DlDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("dlfdefdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DlDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("dlfdefdoctype");
     
     /**
      * Gets the "dl" element
@@ -42,7 +42,7 @@ public interface DlDocument extends org.apache.xmlbeans.XmlObject
     public interface Dl extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dl.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("dl8413elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dl.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("dl8413elemtype");
         
         /**
          * Gets array of all "dt" elements
@@ -642,7 +642,7 @@ public interface DlDocument extends org.apache.xmlbeans.XmlObject
         public interface Dir extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dir.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("dir137eattrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dir.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("dir137eattrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);

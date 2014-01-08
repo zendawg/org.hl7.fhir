@@ -16,42 +16,12 @@ package org.hl7.fhir;
 public interface ConceptMapConcept extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapConcept.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("conceptmapconcept155atype");
-    
-    /**
-     * Gets the "name" element
-     */
-    org.hl7.fhir.String getName();
-    
-    /**
-     * True if has "name" element
-     */
-    boolean isSetName();
-    
-    /**
-     * Sets the "name" element
-     */
-    void setName(org.hl7.fhir.String name);
-    
-    /**
-     * Appends and returns a new empty "name" element
-     */
-    org.hl7.fhir.String addNewName();
-    
-    /**
-     * Unsets the "name" element
-     */
-    void unsetName();
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapConcept.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conceptmapconcept155atype");
     
     /**
      * Gets the "system" element
      */
     org.hl7.fhir.Uri getSystem();
-    
-    /**
-     * True if has "system" element
-     */
-    boolean isSetSystem();
     
     /**
      * Sets the "system" element
@@ -62,11 +32,6 @@ public interface ConceptMapConcept extends org.hl7.fhir.BackboneElement
      * Appends and returns a new empty "system" element
      */
     org.hl7.fhir.Uri addNewSystem();
-    
-    /**
-     * Unsets the "system" element
-     */
-    void unsetSystem();
     
     /**
      * Gets the "code" element
@@ -92,6 +57,46 @@ public interface ConceptMapConcept extends org.hl7.fhir.BackboneElement
      * Unsets the "code" element
      */
     void unsetCode();
+    
+    /**
+     * Gets array of all "dependsOn" elements
+     */
+    org.hl7.fhir.ConceptMapDependsOn[] getDependsOnArray();
+    
+    /**
+     * Gets ith "dependsOn" element
+     */
+    org.hl7.fhir.ConceptMapDependsOn getDependsOnArray(int i);
+    
+    /**
+     * Returns number of "dependsOn" element
+     */
+    int sizeOfDependsOnArray();
+    
+    /**
+     * Sets array of all "dependsOn" element
+     */
+    void setDependsOnArray(org.hl7.fhir.ConceptMapDependsOn[] dependsOnArray);
+    
+    /**
+     * Sets ith "dependsOn" element
+     */
+    void setDependsOnArray(int i, org.hl7.fhir.ConceptMapDependsOn dependsOn);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "dependsOn" element
+     */
+    org.hl7.fhir.ConceptMapDependsOn insertNewDependsOn(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "dependsOn" element
+     */
+    org.hl7.fhir.ConceptMapDependsOn addNewDependsOn();
+    
+    /**
+     * Removes the ith "dependsOn" element
+     */
+    void removeDependsOn(int i);
     
     /**
      * Gets array of all "map" elements
@@ -132,46 +137,6 @@ public interface ConceptMapConcept extends org.hl7.fhir.BackboneElement
      * Removes the ith "map" element
      */
     void removeMap(int i);
-    
-    /**
-     * Gets array of all "concept" elements
-     */
-    org.hl7.fhir.ConceptMapConcept[] getConceptArray();
-    
-    /**
-     * Gets ith "concept" element
-     */
-    org.hl7.fhir.ConceptMapConcept getConceptArray(int i);
-    
-    /**
-     * Returns number of "concept" element
-     */
-    int sizeOfConceptArray();
-    
-    /**
-     * Sets array of all "concept" element
-     */
-    void setConceptArray(org.hl7.fhir.ConceptMapConcept[] conceptArray);
-    
-    /**
-     * Sets ith "concept" element
-     */
-    void setConceptArray(int i, org.hl7.fhir.ConceptMapConcept concept);
-    
-    /**
-     * Inserts and returns a new empty value (as xml) as the ith "concept" element
-     */
-    org.hl7.fhir.ConceptMapConcept insertNewConcept(int i);
-    
-    /**
-     * Appends and returns a new empty value (as xml) as the last "concept" element
-     */
-    org.hl7.fhir.ConceptMapConcept addNewConcept();
-    
-    /**
-     * Removes the ith "concept" element
-     */
-    void removeConcept(int i);
     
     /**
      * A factory class with static methods for creating instances

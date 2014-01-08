@@ -16,18 +16,20 @@ package org.hl7.fhir;
 public interface DiagnosticOrderPriorityList extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticOrderPriorityList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("diagnosticorderprioritylist5b6ctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticOrderPriorityList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("diagnosticorderprioritylist5b6ctype");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
     
-    static final Enum NORMAL = Enum.forString("normal");
+    static final Enum ROUTINE = Enum.forString("routine");
     static final Enum URGENT = Enum.forString("urgent");
     static final Enum STAT = Enum.forString("stat");
+    static final Enum ASAP = Enum.forString("asap");
     
-    static final int INT_NORMAL = Enum.INT_NORMAL;
+    static final int INT_ROUTINE = Enum.INT_ROUTINE;
     static final int INT_URGENT = Enum.INT_URGENT;
     static final int INT_STAT = Enum.INT_STAT;
+    static final int INT_ASAP = Enum.INT_ASAP;
     
     /**
      * Enumeration value class for org.hl7.fhir.DiagnosticOrderPriorityList.
@@ -35,7 +37,7 @@ public interface DiagnosticOrderPriorityList extends org.apache.xmlbeans.XmlStri
      * <pre>
      * enum.toString(); // returns the string value of the enum
      * enum.intValue(); // returns an int value, useful for switches
-     * // e.g., case Enum.INT_NORMAL
+     * // e.g., case Enum.INT_ROUTINE
      * Enum.forString(s); // returns the enum value for a string
      * Enum.forInt(i); // returns the enum value for an int
      * </pre>
@@ -60,18 +62,20 @@ public interface DiagnosticOrderPriorityList extends org.apache.xmlbeans.XmlStri
         private Enum(java.lang.String s, int i)
             { super(s, i); }
         
-        static final int INT_NORMAL = 1;
+        static final int INT_ROUTINE = 1;
         static final int INT_URGENT = 2;
         static final int INT_STAT = 3;
+        static final int INT_ASAP = 4;
         
         public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
             new org.apache.xmlbeans.StringEnumAbstractBase.Table
         (
             new Enum[]
             {
-                new Enum("normal", INT_NORMAL),
+                new Enum("routine", INT_ROUTINE),
                 new Enum("urgent", INT_URGENT),
                 new Enum("stat", INT_STAT),
+                new Enum("asap", INT_ASAP),
             }
         );
         private static final long serialVersionUID = 1L;

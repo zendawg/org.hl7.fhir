@@ -351,31 +351,17 @@ public class SampledDataImpl extends org.hl7.fhir.impl.ElementImpl implements or
     /**
      * Gets the "data" element
      */
-    public java.lang.String getData()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.apache.xmlbeans.SimpleValue target = null;
-            target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATA$12, 0);
-            if (target == null)
-            {
-                return null;
-            }
-            return target.getStringValue();
-        }
-    }
-    
-    /**
-     * Gets (as xml) the "data" element
-     */
-    public org.hl7.fhir.SampledDataDataType xgetData()
+    public org.hl7.fhir.SampledDataDataType getData()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.SampledDataDataType target = null;
             target = (org.hl7.fhir.SampledDataDataType)get_store().find_element_user(DATA$12, 0);
+            if (target == null)
+            {
+                return null;
+            }
             return target;
         }
     }
@@ -383,36 +369,22 @@ public class SampledDataImpl extends org.hl7.fhir.impl.ElementImpl implements or
     /**
      * Sets the "data" element
      */
-    public void setData(java.lang.String data)
+    public void setData(org.hl7.fhir.SampledDataDataType data)
     {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.apache.xmlbeans.SimpleValue target = null;
-            target = (org.apache.xmlbeans.SimpleValue)get_store().find_element_user(DATA$12, 0);
-            if (target == null)
-            {
-                target = (org.apache.xmlbeans.SimpleValue)get_store().add_element_user(DATA$12);
-            }
-            target.setStringValue(data);
-        }
+        generatedSetterHelperImpl(data, DATA$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Sets (as xml) the "data" element
+     * Appends and returns a new empty "data" element
      */
-    public void xsetData(org.hl7.fhir.SampledDataDataType data)
+    public org.hl7.fhir.SampledDataDataType addNewData()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.SampledDataDataType target = null;
-            target = (org.hl7.fhir.SampledDataDataType)get_store().find_element_user(DATA$12, 0);
-            if (target == null)
-            {
-                target = (org.hl7.fhir.SampledDataDataType)get_store().add_element_user(DATA$12);
-            }
-            target.set(data);
+            target = (org.hl7.fhir.SampledDataDataType)get_store().add_element_user(DATA$12);
+            return target;
         }
     }
 }

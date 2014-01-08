@@ -24,11 +24,9 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         new javax.xml.namespace.QName("http://hl7.org/fhir", "type");
     private static final javax.xml.namespace.QName DESCRIPTION$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "description");
-    private static final javax.xml.namespace.QName STATUS$4 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "status");
-    private static final javax.xml.namespace.QName INSTANCE$6 = 
+    private static final javax.xml.namespace.QName INSTANCE$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "instance");
-    private static final javax.xml.namespace.QName INGREDIENT$8 = 
+    private static final javax.xml.namespace.QName INGREDIENT$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "ingredient");
     
     
@@ -137,70 +135,6 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
     }
     
     /**
-     * Gets the "status" element
-     */
-    public org.hl7.fhir.CodeableConcept getStatus()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(STATUS$4, 0);
-            if (target == null)
-            {
-                return null;
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * True if has "status" element
-     */
-    public boolean isSetStatus()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(STATUS$4) != 0;
-        }
-    }
-    
-    /**
-     * Sets the "status" element
-     */
-    public void setStatus(org.hl7.fhir.CodeableConcept status)
-    {
-        generatedSetterHelperImpl(status, STATUS$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-    }
-    
-    /**
-     * Appends and returns a new empty "status" element
-     */
-    public org.hl7.fhir.CodeableConcept addNewStatus()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(STATUS$4);
-            return target;
-        }
-    }
-    
-    /**
-     * Unsets the "status" element
-     */
-    public void unsetStatus()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(STATUS$4, 0);
-        }
-    }
-    
-    /**
      * Gets the "instance" element
      */
     public org.hl7.fhir.SubstanceInstance getInstance()
@@ -209,7 +143,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             org.hl7.fhir.SubstanceInstance target = null;
-            target = (org.hl7.fhir.SubstanceInstance)get_store().find_element_user(INSTANCE$6, 0);
+            target = (org.hl7.fhir.SubstanceInstance)get_store().find_element_user(INSTANCE$4, 0);
             if (target == null)
             {
                 return null;
@@ -226,7 +160,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(INSTANCE$6) != 0;
+            return get_store().count_elements(INSTANCE$4) != 0;
         }
     }
     
@@ -235,7 +169,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
      */
     public void setInstance(org.hl7.fhir.SubstanceInstance instance)
     {
-        generatedSetterHelperImpl(instance, INSTANCE$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(instance, INSTANCE$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -247,7 +181,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             org.hl7.fhir.SubstanceInstance target = null;
-            target = (org.hl7.fhir.SubstanceInstance)get_store().add_element_user(INSTANCE$6);
+            target = (org.hl7.fhir.SubstanceInstance)get_store().add_element_user(INSTANCE$4);
             return target;
         }
     }
@@ -260,7 +194,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(INSTANCE$6, 0);
+            get_store().remove_element(INSTANCE$4, 0);
         }
     }
     
@@ -273,7 +207,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(INGREDIENT$8, targetList);
+            get_store().find_all_element_users(INGREDIENT$6, targetList);
             org.hl7.fhir.SubstanceIngredient[] result = new org.hl7.fhir.SubstanceIngredient[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -289,7 +223,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             org.hl7.fhir.SubstanceIngredient target = null;
-            target = (org.hl7.fhir.SubstanceIngredient)get_store().find_element_user(INGREDIENT$8, i);
+            target = (org.hl7.fhir.SubstanceIngredient)get_store().find_element_user(INGREDIENT$6, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -306,7 +240,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(INGREDIENT$8);
+            return get_store().count_elements(INGREDIENT$6);
         }
     }
     
@@ -316,7 +250,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
     public void setIngredientArray(org.hl7.fhir.SubstanceIngredient[] ingredientArray)
     {
         check_orphaned();
-        arraySetterHelper(ingredientArray, INGREDIENT$8);
+        arraySetterHelper(ingredientArray, INGREDIENT$6);
     }
     
     /**
@@ -328,7 +262,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             org.hl7.fhir.SubstanceIngredient target = null;
-            target = (org.hl7.fhir.SubstanceIngredient)get_store().find_element_user(INGREDIENT$8, i);
+            target = (org.hl7.fhir.SubstanceIngredient)get_store().find_element_user(INGREDIENT$6, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -346,7 +280,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             org.hl7.fhir.SubstanceIngredient target = null;
-            target = (org.hl7.fhir.SubstanceIngredient)get_store().insert_element_user(INGREDIENT$8, i);
+            target = (org.hl7.fhir.SubstanceIngredient)get_store().insert_element_user(INGREDIENT$6, i);
             return target;
         }
     }
@@ -360,7 +294,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         {
             check_orphaned();
             org.hl7.fhir.SubstanceIngredient target = null;
-            target = (org.hl7.fhir.SubstanceIngredient)get_store().add_element_user(INGREDIENT$8);
+            target = (org.hl7.fhir.SubstanceIngredient)get_store().add_element_user(INGREDIENT$6);
             return target;
         }
     }
@@ -373,7 +307,7 @@ public class SubstanceImpl extends org.hl7.fhir.impl.ResourceImpl implements org
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(INGREDIENT$8, i);
+            get_store().remove_element(INGREDIENT$6, i);
         }
     }
 }

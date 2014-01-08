@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface SpecimenCollection extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SpecimenCollection.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("specimencollectionc11etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SpecimenCollection.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("specimencollectionc11etype");
     
     /**
      * Gets the "collector" element
@@ -84,19 +84,54 @@ public interface SpecimenCollection extends org.hl7.fhir.BackboneElement
     void removeComment(int i);
     
     /**
-     * Gets the "collectedTime" element
+     * Gets the "collectedDateTime" element
      */
-    org.hl7.fhir.DateTime getCollectedTime();
+    org.hl7.fhir.DateTime getCollectedDateTime();
     
     /**
-     * Sets the "collectedTime" element
+     * True if has "collectedDateTime" element
      */
-    void setCollectedTime(org.hl7.fhir.DateTime collectedTime);
+    boolean isSetCollectedDateTime();
     
     /**
-     * Appends and returns a new empty "collectedTime" element
+     * Sets the "collectedDateTime" element
      */
-    org.hl7.fhir.DateTime addNewCollectedTime();
+    void setCollectedDateTime(org.hl7.fhir.DateTime collectedDateTime);
+    
+    /**
+     * Appends and returns a new empty "collectedDateTime" element
+     */
+    org.hl7.fhir.DateTime addNewCollectedDateTime();
+    
+    /**
+     * Unsets the "collectedDateTime" element
+     */
+    void unsetCollectedDateTime();
+    
+    /**
+     * Gets the "collectedPeriod" element
+     */
+    org.hl7.fhir.Period getCollectedPeriod();
+    
+    /**
+     * True if has "collectedPeriod" element
+     */
+    boolean isSetCollectedPeriod();
+    
+    /**
+     * Sets the "collectedPeriod" element
+     */
+    void setCollectedPeriod(org.hl7.fhir.Period collectedPeriod);
+    
+    /**
+     * Appends and returns a new empty "collectedPeriod" element
+     */
+    org.hl7.fhir.Period addNewCollectedPeriod();
+    
+    /**
+     * Unsets the "collectedPeriod" element
+     */
+    void unsetCollectedPeriod();
     
     /**
      * Gets the "quantity" element

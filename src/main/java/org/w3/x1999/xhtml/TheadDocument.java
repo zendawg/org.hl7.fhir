@@ -17,7 +17,7 @@ package org.w3.x1999.xhtml;
 public interface TheadDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(TheadDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("thead3b75doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(TheadDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("thead3b75doctype");
     
     /**
      * Gets the "thead" element
@@ -42,7 +42,7 @@ public interface TheadDocument extends org.apache.xmlbeans.XmlObject
     public interface Thead extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Thead.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("theade8b5elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Thead.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("theade8b5elemtype");
         
         /**
          * Gets array of all "tr" elements
@@ -722,7 +722,7 @@ public interface TheadDocument extends org.apache.xmlbeans.XmlObject
         public interface Dir extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dir.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("dirfbe0attrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dir.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("dirfbe0attrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -808,7 +808,7 @@ public interface TheadDocument extends org.apache.xmlbeans.XmlObject
         public interface Align extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Align.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("alignf568attrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Align.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("alignf568attrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -906,7 +906,7 @@ public interface TheadDocument extends org.apache.xmlbeans.XmlObject
         public interface Valign extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Valign.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("valign3da6attrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Valign.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("valign3da6attrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);

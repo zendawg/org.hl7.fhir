@@ -32,15 +32,17 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         new javax.xml.namespace.QName("http://hl7.org/fhir", "prescriber");
     private static final javax.xml.namespace.QName ENCOUNTER$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "encounter");
-    private static final javax.xml.namespace.QName REASONFORPRESCRIBING$12 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "reasonForPrescribing");
-    private static final javax.xml.namespace.QName MEDICATION$14 = 
+    private static final javax.xml.namespace.QName REASONCODEABLECONCEPT$12 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "reasonCodeableConcept");
+    private static final javax.xml.namespace.QName REASONRESOURCE$14 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "reasonResource");
+    private static final javax.xml.namespace.QName MEDICATION$16 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "medication");
-    private static final javax.xml.namespace.QName DOSAGEINSTRUCTION$16 = 
+    private static final javax.xml.namespace.QName DOSAGEINSTRUCTION$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "dosageInstruction");
-    private static final javax.xml.namespace.QName DISPENSE$18 = 
+    private static final javax.xml.namespace.QName DISPENSE$20 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "dispense");
-    private static final javax.xml.namespace.QName SUBSTITUTION$20 = 
+    private static final javax.xml.namespace.QName SUBSTITUTION$22 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "substitution");
     
     
@@ -478,15 +480,15 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
     }
     
     /**
-     * Gets the "reasonForPrescribing" element
+     * Gets the "reasonCodeableConcept" element
      */
-    public org.hl7.fhir.CodeableConcept getReasonForPrescribing()
+    public org.hl7.fhir.CodeableConcept getReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(REASONFORPRESCRIBING$12, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(REASONCODEABLECONCEPT$12, 0);
             if (target == null)
             {
                 return null;
@@ -496,48 +498,112 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
     }
     
     /**
-     * True if has "reasonForPrescribing" element
+     * True if has "reasonCodeableConcept" element
      */
-    public boolean isSetReasonForPrescribing()
+    public boolean isSetReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REASONFORPRESCRIBING$12) != 0;
+            return get_store().count_elements(REASONCODEABLECONCEPT$12) != 0;
         }
     }
     
     /**
-     * Sets the "reasonForPrescribing" element
+     * Sets the "reasonCodeableConcept" element
      */
-    public void setReasonForPrescribing(org.hl7.fhir.CodeableConcept reasonForPrescribing)
+    public void setReasonCodeableConcept(org.hl7.fhir.CodeableConcept reasonCodeableConcept)
     {
-        generatedSetterHelperImpl(reasonForPrescribing, REASONFORPRESCRIBING$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(reasonCodeableConcept, REASONCODEABLECONCEPT$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "reasonForPrescribing" element
+     * Appends and returns a new empty "reasonCodeableConcept" element
      */
-    public org.hl7.fhir.CodeableConcept addNewReasonForPrescribing()
+    public org.hl7.fhir.CodeableConcept addNewReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(REASONFORPRESCRIBING$12);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(REASONCODEABLECONCEPT$12);
             return target;
         }
     }
     
     /**
-     * Unsets the "reasonForPrescribing" element
+     * Unsets the "reasonCodeableConcept" element
      */
-    public void unsetReasonForPrescribing()
+    public void unsetReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REASONFORPRESCRIBING$12, 0);
+            get_store().remove_element(REASONCODEABLECONCEPT$12, 0);
+        }
+    }
+    
+    /**
+     * Gets the "reasonResource" element
+     */
+    public org.hl7.fhir.ResourceReference getReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(REASONRESOURCE$14, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "reasonResource" element
+     */
+    public boolean isSetReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(REASONRESOURCE$14) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "reasonResource" element
+     */
+    public void setReasonResource(org.hl7.fhir.ResourceReference reasonResource)
+    {
+        generatedSetterHelperImpl(reasonResource, REASONRESOURCE$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "reasonResource" element
+     */
+    public org.hl7.fhir.ResourceReference addNewReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(REASONRESOURCE$14);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "reasonResource" element
+     */
+    public void unsetReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(REASONRESOURCE$14, 0);
         }
     }
     
@@ -550,7 +616,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(MEDICATION$14, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(MEDICATION$16, 0);
             if (target == null)
             {
                 return null;
@@ -567,7 +633,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(MEDICATION$14) != 0;
+            return get_store().count_elements(MEDICATION$16) != 0;
         }
     }
     
@@ -576,7 +642,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
      */
     public void setMedication(org.hl7.fhir.ResourceReference medication)
     {
-        generatedSetterHelperImpl(medication, MEDICATION$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(medication, MEDICATION$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -588,7 +654,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(MEDICATION$14);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(MEDICATION$16);
             return target;
         }
     }
@@ -601,7 +667,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(MEDICATION$14, 0);
+            get_store().remove_element(MEDICATION$16, 0);
         }
     }
     
@@ -614,7 +680,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(DOSAGEINSTRUCTION$16, targetList);
+            get_store().find_all_element_users(DOSAGEINSTRUCTION$18, targetList);
             org.hl7.fhir.MedicationPrescriptionDosageInstruction[] result = new org.hl7.fhir.MedicationPrescriptionDosageInstruction[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -630,7 +696,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionDosageInstruction target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().find_element_user(DOSAGEINSTRUCTION$16, i);
+            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().find_element_user(DOSAGEINSTRUCTION$18, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -647,7 +713,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(DOSAGEINSTRUCTION$16);
+            return get_store().count_elements(DOSAGEINSTRUCTION$18);
         }
     }
     
@@ -657,7 +723,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
     public void setDosageInstructionArray(org.hl7.fhir.MedicationPrescriptionDosageInstruction[] dosageInstructionArray)
     {
         check_orphaned();
-        arraySetterHelper(dosageInstructionArray, DOSAGEINSTRUCTION$16);
+        arraySetterHelper(dosageInstructionArray, DOSAGEINSTRUCTION$18);
     }
     
     /**
@@ -669,7 +735,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionDosageInstruction target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().find_element_user(DOSAGEINSTRUCTION$16, i);
+            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().find_element_user(DOSAGEINSTRUCTION$18, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -687,7 +753,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionDosageInstruction target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().insert_element_user(DOSAGEINSTRUCTION$16, i);
+            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().insert_element_user(DOSAGEINSTRUCTION$18, i);
             return target;
         }
     }
@@ -701,7 +767,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionDosageInstruction target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().add_element_user(DOSAGEINSTRUCTION$16);
+            target = (org.hl7.fhir.MedicationPrescriptionDosageInstruction)get_store().add_element_user(DOSAGEINSTRUCTION$18);
             return target;
         }
     }
@@ -714,7 +780,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(DOSAGEINSTRUCTION$16, i);
+            get_store().remove_element(DOSAGEINSTRUCTION$18, i);
         }
     }
     
@@ -727,7 +793,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionDispense target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionDispense)get_store().find_element_user(DISPENSE$18, 0);
+            target = (org.hl7.fhir.MedicationPrescriptionDispense)get_store().find_element_user(DISPENSE$20, 0);
             if (target == null)
             {
                 return null;
@@ -744,7 +810,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(DISPENSE$18) != 0;
+            return get_store().count_elements(DISPENSE$20) != 0;
         }
     }
     
@@ -753,7 +819,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
      */
     public void setDispense(org.hl7.fhir.MedicationPrescriptionDispense dispense)
     {
-        generatedSetterHelperImpl(dispense, DISPENSE$18, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(dispense, DISPENSE$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -765,7 +831,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionDispense target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionDispense)get_store().add_element_user(DISPENSE$18);
+            target = (org.hl7.fhir.MedicationPrescriptionDispense)get_store().add_element_user(DISPENSE$20);
             return target;
         }
     }
@@ -778,7 +844,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(DISPENSE$18, 0);
+            get_store().remove_element(DISPENSE$20, 0);
         }
     }
     
@@ -791,7 +857,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionSubstitution target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionSubstitution)get_store().find_element_user(SUBSTITUTION$20, 0);
+            target = (org.hl7.fhir.MedicationPrescriptionSubstitution)get_store().find_element_user(SUBSTITUTION$22, 0);
             if (target == null)
             {
                 return null;
@@ -808,7 +874,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SUBSTITUTION$20) != 0;
+            return get_store().count_elements(SUBSTITUTION$22) != 0;
         }
     }
     
@@ -817,7 +883,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
      */
     public void setSubstitution(org.hl7.fhir.MedicationPrescriptionSubstitution substitution)
     {
-        generatedSetterHelperImpl(substitution, SUBSTITUTION$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(substitution, SUBSTITUTION$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -829,7 +895,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         {
             check_orphaned();
             org.hl7.fhir.MedicationPrescriptionSubstitution target = null;
-            target = (org.hl7.fhir.MedicationPrescriptionSubstitution)get_store().add_element_user(SUBSTITUTION$20);
+            target = (org.hl7.fhir.MedicationPrescriptionSubstitution)get_store().add_element_user(SUBSTITUTION$22);
             return target;
         }
     }
@@ -842,7 +908,7 @@ public class MedicationPrescriptionImpl extends org.hl7.fhir.impl.ResourceImpl i
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SUBSTITUTION$20, 0);
+            get_store().remove_element(SUBSTITUTION$22, 0);
         }
     }
 }

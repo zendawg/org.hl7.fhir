@@ -17,7 +17,7 @@ package org.w3.x1999.xhtml;
 public interface ScriptDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ScriptDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("script190cdoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ScriptDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("script190cdoctype");
     
     /**
      * Gets the "script" element
@@ -42,7 +42,7 @@ public interface ScriptDocument extends org.apache.xmlbeans.XmlObject
     public interface Script extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Script.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("script5b33elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Script.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("script5b33elemtype");
         
         /**
          * Gets the "id" attribute
@@ -222,7 +222,7 @@ public interface ScriptDocument extends org.apache.xmlbeans.XmlObject
         public interface Defer extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Defer.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("defer6719attrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Defer.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("defer6719attrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);

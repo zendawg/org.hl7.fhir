@@ -20,8 +20,8 @@ public class SupplyImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName NAME$0 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "name");
+    private static final javax.xml.namespace.QName KIND$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "kind");
     private static final javax.xml.namespace.QName IDENTIFIER$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
     private static final javax.xml.namespace.QName STATUS$4 = 
@@ -35,15 +35,15 @@ public class SupplyImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl
     
     
     /**
-     * Gets the "name" element
+     * Gets the "kind" element
      */
-    public org.hl7.fhir.CodeableConcept getName()
+    public org.hl7.fhir.CodeableConcept getKind()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(NAME$0, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(KIND$0, 0);
             if (target == null)
             {
                 return null;
@@ -53,48 +53,48 @@ public class SupplyImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl
     }
     
     /**
-     * True if has "name" element
+     * True if has "kind" element
      */
-    public boolean isSetName()
+    public boolean isSetKind()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(NAME$0) != 0;
+            return get_store().count_elements(KIND$0) != 0;
         }
     }
     
     /**
-     * Sets the "name" element
+     * Sets the "kind" element
      */
-    public void setName(org.hl7.fhir.CodeableConcept name)
+    public void setKind(org.hl7.fhir.CodeableConcept kind)
     {
-        generatedSetterHelperImpl(name, NAME$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(kind, KIND$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "name" element
+     * Appends and returns a new empty "kind" element
      */
-    public org.hl7.fhir.CodeableConcept addNewName()
+    public org.hl7.fhir.CodeableConcept addNewKind()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(NAME$0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(KIND$0);
             return target;
         }
     }
     
     /**
-     * Unsets the "name" element
+     * Unsets the "kind" element
      */
-    public void unsetName()
+    public void unsetKind()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(NAME$0, 0);
+            get_store().remove_element(KIND$0, 0);
         }
     }
     
@@ -165,13 +165,13 @@ public class SupplyImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl
     /**
      * Gets the "status" element
      */
-    public org.hl7.fhir.Code getStatus()
+    public org.hl7.fhir.SupplyStatus getStatus()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().find_element_user(STATUS$4, 0);
+            org.hl7.fhir.SupplyStatus target = null;
+            target = (org.hl7.fhir.SupplyStatus)get_store().find_element_user(STATUS$4, 0);
             if (target == null)
             {
                 return null;
@@ -195,7 +195,7 @@ public class SupplyImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl
     /**
      * Sets the "status" element
      */
-    public void setStatus(org.hl7.fhir.Code status)
+    public void setStatus(org.hl7.fhir.SupplyStatus status)
     {
         generatedSetterHelperImpl(status, STATUS$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -203,13 +203,13 @@ public class SupplyImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl
     /**
      * Appends and returns a new empty "status" element
      */
-    public org.hl7.fhir.Code addNewStatus()
+    public org.hl7.fhir.SupplyStatus addNewStatus()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().add_element_user(STATUS$4);
+            org.hl7.fhir.SupplyStatus target = null;
+            target = (org.hl7.fhir.SupplyStatus)get_store().add_element_user(STATUS$4);
             return target;
         }
     }

@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface DiagnosticOrderStatusList extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticOrderStatusList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("diagnosticorderstatuslist095etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticOrderStatusList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("diagnosticorderstatuslist095etype");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -27,7 +27,7 @@ public interface DiagnosticOrderStatusList extends org.apache.xmlbeans.XmlString
     static final Enum IN_PROGRESS = Enum.forString("in progress");
     static final Enum REVIEW = Enum.forString("review");
     static final Enum COMPLETED = Enum.forString("completed");
-    static final Enum ON_HOLD = Enum.forString("on hold");
+    static final Enum SUSPENDED = Enum.forString("suspended");
     static final Enum REJECTED = Enum.forString("rejected");
     static final Enum FAILED = Enum.forString("failed");
     
@@ -37,7 +37,7 @@ public interface DiagnosticOrderStatusList extends org.apache.xmlbeans.XmlString
     static final int INT_IN_PROGRESS = Enum.INT_IN_PROGRESS;
     static final int INT_REVIEW = Enum.INT_REVIEW;
     static final int INT_COMPLETED = Enum.INT_COMPLETED;
-    static final int INT_ON_HOLD = Enum.INT_ON_HOLD;
+    static final int INT_SUSPENDED = Enum.INT_SUSPENDED;
     static final int INT_REJECTED = Enum.INT_REJECTED;
     static final int INT_FAILED = Enum.INT_FAILED;
     
@@ -78,7 +78,7 @@ public interface DiagnosticOrderStatusList extends org.apache.xmlbeans.XmlString
         static final int INT_IN_PROGRESS = 4;
         static final int INT_REVIEW = 5;
         static final int INT_COMPLETED = 6;
-        static final int INT_ON_HOLD = 7;
+        static final int INT_SUSPENDED = 7;
         static final int INT_REJECTED = 8;
         static final int INT_FAILED = 9;
         
@@ -93,7 +93,7 @@ public interface DiagnosticOrderStatusList extends org.apache.xmlbeans.XmlString
                 new Enum("in progress", INT_IN_PROGRESS),
                 new Enum("review", INT_REVIEW),
                 new Enum("completed", INT_COMPLETED),
-                new Enum("on hold", INT_ON_HOLD),
+                new Enum("suspended", INT_SUSPENDED),
                 new Enum("rejected", INT_REJECTED),
                 new Enum("failed", INT_FAILED),
             }

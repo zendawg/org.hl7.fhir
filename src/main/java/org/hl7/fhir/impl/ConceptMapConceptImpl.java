@@ -20,81 +20,15 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName NAME$0 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "name");
-    private static final javax.xml.namespace.QName SYSTEM$2 = 
+    private static final javax.xml.namespace.QName SYSTEM$0 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "system");
-    private static final javax.xml.namespace.QName CODE$4 = 
+    private static final javax.xml.namespace.QName CODE$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "code");
+    private static final javax.xml.namespace.QName DEPENDSON$4 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "dependsOn");
     private static final javax.xml.namespace.QName MAP$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "map");
-    private static final javax.xml.namespace.QName CONCEPT$8 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "concept");
     
-    
-    /**
-     * Gets the "name" element
-     */
-    public org.hl7.fhir.String getName()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(NAME$0, 0);
-            if (target == null)
-            {
-                return null;
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * True if has "name" element
-     */
-    public boolean isSetName()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(NAME$0) != 0;
-        }
-    }
-    
-    /**
-     * Sets the "name" element
-     */
-    public void setName(org.hl7.fhir.String name)
-    {
-        generatedSetterHelperImpl(name, NAME$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-    }
-    
-    /**
-     * Appends and returns a new empty "name" element
-     */
-    public org.hl7.fhir.String addNewName()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(NAME$0);
-            return target;
-        }
-    }
-    
-    /**
-     * Unsets the "name" element
-     */
-    public void unsetName()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(NAME$0, 0);
-        }
-    }
     
     /**
      * Gets the "system" element
@@ -105,7 +39,7 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         {
             check_orphaned();
             org.hl7.fhir.Uri target = null;
-            target = (org.hl7.fhir.Uri)get_store().find_element_user(SYSTEM$2, 0);
+            target = (org.hl7.fhir.Uri)get_store().find_element_user(SYSTEM$0, 0);
             if (target == null)
             {
                 return null;
@@ -115,23 +49,11 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
     }
     
     /**
-     * True if has "system" element
-     */
-    public boolean isSetSystem()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(SYSTEM$2) != 0;
-        }
-    }
-    
-    /**
      * Sets the "system" element
      */
     public void setSystem(org.hl7.fhir.Uri system)
     {
-        generatedSetterHelperImpl(system, SYSTEM$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(system, SYSTEM$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -143,20 +65,8 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         {
             check_orphaned();
             org.hl7.fhir.Uri target = null;
-            target = (org.hl7.fhir.Uri)get_store().add_element_user(SYSTEM$2);
+            target = (org.hl7.fhir.Uri)get_store().add_element_user(SYSTEM$0);
             return target;
-        }
-    }
-    
-    /**
-     * Unsets the "system" element
-     */
-    public void unsetSystem()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(SYSTEM$2, 0);
         }
     }
     
@@ -169,7 +79,7 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         {
             check_orphaned();
             org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().find_element_user(CODE$4, 0);
+            target = (org.hl7.fhir.Code)get_store().find_element_user(CODE$2, 0);
             if (target == null)
             {
                 return null;
@@ -186,7 +96,7 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CODE$4) != 0;
+            return get_store().count_elements(CODE$2) != 0;
         }
     }
     
@@ -195,7 +105,7 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
      */
     public void setCode(org.hl7.fhir.Code code)
     {
-        generatedSetterHelperImpl(code, CODE$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(code, CODE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -207,7 +117,7 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         {
             check_orphaned();
             org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().add_element_user(CODE$4);
+            target = (org.hl7.fhir.Code)get_store().add_element_user(CODE$2);
             return target;
         }
     }
@@ -220,7 +130,120 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CODE$4, 0);
+            get_store().remove_element(CODE$2, 0);
+        }
+    }
+    
+    /**
+     * Gets array of all "dependsOn" elements
+     */
+    public org.hl7.fhir.ConceptMapDependsOn[] getDependsOnArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(DEPENDSON$4, targetList);
+            org.hl7.fhir.ConceptMapDependsOn[] result = new org.hl7.fhir.ConceptMapDependsOn[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "dependsOn" element
+     */
+    public org.hl7.fhir.ConceptMapDependsOn getDependsOnArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ConceptMapDependsOn target = null;
+            target = (org.hl7.fhir.ConceptMapDependsOn)get_store().find_element_user(DEPENDSON$4, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "dependsOn" element
+     */
+    public int sizeOfDependsOnArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(DEPENDSON$4);
+        }
+    }
+    
+    /**
+     * Sets array of all "dependsOn" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setDependsOnArray(org.hl7.fhir.ConceptMapDependsOn[] dependsOnArray)
+    {
+        check_orphaned();
+        arraySetterHelper(dependsOnArray, DEPENDSON$4);
+    }
+    
+    /**
+     * Sets ith "dependsOn" element
+     */
+    public void setDependsOnArray(int i, org.hl7.fhir.ConceptMapDependsOn dependsOn)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ConceptMapDependsOn target = null;
+            target = (org.hl7.fhir.ConceptMapDependsOn)get_store().find_element_user(DEPENDSON$4, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(dependsOn);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "dependsOn" element
+     */
+    public org.hl7.fhir.ConceptMapDependsOn insertNewDependsOn(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ConceptMapDependsOn target = null;
+            target = (org.hl7.fhir.ConceptMapDependsOn)get_store().insert_element_user(DEPENDSON$4, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "dependsOn" element
+     */
+    public org.hl7.fhir.ConceptMapDependsOn addNewDependsOn()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ConceptMapDependsOn target = null;
+            target = (org.hl7.fhir.ConceptMapDependsOn)get_store().add_element_user(DEPENDSON$4);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "dependsOn" element
+     */
+    public void removeDependsOn(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(DEPENDSON$4, i);
         }
     }
     
@@ -334,119 +357,6 @@ public class ConceptMapConceptImpl extends org.hl7.fhir.impl.BackboneElementImpl
         {
             check_orphaned();
             get_store().remove_element(MAP$6, i);
-        }
-    }
-    
-    /**
-     * Gets array of all "concept" elements
-     */
-    public org.hl7.fhir.ConceptMapConcept[] getConceptArray()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(CONCEPT$8, targetList);
-            org.hl7.fhir.ConceptMapConcept[] result = new org.hl7.fhir.ConceptMapConcept[targetList.size()];
-            targetList.toArray(result);
-            return result;
-        }
-    }
-    
-    /**
-     * Gets ith "concept" element
-     */
-    public org.hl7.fhir.ConceptMapConcept getConceptArray(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ConceptMapConcept target = null;
-            target = (org.hl7.fhir.ConceptMapConcept)get_store().find_element_user(CONCEPT$8, i);
-            if (target == null)
-            {
-                throw new IndexOutOfBoundsException();
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * Returns number of "concept" element
-     */
-    public int sizeOfConceptArray()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(CONCEPT$8);
-        }
-    }
-    
-    /**
-     * Sets array of all "concept" element  WARNING: This method is not atomicaly synchronized.
-     */
-    public void setConceptArray(org.hl7.fhir.ConceptMapConcept[] conceptArray)
-    {
-        check_orphaned();
-        arraySetterHelper(conceptArray, CONCEPT$8);
-    }
-    
-    /**
-     * Sets ith "concept" element
-     */
-    public void setConceptArray(int i, org.hl7.fhir.ConceptMapConcept concept)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ConceptMapConcept target = null;
-            target = (org.hl7.fhir.ConceptMapConcept)get_store().find_element_user(CONCEPT$8, i);
-            if (target == null)
-            {
-                throw new IndexOutOfBoundsException();
-            }
-            target.set(concept);
-        }
-    }
-    
-    /**
-     * Inserts and returns a new empty value (as xml) as the ith "concept" element
-     */
-    public org.hl7.fhir.ConceptMapConcept insertNewConcept(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ConceptMapConcept target = null;
-            target = (org.hl7.fhir.ConceptMapConcept)get_store().insert_element_user(CONCEPT$8, i);
-            return target;
-        }
-    }
-    
-    /**
-     * Appends and returns a new empty value (as xml) as the last "concept" element
-     */
-    public org.hl7.fhir.ConceptMapConcept addNewConcept()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ConceptMapConcept target = null;
-            target = (org.hl7.fhir.ConceptMapConcept)get_store().add_element_user(CONCEPT$8);
-            return target;
-        }
-    }
-    
-    /**
-     * Removes the ith "concept" element
-     */
-    public void removeConcept(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(CONCEPT$8, i);
         }
     }
 }

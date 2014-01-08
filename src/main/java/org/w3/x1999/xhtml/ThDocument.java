@@ -17,7 +17,7 @@ package org.w3.x1999.xhtml;
 public interface ThDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ThDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("thd383doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ThDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("thd383doctype");
     
     /**
      * Gets the "th" element
@@ -42,7 +42,7 @@ public interface ThDocument extends org.apache.xmlbeans.XmlObject
     public interface Th extends org.w3.x1999.xhtml.Flow
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Th.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("the093elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Th.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("the093elemtype");
         
         /**
          * Gets the "id" attribute
@@ -857,7 +857,7 @@ public interface ThDocument extends org.apache.xmlbeans.XmlObject
         public interface Dir extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dir.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("dir6ffeattrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Dir.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("dir6ffeattrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -943,7 +943,7 @@ public interface ThDocument extends org.apache.xmlbeans.XmlObject
         public interface Align extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Align.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("align2f86attrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Align.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("align2f86attrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -1041,7 +1041,7 @@ public interface ThDocument extends org.apache.xmlbeans.XmlObject
         public interface Valign extends org.apache.xmlbeans.XmlToken
         {
             public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Valign.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("valignfe44attrtype");
+                org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Valign.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("valignfe44attrtype");
             
             org.apache.xmlbeans.StringEnumAbstractBase enumValue();
             void set(org.apache.xmlbeans.StringEnumAbstractBase e);

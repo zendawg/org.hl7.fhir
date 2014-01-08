@@ -11,12 +11,42 @@ package org.hl7.fhir;
 /**
  * An XML SampledDataDataType(@http://hl7.org/fhir).
  *
- * This is an atomic type that is a restriction of org.hl7.fhir.SampledDataDataType.
+ * This is a complex type.
  */
-public interface SampledDataDataType extends org.apache.xmlbeans.XmlString
+public interface SampledDataDataType extends org.hl7.fhir.Element
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SampledDataDataType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("sampleddatadatatype6aa2type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SampledDataDataType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("sampleddatadatatype6aa2type");
+    
+    /**
+     * Gets the "value" attribute
+     */
+    java.lang.String getValue();
+    
+    /**
+     * Gets (as xml) the "value" attribute
+     */
+    org.hl7.fhir.SampledDataDataTypePrimitive xgetValue();
+    
+    /**
+     * True if has "value" attribute
+     */
+    boolean isSetValue();
+    
+    /**
+     * Sets the "value" attribute
+     */
+    void setValue(java.lang.String value);
+    
+    /**
+     * Sets (as xml) the "value" attribute
+     */
+    void xsetValue(org.hl7.fhir.SampledDataDataTypePrimitive value);
+    
+    /**
+     * Unsets the "value" attribute
+     */
+    void unsetValue();
     
     /**
      * A factory class with static methods for creating instances
@@ -25,9 +55,6 @@ public interface SampledDataDataType extends org.apache.xmlbeans.XmlString
     
     public static final class Factory
     {
-        public static org.hl7.fhir.SampledDataDataType newValue(java.lang.Object obj) {
-          return (org.hl7.fhir.SampledDataDataType) type.newValue( obj ); }
-        
         public static org.hl7.fhir.SampledDataDataType newInstance() {
           return (org.hl7.fhir.SampledDataDataType) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, null ); }
         

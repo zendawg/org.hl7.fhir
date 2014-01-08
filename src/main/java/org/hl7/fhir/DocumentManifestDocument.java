@@ -17,7 +17,7 @@ package org.hl7.fhir;
 public interface DocumentManifestDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DocumentManifestDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("documentmanifest83e6doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DocumentManifestDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("documentmanifest83e6doctype");
     
     /**
      * Gets the "DocumentManifest" element

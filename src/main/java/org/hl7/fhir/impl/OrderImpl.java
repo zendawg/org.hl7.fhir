@@ -20,23 +20,140 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName DATE$0 = 
+    private static final javax.xml.namespace.QName IDENTIFIER$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
+    private static final javax.xml.namespace.QName DATE$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
-    private static final javax.xml.namespace.QName SUBJECT$2 = 
+    private static final javax.xml.namespace.QName SUBJECT$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
-    private static final javax.xml.namespace.QName SOURCE$4 = 
+    private static final javax.xml.namespace.QName SOURCE$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "source");
-    private static final javax.xml.namespace.QName TARGET$6 = 
+    private static final javax.xml.namespace.QName TARGET$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "target");
-    private static final javax.xml.namespace.QName REASON$8 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "reason");
-    private static final javax.xml.namespace.QName AUTHORITY$10 = 
+    private static final javax.xml.namespace.QName REASONCODEABLECONCEPT$10 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "reasonCodeableConcept");
+    private static final javax.xml.namespace.QName REASONRESOURCE$12 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "reasonResource");
+    private static final javax.xml.namespace.QName AUTHORITY$14 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "authority");
-    private static final javax.xml.namespace.QName WHEN$12 = 
+    private static final javax.xml.namespace.QName WHEN$16 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "when");
-    private static final javax.xml.namespace.QName DETAIL$14 = 
+    private static final javax.xml.namespace.QName DETAIL$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "detail");
     
+    
+    /**
+     * Gets array of all "identifier" elements
+     */
+    public org.hl7.fhir.Identifier[] getIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(IDENTIFIER$0, targetList);
+            org.hl7.fhir.Identifier[] result = new org.hl7.fhir.Identifier[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier getIdentifierArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "identifier" element
+     */
+    public int sizeOfIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(IDENTIFIER$0);
+        }
+    }
+    
+    /**
+     * Sets array of all "identifier" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray)
+    {
+        check_orphaned();
+        arraySetterHelper(identifierArray, IDENTIFIER$0);
+    }
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    public void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(identifier);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier insertNewIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().insert_element_user(IDENTIFIER$0, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
+     */
+    public org.hl7.fhir.Identifier addNewIdentifier()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().add_element_user(IDENTIFIER$0);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "identifier" element
+     */
+    public void removeIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(IDENTIFIER$0, i);
+        }
+    }
     
     /**
      * Gets the "date" element
@@ -47,7 +164,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$0, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$2, 0);
             if (target == null)
             {
                 return null;
@@ -64,7 +181,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(DATE$0) != 0;
+            return get_store().count_elements(DATE$2) != 0;
         }
     }
     
@@ -73,7 +190,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setDate(org.hl7.fhir.DateTime date)
     {
-        generatedSetterHelperImpl(date, DATE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(date, DATE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -85,7 +202,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$0);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$2);
             return target;
         }
     }
@@ -98,7 +215,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(DATE$0, 0);
+            get_store().remove_element(DATE$2, 0);
         }
     }
     
@@ -111,7 +228,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$2, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$4, 0);
             if (target == null)
             {
                 return null;
@@ -128,7 +245,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SUBJECT$2) != 0;
+            return get_store().count_elements(SUBJECT$4) != 0;
         }
     }
     
@@ -137,7 +254,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setSubject(org.hl7.fhir.ResourceReference subject)
     {
-        generatedSetterHelperImpl(subject, SUBJECT$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(subject, SUBJECT$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -149,7 +266,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$2);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$4);
             return target;
         }
     }
@@ -162,7 +279,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SUBJECT$2, 0);
+            get_store().remove_element(SUBJECT$4, 0);
         }
     }
     
@@ -175,7 +292,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SOURCE$4, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SOURCE$6, 0);
             if (target == null)
             {
                 return null;
@@ -192,7 +309,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SOURCE$4) != 0;
+            return get_store().count_elements(SOURCE$6) != 0;
         }
     }
     
@@ -201,7 +318,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setSource(org.hl7.fhir.ResourceReference source)
     {
-        generatedSetterHelperImpl(source, SOURCE$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(source, SOURCE$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -213,7 +330,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SOURCE$4);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SOURCE$6);
             return target;
         }
     }
@@ -226,7 +343,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SOURCE$4, 0);
+            get_store().remove_element(SOURCE$6, 0);
         }
     }
     
@@ -239,7 +356,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(TARGET$6, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(TARGET$8, 0);
             if (target == null)
             {
                 return null;
@@ -256,7 +373,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(TARGET$6) != 0;
+            return get_store().count_elements(TARGET$8) != 0;
         }
     }
     
@@ -265,7 +382,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setTarget(org.hl7.fhir.ResourceReference targetValue)
     {
-        generatedSetterHelperImpl(targetValue, TARGET$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(targetValue, TARGET$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -277,7 +394,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(TARGET$6);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(TARGET$8);
             return target;
         }
     }
@@ -290,20 +407,20 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(TARGET$6, 0);
+            get_store().remove_element(TARGET$8, 0);
         }
     }
     
     /**
-     * Gets the "reason" element
+     * Gets the "reasonCodeableConcept" element
      */
-    public org.hl7.fhir.String getReason()
+    public org.hl7.fhir.CodeableConcept getReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(REASON$8, 0);
+            org.hl7.fhir.CodeableConcept target = null;
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(REASONCODEABLECONCEPT$10, 0);
             if (target == null)
             {
                 return null;
@@ -313,48 +430,112 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
     }
     
     /**
-     * True if has "reason" element
+     * True if has "reasonCodeableConcept" element
      */
-    public boolean isSetReason()
+    public boolean isSetReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REASON$8) != 0;
+            return get_store().count_elements(REASONCODEABLECONCEPT$10) != 0;
         }
     }
     
     /**
-     * Sets the "reason" element
+     * Sets the "reasonCodeableConcept" element
      */
-    public void setReason(org.hl7.fhir.String reason)
+    public void setReasonCodeableConcept(org.hl7.fhir.CodeableConcept reasonCodeableConcept)
     {
-        generatedSetterHelperImpl(reason, REASON$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(reasonCodeableConcept, REASONCODEABLECONCEPT$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "reason" element
+     * Appends and returns a new empty "reasonCodeableConcept" element
      */
-    public org.hl7.fhir.String addNewReason()
+    public org.hl7.fhir.CodeableConcept addNewReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(REASON$8);
+            org.hl7.fhir.CodeableConcept target = null;
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(REASONCODEABLECONCEPT$10);
             return target;
         }
     }
     
     /**
-     * Unsets the "reason" element
+     * Unsets the "reasonCodeableConcept" element
      */
-    public void unsetReason()
+    public void unsetReasonCodeableConcept()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REASON$8, 0);
+            get_store().remove_element(REASONCODEABLECONCEPT$10, 0);
+        }
+    }
+    
+    /**
+     * Gets the "reasonResource" element
+     */
+    public org.hl7.fhir.ResourceReference getReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(REASONRESOURCE$12, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "reasonResource" element
+     */
+    public boolean isSetReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(REASONRESOURCE$12) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "reasonResource" element
+     */
+    public void setReasonResource(org.hl7.fhir.ResourceReference reasonResource)
+    {
+        generatedSetterHelperImpl(reasonResource, REASONRESOURCE$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "reasonResource" element
+     */
+    public org.hl7.fhir.ResourceReference addNewReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(REASONRESOURCE$12);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "reasonResource" element
+     */
+    public void unsetReasonResource()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(REASONRESOURCE$12, 0);
         }
     }
     
@@ -367,7 +548,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(AUTHORITY$10, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(AUTHORITY$14, 0);
             if (target == null)
             {
                 return null;
@@ -384,7 +565,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(AUTHORITY$10) != 0;
+            return get_store().count_elements(AUTHORITY$14) != 0;
         }
     }
     
@@ -393,7 +574,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setAuthority(org.hl7.fhir.ResourceReference authority)
     {
-        generatedSetterHelperImpl(authority, AUTHORITY$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(authority, AUTHORITY$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -405,7 +586,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(AUTHORITY$10);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(AUTHORITY$14);
             return target;
         }
     }
@@ -418,7 +599,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(AUTHORITY$10, 0);
+            get_store().remove_element(AUTHORITY$14, 0);
         }
     }
     
@@ -431,7 +612,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.OrderWhen target = null;
-            target = (org.hl7.fhir.OrderWhen)get_store().find_element_user(WHEN$12, 0);
+            target = (org.hl7.fhir.OrderWhen)get_store().find_element_user(WHEN$16, 0);
             if (target == null)
             {
                 return null;
@@ -448,7 +629,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(WHEN$12) != 0;
+            return get_store().count_elements(WHEN$16) != 0;
         }
     }
     
@@ -457,7 +638,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
      */
     public void setWhen(org.hl7.fhir.OrderWhen when)
     {
-        generatedSetterHelperImpl(when, WHEN$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(when, WHEN$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -469,7 +650,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.OrderWhen target = null;
-            target = (org.hl7.fhir.OrderWhen)get_store().add_element_user(WHEN$12);
+            target = (org.hl7.fhir.OrderWhen)get_store().add_element_user(WHEN$16);
             return target;
         }
     }
@@ -482,7 +663,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(WHEN$12, 0);
+            get_store().remove_element(WHEN$16, 0);
         }
     }
     
@@ -495,7 +676,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(DETAIL$14, targetList);
+            get_store().find_all_element_users(DETAIL$18, targetList);
             org.hl7.fhir.ResourceReference[] result = new org.hl7.fhir.ResourceReference[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -511,7 +692,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(DETAIL$14, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(DETAIL$18, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -528,7 +709,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(DETAIL$14);
+            return get_store().count_elements(DETAIL$18);
         }
     }
     
@@ -538,7 +719,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
     public void setDetailArray(org.hl7.fhir.ResourceReference[] detailArray)
     {
         check_orphaned();
-        arraySetterHelper(detailArray, DETAIL$14);
+        arraySetterHelper(detailArray, DETAIL$18);
     }
     
     /**
@@ -550,7 +731,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(DETAIL$14, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(DETAIL$18, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -568,7 +749,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(DETAIL$14, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(DETAIL$18, i);
             return target;
         }
     }
@@ -582,7 +763,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(DETAIL$14);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(DETAIL$18);
             return target;
         }
     }
@@ -595,7 +776,7 @@ public class OrderImpl extends org.hl7.fhir.impl.ResourceImpl implements org.hl7
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(DETAIL$14, i);
+            get_store().remove_element(DETAIL$18, i);
         }
     }
 }

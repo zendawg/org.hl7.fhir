@@ -109,13 +109,13 @@ public class SupplyDispenseImpl extends org.hl7.fhir.impl.BackboneElementImpl im
     /**
      * Gets the "status" element
      */
-    public org.hl7.fhir.Code getStatus()
+    public org.hl7.fhir.SupplyDispenseStatus getStatus()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().find_element_user(STATUS$2, 0);
+            org.hl7.fhir.SupplyDispenseStatus target = null;
+            target = (org.hl7.fhir.SupplyDispenseStatus)get_store().find_element_user(STATUS$2, 0);
             if (target == null)
             {
                 return null;
@@ -139,7 +139,7 @@ public class SupplyDispenseImpl extends org.hl7.fhir.impl.BackboneElementImpl im
     /**
      * Sets the "status" element
      */
-    public void setStatus(org.hl7.fhir.Code status)
+    public void setStatus(org.hl7.fhir.SupplyDispenseStatus status)
     {
         generatedSetterHelperImpl(status, STATUS$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -147,13 +147,13 @@ public class SupplyDispenseImpl extends org.hl7.fhir.impl.BackboneElementImpl im
     /**
      * Appends and returns a new empty "status" element
      */
-    public org.hl7.fhir.Code addNewStatus()
+    public org.hl7.fhir.SupplyDispenseStatus addNewStatus()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().add_element_user(STATUS$2);
+            org.hl7.fhir.SupplyDispenseStatus target = null;
+            target = (org.hl7.fhir.SupplyDispenseStatus)get_store().add_element_user(STATUS$2);
             return target;
         }
     }

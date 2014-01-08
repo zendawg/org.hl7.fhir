@@ -25,7 +25,7 @@ public interface ResourceNamesPlusBinary extends org.apache.xmlbeans.XmlAnySimpl
     void objectSet(java.lang.Object val);
     org.apache.xmlbeans.SchemaType instanceType();
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ResourceNamesPlusBinary.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("resourcenamesplusbinary336ftype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ResourceNamesPlusBinary.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("resourcenamesplusbinary336ftype");
     
     /**
      * An anonymous inner XML type.
@@ -35,7 +35,7 @@ public interface ResourceNamesPlusBinary extends org.apache.xmlbeans.XmlAnySimpl
     public interface Member extends org.apache.xmlbeans.XmlNMTOKEN
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Member.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("anon0354type");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Member.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("anon0354type");
         
         org.apache.xmlbeans.StringEnumAbstractBase enumValue();
         void set(org.apache.xmlbeans.StringEnumAbstractBase e);

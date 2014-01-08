@@ -28,8 +28,8 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
     private static final javax.xml.namespace.QName PERFORMER$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "performer");
-    private static final javax.xml.namespace.QName REPORTID$8 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "reportId");
+    private static final javax.xml.namespace.QName IDENTIFIER$8 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
     private static final javax.xml.namespace.QName REQUESTDETAIL$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "requestDetail");
     private static final javax.xml.namespace.QName SERVICECATEGORY$12 = 
@@ -40,14 +40,16 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         new javax.xml.namespace.QName("http://hl7.org/fhir", "diagnosticPeriod");
     private static final javax.xml.namespace.QName RESULTS$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "results");
-    private static final javax.xml.namespace.QName IMAGE$20 = 
+    private static final javax.xml.namespace.QName IMAGINGSTUDY$20 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "imagingStudy");
+    private static final javax.xml.namespace.QName IMAGE$22 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "image");
-    private static final javax.xml.namespace.QName CONCLUSION$22 = 
+    private static final javax.xml.namespace.QName CONCLUSION$24 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "conclusion");
-    private static final javax.xml.namespace.QName CODEDDIAGNOSIS$24 = 
+    private static final javax.xml.namespace.QName CODEDDIAGNOSIS$26 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "codedDiagnosis");
-    private static final javax.xml.namespace.QName REPRESENTATION$26 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "representation");
+    private static final javax.xml.namespace.QName PRESENTEDFORM$28 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "presentedForm");
     
     
     /**
@@ -211,15 +213,15 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     }
     
     /**
-     * Gets the "reportId" element
+     * Gets the "identifier" element
      */
-    public org.hl7.fhir.Identifier getReportId()
+    public org.hl7.fhir.Identifier getIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Identifier target = null;
-            target = (org.hl7.fhir.Identifier)get_store().find_element_user(REPORTID$8, 0);
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$8, 0);
             if (target == null)
             {
                 return null;
@@ -229,62 +231,62 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     }
     
     /**
-     * True if has "reportId" element
+     * True if has "identifier" element
      */
-    public boolean isSetReportId()
+    public boolean isSetIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REPORTID$8) != 0;
+            return get_store().count_elements(IDENTIFIER$8) != 0;
         }
     }
     
     /**
-     * Sets the "reportId" element
+     * Sets the "identifier" element
      */
-    public void setReportId(org.hl7.fhir.Identifier reportId)
+    public void setIdentifier(org.hl7.fhir.Identifier identifier)
     {
-        generatedSetterHelperImpl(reportId, REPORTID$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(identifier, IDENTIFIER$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "reportId" element
+     * Appends and returns a new empty "identifier" element
      */
-    public org.hl7.fhir.Identifier addNewReportId()
+    public org.hl7.fhir.Identifier addNewIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Identifier target = null;
-            target = (org.hl7.fhir.Identifier)get_store().add_element_user(REPORTID$8);
+            target = (org.hl7.fhir.Identifier)get_store().add_element_user(IDENTIFIER$8);
             return target;
         }
     }
     
     /**
-     * Unsets the "reportId" element
+     * Unsets the "identifier" element
      */
-    public void unsetReportId()
+    public void unsetIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REPORTID$8, 0);
+            get_store().remove_element(IDENTIFIER$8, 0);
         }
     }
     
     /**
      * Gets array of all "requestDetail" elements
      */
-    public org.hl7.fhir.DiagnosticReportRequestDetail[] getRequestDetailArray()
+    public org.hl7.fhir.ResourceReference[] getRequestDetailArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
             get_store().find_all_element_users(REQUESTDETAIL$10, targetList);
-            org.hl7.fhir.DiagnosticReportRequestDetail[] result = new org.hl7.fhir.DiagnosticReportRequestDetail[targetList.size()];
+            org.hl7.fhir.ResourceReference[] result = new org.hl7.fhir.ResourceReference[targetList.size()];
             targetList.toArray(result);
             return result;
         }
@@ -293,13 +295,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Gets ith "requestDetail" element
      */
-    public org.hl7.fhir.DiagnosticReportRequestDetail getRequestDetailArray(int i)
+    public org.hl7.fhir.ResourceReference getRequestDetailArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.DiagnosticReportRequestDetail target = null;
-            target = (org.hl7.fhir.DiagnosticReportRequestDetail)get_store().find_element_user(REQUESTDETAIL$10, i);
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(REQUESTDETAIL$10, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -323,7 +325,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Sets array of all "requestDetail" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setRequestDetailArray(org.hl7.fhir.DiagnosticReportRequestDetail[] requestDetailArray)
+    public void setRequestDetailArray(org.hl7.fhir.ResourceReference[] requestDetailArray)
     {
         check_orphaned();
         arraySetterHelper(requestDetailArray, REQUESTDETAIL$10);
@@ -332,13 +334,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Sets ith "requestDetail" element
      */
-    public void setRequestDetailArray(int i, org.hl7.fhir.DiagnosticReportRequestDetail requestDetail)
+    public void setRequestDetailArray(int i, org.hl7.fhir.ResourceReference requestDetail)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.DiagnosticReportRequestDetail target = null;
-            target = (org.hl7.fhir.DiagnosticReportRequestDetail)get_store().find_element_user(REQUESTDETAIL$10, i);
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(REQUESTDETAIL$10, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -350,13 +352,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Inserts and returns a new empty value (as xml) as the ith "requestDetail" element
      */
-    public org.hl7.fhir.DiagnosticReportRequestDetail insertNewRequestDetail(int i)
+    public org.hl7.fhir.ResourceReference insertNewRequestDetail(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.DiagnosticReportRequestDetail target = null;
-            target = (org.hl7.fhir.DiagnosticReportRequestDetail)get_store().insert_element_user(REQUESTDETAIL$10, i);
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(REQUESTDETAIL$10, i);
             return target;
         }
     }
@@ -364,13 +366,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Appends and returns a new empty value (as xml) as the last "requestDetail" element
      */
-    public org.hl7.fhir.DiagnosticReportRequestDetail addNewRequestDetail()
+    public org.hl7.fhir.ResourceReference addNewRequestDetail()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.DiagnosticReportRequestDetail target = null;
-            target = (org.hl7.fhir.DiagnosticReportRequestDetail)get_store().add_element_user(REQUESTDETAIL$10);
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(REQUESTDETAIL$10);
             return target;
         }
     }
@@ -620,16 +622,129 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     }
     
     /**
-     * Gets array of all "image" elements
+     * Gets array of all "imagingStudy" elements
      */
-    public org.hl7.fhir.ResourceReference[] getImageArray()
+    public org.hl7.fhir.ResourceReference[] getImagingStudyArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(IMAGE$20, targetList);
+            get_store().find_all_element_users(IMAGINGSTUDY$20, targetList);
             org.hl7.fhir.ResourceReference[] result = new org.hl7.fhir.ResourceReference[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "imagingStudy" element
+     */
+    public org.hl7.fhir.ResourceReference getImagingStudyArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(IMAGINGSTUDY$20, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "imagingStudy" element
+     */
+    public int sizeOfImagingStudyArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(IMAGINGSTUDY$20);
+        }
+    }
+    
+    /**
+     * Sets array of all "imagingStudy" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setImagingStudyArray(org.hl7.fhir.ResourceReference[] imagingStudyArray)
+    {
+        check_orphaned();
+        arraySetterHelper(imagingStudyArray, IMAGINGSTUDY$20);
+    }
+    
+    /**
+     * Sets ith "imagingStudy" element
+     */
+    public void setImagingStudyArray(int i, org.hl7.fhir.ResourceReference imagingStudy)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(IMAGINGSTUDY$20, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(imagingStudy);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "imagingStudy" element
+     */
+    public org.hl7.fhir.ResourceReference insertNewImagingStudy(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(IMAGINGSTUDY$20, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "imagingStudy" element
+     */
+    public org.hl7.fhir.ResourceReference addNewImagingStudy()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ResourceReference target = null;
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(IMAGINGSTUDY$20);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "imagingStudy" element
+     */
+    public void removeImagingStudy(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(IMAGINGSTUDY$20, i);
+        }
+    }
+    
+    /**
+     * Gets array of all "image" elements
+     */
+    public org.hl7.fhir.DiagnosticReportImage[] getImageArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(IMAGE$22, targetList);
+            org.hl7.fhir.DiagnosticReportImage[] result = new org.hl7.fhir.DiagnosticReportImage[targetList.size()];
             targetList.toArray(result);
             return result;
         }
@@ -638,13 +753,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Gets ith "image" element
      */
-    public org.hl7.fhir.ResourceReference getImageArray(int i)
+    public org.hl7.fhir.DiagnosticReportImage getImageArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(IMAGE$20, i);
+            org.hl7.fhir.DiagnosticReportImage target = null;
+            target = (org.hl7.fhir.DiagnosticReportImage)get_store().find_element_user(IMAGE$22, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -661,29 +776,29 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(IMAGE$20);
+            return get_store().count_elements(IMAGE$22);
         }
     }
     
     /**
      * Sets array of all "image" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setImageArray(org.hl7.fhir.ResourceReference[] imageArray)
+    public void setImageArray(org.hl7.fhir.DiagnosticReportImage[] imageArray)
     {
         check_orphaned();
-        arraySetterHelper(imageArray, IMAGE$20);
+        arraySetterHelper(imageArray, IMAGE$22);
     }
     
     /**
      * Sets ith "image" element
      */
-    public void setImageArray(int i, org.hl7.fhir.ResourceReference image)
+    public void setImageArray(int i, org.hl7.fhir.DiagnosticReportImage image)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(IMAGE$20, i);
+            org.hl7.fhir.DiagnosticReportImage target = null;
+            target = (org.hl7.fhir.DiagnosticReportImage)get_store().find_element_user(IMAGE$22, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -695,13 +810,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Inserts and returns a new empty value (as xml) as the ith "image" element
      */
-    public org.hl7.fhir.ResourceReference insertNewImage(int i)
+    public org.hl7.fhir.DiagnosticReportImage insertNewImage(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(IMAGE$20, i);
+            org.hl7.fhir.DiagnosticReportImage target = null;
+            target = (org.hl7.fhir.DiagnosticReportImage)get_store().insert_element_user(IMAGE$22, i);
             return target;
         }
     }
@@ -709,13 +824,13 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     /**
      * Appends and returns a new empty value (as xml) as the last "image" element
      */
-    public org.hl7.fhir.ResourceReference addNewImage()
+    public org.hl7.fhir.DiagnosticReportImage addNewImage()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(IMAGE$20);
+            org.hl7.fhir.DiagnosticReportImage target = null;
+            target = (org.hl7.fhir.DiagnosticReportImage)get_store().add_element_user(IMAGE$22);
             return target;
         }
     }
@@ -728,7 +843,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(IMAGE$20, i);
+            get_store().remove_element(IMAGE$22, i);
         }
     }
     
@@ -741,7 +856,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(CONCLUSION$22, 0);
+            target = (org.hl7.fhir.String)get_store().find_element_user(CONCLUSION$24, 0);
             if (target == null)
             {
                 return null;
@@ -758,7 +873,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CONCLUSION$22) != 0;
+            return get_store().count_elements(CONCLUSION$24) != 0;
         }
     }
     
@@ -767,7 +882,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
      */
     public void setConclusion(org.hl7.fhir.String conclusion)
     {
-        generatedSetterHelperImpl(conclusion, CONCLUSION$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(conclusion, CONCLUSION$24, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -779,7 +894,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(CONCLUSION$22);
+            target = (org.hl7.fhir.String)get_store().add_element_user(CONCLUSION$24);
             return target;
         }
     }
@@ -792,7 +907,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CONCLUSION$22, 0);
+            get_store().remove_element(CONCLUSION$24, 0);
         }
     }
     
@@ -805,7 +920,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(CODEDDIAGNOSIS$24, targetList);
+            get_store().find_all_element_users(CODEDDIAGNOSIS$26, targetList);
             org.hl7.fhir.CodeableConcept[] result = new org.hl7.fhir.CodeableConcept[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -821,7 +936,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CODEDDIAGNOSIS$24, i);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CODEDDIAGNOSIS$26, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -838,7 +953,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CODEDDIAGNOSIS$24);
+            return get_store().count_elements(CODEDDIAGNOSIS$26);
         }
     }
     
@@ -848,7 +963,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     public void setCodedDiagnosisArray(org.hl7.fhir.CodeableConcept[] codedDiagnosisArray)
     {
         check_orphaned();
-        arraySetterHelper(codedDiagnosisArray, CODEDDIAGNOSIS$24);
+        arraySetterHelper(codedDiagnosisArray, CODEDDIAGNOSIS$26);
     }
     
     /**
@@ -860,7 +975,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CODEDDIAGNOSIS$24, i);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CODEDDIAGNOSIS$26, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -878,7 +993,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().insert_element_user(CODEDDIAGNOSIS$24, i);
+            target = (org.hl7.fhir.CodeableConcept)get_store().insert_element_user(CODEDDIAGNOSIS$26, i);
             return target;
         }
     }
@@ -892,7 +1007,7 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(CODEDDIAGNOSIS$24);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(CODEDDIAGNOSIS$26);
             return target;
         }
     }
@@ -905,20 +1020,20 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CODEDDIAGNOSIS$24, i);
+            get_store().remove_element(CODEDDIAGNOSIS$26, i);
         }
     }
     
     /**
-     * Gets array of all "representation" elements
+     * Gets array of all "presentedForm" elements
      */
-    public org.hl7.fhir.Attachment[] getRepresentationArray()
+    public org.hl7.fhir.Attachment[] getPresentedFormArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(REPRESENTATION$26, targetList);
+            get_store().find_all_element_users(PRESENTEDFORM$28, targetList);
             org.hl7.fhir.Attachment[] result = new org.hl7.fhir.Attachment[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -926,15 +1041,15 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     }
     
     /**
-     * Gets ith "representation" element
+     * Gets ith "presentedForm" element
      */
-    public org.hl7.fhir.Attachment getRepresentationArray(int i)
+    public org.hl7.fhir.Attachment getPresentedFormArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Attachment target = null;
-            target = (org.hl7.fhir.Attachment)get_store().find_element_user(REPRESENTATION$26, i);
+            target = (org.hl7.fhir.Attachment)get_store().find_element_user(PRESENTEDFORM$28, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -944,81 +1059,81 @@ public class DiagnosticReportImpl extends org.hl7.fhir.impl.ResourceImpl impleme
     }
     
     /**
-     * Returns number of "representation" element
+     * Returns number of "presentedForm" element
      */
-    public int sizeOfRepresentationArray()
+    public int sizeOfPresentedFormArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REPRESENTATION$26);
+            return get_store().count_elements(PRESENTEDFORM$28);
         }
     }
     
     /**
-     * Sets array of all "representation" element  WARNING: This method is not atomicaly synchronized.
+     * Sets array of all "presentedForm" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setRepresentationArray(org.hl7.fhir.Attachment[] representationArray)
+    public void setPresentedFormArray(org.hl7.fhir.Attachment[] presentedFormArray)
     {
         check_orphaned();
-        arraySetterHelper(representationArray, REPRESENTATION$26);
+        arraySetterHelper(presentedFormArray, PRESENTEDFORM$28);
     }
     
     /**
-     * Sets ith "representation" element
+     * Sets ith "presentedForm" element
      */
-    public void setRepresentationArray(int i, org.hl7.fhir.Attachment representation)
+    public void setPresentedFormArray(int i, org.hl7.fhir.Attachment presentedForm)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Attachment target = null;
-            target = (org.hl7.fhir.Attachment)get_store().find_element_user(REPRESENTATION$26, i);
+            target = (org.hl7.fhir.Attachment)get_store().find_element_user(PRESENTEDFORM$28, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
             }
-            target.set(representation);
+            target.set(presentedForm);
         }
     }
     
     /**
-     * Inserts and returns a new empty value (as xml) as the ith "representation" element
+     * Inserts and returns a new empty value (as xml) as the ith "presentedForm" element
      */
-    public org.hl7.fhir.Attachment insertNewRepresentation(int i)
+    public org.hl7.fhir.Attachment insertNewPresentedForm(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Attachment target = null;
-            target = (org.hl7.fhir.Attachment)get_store().insert_element_user(REPRESENTATION$26, i);
+            target = (org.hl7.fhir.Attachment)get_store().insert_element_user(PRESENTEDFORM$28, i);
             return target;
         }
     }
     
     /**
-     * Appends and returns a new empty value (as xml) as the last "representation" element
+     * Appends and returns a new empty value (as xml) as the last "presentedForm" element
      */
-    public org.hl7.fhir.Attachment addNewRepresentation()
+    public org.hl7.fhir.Attachment addNewPresentedForm()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Attachment target = null;
-            target = (org.hl7.fhir.Attachment)get_store().add_element_user(REPRESENTATION$26);
+            target = (org.hl7.fhir.Attachment)get_store().add_element_user(PRESENTEDFORM$28);
             return target;
         }
     }
     
     /**
-     * Removes the ith "representation" element
+     * Removes the ith "presentedForm" element
      */
-    public void removeRepresentation(int i)
+    public void removePresentedForm(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REPRESENTATION$26, i);
+            get_store().remove_element(PRESENTEDFORM$28, i);
         }
     }
 }

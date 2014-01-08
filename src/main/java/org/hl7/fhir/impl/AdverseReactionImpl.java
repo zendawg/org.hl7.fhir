@@ -22,8 +22,8 @@ public class AdverseReactionImpl extends org.hl7.fhir.impl.ResourceImpl implemen
     
     private static final javax.xml.namespace.QName IDENTIFIER$0 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
-    private static final javax.xml.namespace.QName REACTIONDATE$2 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "reactionDate");
+    private static final javax.xml.namespace.QName DATE$2 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
     private static final javax.xml.namespace.QName SUBJECT$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
     private static final javax.xml.namespace.QName DIDNOTOCCURFLAG$6 = 
@@ -150,15 +150,15 @@ public class AdverseReactionImpl extends org.hl7.fhir.impl.ResourceImpl implemen
     }
     
     /**
-     * Gets the "reactionDate" element
+     * Gets the "date" element
      */
-    public org.hl7.fhir.DateTime getReactionDate()
+    public org.hl7.fhir.DateTime getDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(REACTIONDATE$2, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$2, 0);
             if (target == null)
             {
                 return null;
@@ -168,48 +168,48 @@ public class AdverseReactionImpl extends org.hl7.fhir.impl.ResourceImpl implemen
     }
     
     /**
-     * True if has "reactionDate" element
+     * True if has "date" element
      */
-    public boolean isSetReactionDate()
+    public boolean isSetDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REACTIONDATE$2) != 0;
+            return get_store().count_elements(DATE$2) != 0;
         }
     }
     
     /**
-     * Sets the "reactionDate" element
+     * Sets the "date" element
      */
-    public void setReactionDate(org.hl7.fhir.DateTime reactionDate)
+    public void setDate(org.hl7.fhir.DateTime date)
     {
-        generatedSetterHelperImpl(reactionDate, REACTIONDATE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(date, DATE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "reactionDate" element
+     * Appends and returns a new empty "date" element
      */
-    public org.hl7.fhir.DateTime addNewReactionDate()
+    public org.hl7.fhir.DateTime addNewDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(REACTIONDATE$2);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$2);
             return target;
         }
     }
     
     /**
-     * Unsets the "reactionDate" element
+     * Unsets the "date" element
      */
-    public void unsetReactionDate()
+    public void unsetDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REACTIONDATE$2, 0);
+            get_store().remove_element(DATE$2, 0);
         }
     }
     

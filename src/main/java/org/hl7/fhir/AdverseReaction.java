@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface AdverseReaction extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AdverseReaction.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("adversereaction78f5type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AdverseReaction.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("adversereaction78f5type");
     
     /**
      * Gets array of all "identifier" elements
@@ -59,29 +59,29 @@ public interface AdverseReaction extends org.hl7.fhir.Resource
     void removeIdentifier(int i);
     
     /**
-     * Gets the "reactionDate" element
+     * Gets the "date" element
      */
-    org.hl7.fhir.DateTime getReactionDate();
+    org.hl7.fhir.DateTime getDate();
     
     /**
-     * True if has "reactionDate" element
+     * True if has "date" element
      */
-    boolean isSetReactionDate();
+    boolean isSetDate();
     
     /**
-     * Sets the "reactionDate" element
+     * Sets the "date" element
      */
-    void setReactionDate(org.hl7.fhir.DateTime reactionDate);
+    void setDate(org.hl7.fhir.DateTime date);
     
     /**
-     * Appends and returns a new empty "reactionDate" element
+     * Appends and returns a new empty "date" element
      */
-    org.hl7.fhir.DateTime addNewReactionDate();
+    org.hl7.fhir.DateTime addNewDate();
     
     /**
-     * Unsets the "reactionDate" element
+     * Unsets the "date" element
      */
-    void unsetReactionDate();
+    void unsetDate();
     
     /**
      * Gets the "subject" element

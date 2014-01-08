@@ -24,13 +24,15 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         new javax.xml.namespace.QName("http://hl7.org/fhir", "collector");
     private static final javax.xml.namespace.QName COMMENT$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "comment");
-    private static final javax.xml.namespace.QName COLLECTEDTIME$4 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "collectedTime");
-    private static final javax.xml.namespace.QName QUANTITY$6 = 
+    private static final javax.xml.namespace.QName COLLECTEDDATETIME$4 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "collectedDateTime");
+    private static final javax.xml.namespace.QName COLLECTEDPERIOD$6 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "collectedPeriod");
+    private static final javax.xml.namespace.QName QUANTITY$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "quantity");
-    private static final javax.xml.namespace.QName METHOD$8 = 
+    private static final javax.xml.namespace.QName METHOD$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "method");
-    private static final javax.xml.namespace.QName SOURCESITE$10 = 
+    private static final javax.xml.namespace.QName SOURCESITE$12 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "sourceSite");
     
     
@@ -212,15 +214,15 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
     }
     
     /**
-     * Gets the "collectedTime" element
+     * Gets the "collectedDateTime" element
      */
-    public org.hl7.fhir.DateTime getCollectedTime()
+    public org.hl7.fhir.DateTime getCollectedDateTime()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(COLLECTEDTIME$4, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(COLLECTEDDATETIME$4, 0);
             if (target == null)
             {
                 return null;
@@ -230,24 +232,112 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
     }
     
     /**
-     * Sets the "collectedTime" element
+     * True if has "collectedDateTime" element
      */
-    public void setCollectedTime(org.hl7.fhir.DateTime collectedTime)
+    public boolean isSetCollectedDateTime()
     {
-        generatedSetterHelperImpl(collectedTime, COLLECTEDTIME$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(COLLECTEDDATETIME$4) != 0;
+        }
     }
     
     /**
-     * Appends and returns a new empty "collectedTime" element
+     * Sets the "collectedDateTime" element
      */
-    public org.hl7.fhir.DateTime addNewCollectedTime()
+    public void setCollectedDateTime(org.hl7.fhir.DateTime collectedDateTime)
+    {
+        generatedSetterHelperImpl(collectedDateTime, COLLECTEDDATETIME$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "collectedDateTime" element
+     */
+    public org.hl7.fhir.DateTime addNewCollectedDateTime()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(COLLECTEDTIME$4);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(COLLECTEDDATETIME$4);
             return target;
+        }
+    }
+    
+    /**
+     * Unsets the "collectedDateTime" element
+     */
+    public void unsetCollectedDateTime()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(COLLECTEDDATETIME$4, 0);
+        }
+    }
+    
+    /**
+     * Gets the "collectedPeriod" element
+     */
+    public org.hl7.fhir.Period getCollectedPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Period target = null;
+            target = (org.hl7.fhir.Period)get_store().find_element_user(COLLECTEDPERIOD$6, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "collectedPeriod" element
+     */
+    public boolean isSetCollectedPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(COLLECTEDPERIOD$6) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "collectedPeriod" element
+     */
+    public void setCollectedPeriod(org.hl7.fhir.Period collectedPeriod)
+    {
+        generatedSetterHelperImpl(collectedPeriod, COLLECTEDPERIOD$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "collectedPeriod" element
+     */
+    public org.hl7.fhir.Period addNewCollectedPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Period target = null;
+            target = (org.hl7.fhir.Period)get_store().add_element_user(COLLECTEDPERIOD$6);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "collectedPeriod" element
+     */
+    public void unsetCollectedPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(COLLECTEDPERIOD$6, 0);
         }
     }
     
@@ -260,7 +350,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().find_element_user(QUANTITY$6, 0);
+            target = (org.hl7.fhir.Quantity)get_store().find_element_user(QUANTITY$8, 0);
             if (target == null)
             {
                 return null;
@@ -277,7 +367,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(QUANTITY$6) != 0;
+            return get_store().count_elements(QUANTITY$8) != 0;
         }
     }
     
@@ -286,7 +376,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setQuantity(org.hl7.fhir.Quantity quantity)
     {
-        generatedSetterHelperImpl(quantity, QUANTITY$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(quantity, QUANTITY$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -298,7 +388,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().add_element_user(QUANTITY$6);
+            target = (org.hl7.fhir.Quantity)get_store().add_element_user(QUANTITY$8);
             return target;
         }
     }
@@ -311,7 +401,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(QUANTITY$6, 0);
+            get_store().remove_element(QUANTITY$8, 0);
         }
     }
     
@@ -324,7 +414,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(METHOD$8, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(METHOD$10, 0);
             if (target == null)
             {
                 return null;
@@ -341,7 +431,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(METHOD$8) != 0;
+            return get_store().count_elements(METHOD$10) != 0;
         }
     }
     
@@ -350,7 +440,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setMethod(org.hl7.fhir.CodeableConcept method)
     {
-        generatedSetterHelperImpl(method, METHOD$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(method, METHOD$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -362,7 +452,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(METHOD$8);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(METHOD$10);
             return target;
         }
     }
@@ -375,7 +465,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(METHOD$8, 0);
+            get_store().remove_element(METHOD$10, 0);
         }
     }
     
@@ -388,7 +478,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SOURCESITE$10, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SOURCESITE$12, 0);
             if (target == null)
             {
                 return null;
@@ -405,7 +495,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SOURCESITE$10) != 0;
+            return get_store().count_elements(SOURCESITE$12) != 0;
         }
     }
     
@@ -414,7 +504,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setSourceSite(org.hl7.fhir.CodeableConcept sourceSite)
     {
-        generatedSetterHelperImpl(sourceSite, SOURCESITE$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(sourceSite, SOURCESITE$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -426,7 +516,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SOURCESITE$10);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SOURCESITE$12);
             return target;
         }
     }
@@ -439,7 +529,7 @@ public class SpecimenCollectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SOURCESITE$10, 0);
+            get_store().remove_element(SOURCESITE$12, 0);
         }
     }
 }

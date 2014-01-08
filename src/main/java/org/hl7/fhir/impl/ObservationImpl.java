@@ -40,10 +40,10 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         new javax.xml.namespace.QName("http://hl7.org/fhir", "interpretation");
     private static final javax.xml.namespace.QName COMMENTS$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "comments");
-    private static final javax.xml.namespace.QName APPLIESPERIOD$20 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "appliesPeriod");
-    private static final javax.xml.namespace.QName APPLIESDATETIME$22 = 
+    private static final javax.xml.namespace.QName APPLIESDATETIME$20 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "appliesDateTime");
+    private static final javax.xml.namespace.QName APPLIESPERIOD$22 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "appliesPeriod");
     private static final javax.xml.namespace.QName ISSUED$24 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "issued");
     private static final javax.xml.namespace.QName STATUS$26 = 
@@ -683,70 +683,6 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
     }
     
     /**
-     * Gets the "appliesPeriod" element
-     */
-    public org.hl7.fhir.Period getAppliesPeriod()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().find_element_user(APPLIESPERIOD$20, 0);
-            if (target == null)
-            {
-                return null;
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * True if has "appliesPeriod" element
-     */
-    public boolean isSetAppliesPeriod()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(APPLIESPERIOD$20) != 0;
-        }
-    }
-    
-    /**
-     * Sets the "appliesPeriod" element
-     */
-    public void setAppliesPeriod(org.hl7.fhir.Period appliesPeriod)
-    {
-        generatedSetterHelperImpl(appliesPeriod, APPLIESPERIOD$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-    }
-    
-    /**
-     * Appends and returns a new empty "appliesPeriod" element
-     */
-    public org.hl7.fhir.Period addNewAppliesPeriod()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().add_element_user(APPLIESPERIOD$20);
-            return target;
-        }
-    }
-    
-    /**
-     * Unsets the "appliesPeriod" element
-     */
-    public void unsetAppliesPeriod()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(APPLIESPERIOD$20, 0);
-        }
-    }
-    
-    /**
      * Gets the "appliesDateTime" element
      */
     public org.hl7.fhir.DateTime getAppliesDateTime()
@@ -755,7 +691,7 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(APPLIESDATETIME$22, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(APPLIESDATETIME$20, 0);
             if (target == null)
             {
                 return null;
@@ -772,7 +708,7 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(APPLIESDATETIME$22) != 0;
+            return get_store().count_elements(APPLIESDATETIME$20) != 0;
         }
     }
     
@@ -781,7 +717,7 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
      */
     public void setAppliesDateTime(org.hl7.fhir.DateTime appliesDateTime)
     {
-        generatedSetterHelperImpl(appliesDateTime, APPLIESDATETIME$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(appliesDateTime, APPLIESDATETIME$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -793,7 +729,7 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(APPLIESDATETIME$22);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(APPLIESDATETIME$20);
             return target;
         }
     }
@@ -806,7 +742,71 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(APPLIESDATETIME$22, 0);
+            get_store().remove_element(APPLIESDATETIME$20, 0);
+        }
+    }
+    
+    /**
+     * Gets the "appliesPeriod" element
+     */
+    public org.hl7.fhir.Period getAppliesPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Period target = null;
+            target = (org.hl7.fhir.Period)get_store().find_element_user(APPLIESPERIOD$22, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "appliesPeriod" element
+     */
+    public boolean isSetAppliesPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(APPLIESPERIOD$22) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "appliesPeriod" element
+     */
+    public void setAppliesPeriod(org.hl7.fhir.Period appliesPeriod)
+    {
+        generatedSetterHelperImpl(appliesPeriod, APPLIESPERIOD$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "appliesPeriod" element
+     */
+    public org.hl7.fhir.Period addNewAppliesPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Period target = null;
+            target = (org.hl7.fhir.Period)get_store().add_element_user(APPLIESPERIOD$22);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "appliesPeriod" element
+     */
+    public void unsetAppliesPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(APPLIESPERIOD$22, 0);
         }
     }
     

@@ -20,10 +20,10 @@ public class AdverseReactionExposureImpl extends org.hl7.fhir.impl.BackboneEleme
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName EXPOSUREDATE$0 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "exposureDate");
-    private static final javax.xml.namespace.QName EXPOSURETYPE$2 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "exposureType");
+    private static final javax.xml.namespace.QName DATE$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
+    private static final javax.xml.namespace.QName TYPE$2 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "type");
     private static final javax.xml.namespace.QName CAUSALITYEXPECTATION$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "causalityExpectation");
     private static final javax.xml.namespace.QName SUBSTANCE$6 = 
@@ -31,15 +31,15 @@ public class AdverseReactionExposureImpl extends org.hl7.fhir.impl.BackboneEleme
     
     
     /**
-     * Gets the "exposureDate" element
+     * Gets the "date" element
      */
-    public org.hl7.fhir.DateTime getExposureDate()
+    public org.hl7.fhir.DateTime getDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(EXPOSUREDATE$0, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$0, 0);
             if (target == null)
             {
                 return null;
@@ -49,61 +49,61 @@ public class AdverseReactionExposureImpl extends org.hl7.fhir.impl.BackboneEleme
     }
     
     /**
-     * True if has "exposureDate" element
+     * True if has "date" element
      */
-    public boolean isSetExposureDate()
+    public boolean isSetDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(EXPOSUREDATE$0) != 0;
+            return get_store().count_elements(DATE$0) != 0;
         }
     }
     
     /**
-     * Sets the "exposureDate" element
+     * Sets the "date" element
      */
-    public void setExposureDate(org.hl7.fhir.DateTime exposureDate)
+    public void setDate(org.hl7.fhir.DateTime date)
     {
-        generatedSetterHelperImpl(exposureDate, EXPOSUREDATE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(date, DATE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "exposureDate" element
+     * Appends and returns a new empty "date" element
      */
-    public org.hl7.fhir.DateTime addNewExposureDate()
+    public org.hl7.fhir.DateTime addNewDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(EXPOSUREDATE$0);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$0);
             return target;
         }
     }
     
     /**
-     * Unsets the "exposureDate" element
+     * Unsets the "date" element
      */
-    public void unsetExposureDate()
+    public void unsetDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(EXPOSUREDATE$0, 0);
+            get_store().remove_element(DATE$0, 0);
         }
     }
     
     /**
-     * Gets the "exposureType" element
+     * Gets the "type" element
      */
-    public org.hl7.fhir.ExposureType getExposureType()
+    public org.hl7.fhir.ExposureType getType()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ExposureType target = null;
-            target = (org.hl7.fhir.ExposureType)get_store().find_element_user(EXPOSURETYPE$2, 0);
+            target = (org.hl7.fhir.ExposureType)get_store().find_element_user(TYPE$2, 0);
             if (target == null)
             {
                 return null;
@@ -113,48 +113,48 @@ public class AdverseReactionExposureImpl extends org.hl7.fhir.impl.BackboneEleme
     }
     
     /**
-     * True if has "exposureType" element
+     * True if has "type" element
      */
-    public boolean isSetExposureType()
+    public boolean isSetType()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(EXPOSURETYPE$2) != 0;
+            return get_store().count_elements(TYPE$2) != 0;
         }
     }
     
     /**
-     * Sets the "exposureType" element
+     * Sets the "type" element
      */
-    public void setExposureType(org.hl7.fhir.ExposureType exposureType)
+    public void setType(org.hl7.fhir.ExposureType type)
     {
-        generatedSetterHelperImpl(exposureType, EXPOSURETYPE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(type, TYPE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "exposureType" element
+     * Appends and returns a new empty "type" element
      */
-    public org.hl7.fhir.ExposureType addNewExposureType()
+    public org.hl7.fhir.ExposureType addNewType()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ExposureType target = null;
-            target = (org.hl7.fhir.ExposureType)get_store().add_element_user(EXPOSURETYPE$2);
+            target = (org.hl7.fhir.ExposureType)get_store().add_element_user(TYPE$2);
             return target;
         }
     }
     
     /**
-     * Unsets the "exposureType" element
+     * Unsets the "type" element
      */
-    public void unsetExposureType()
+    public void unsetType()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(EXPOSURETYPE$2, 0);
+            get_store().remove_element(TYPE$2, 0);
         }
     }
     

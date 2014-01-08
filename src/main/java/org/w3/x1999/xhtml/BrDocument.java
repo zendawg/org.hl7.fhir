@@ -17,7 +17,7 @@ package org.w3.x1999.xhtml;
 public interface BrDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(BrDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("br7327doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(BrDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("br7327doctype");
     
     /**
      * Gets the "br" element
@@ -42,7 +42,7 @@ public interface BrDocument extends org.apache.xmlbeans.XmlObject
     public interface Br extends org.apache.xmlbeans.XmlObject
     {
         public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Br.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("br0713elemtype");
+            org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Br.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("br0713elemtype");
         
         /**
          * Gets the "id" attribute

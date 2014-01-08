@@ -1,21 +1,21 @@
 /*
- * XML Type:  ImmunizationForecastStatus
+ * XML Type:  SupplyStatus
  * Namespace: http://hl7.org/fhir
- * Java type: org.hl7.fhir.ImmunizationForecastStatus
+ * Java type: org.hl7.fhir.SupplyStatus
  *
  * Automatically generated - do not modify.
  */
 package org.hl7.fhir.impl;
 /**
- * An XML ImmunizationForecastStatus(@http://hl7.org/fhir).
+ * An XML SupplyStatus(@http://hl7.org/fhir).
  *
  * This is a complex type.
  */
-public class ImmunizationForecastStatusImpl extends org.hl7.fhir.impl.ElementImpl implements org.hl7.fhir.ImmunizationForecastStatus
+public class SupplyStatusImpl extends org.hl7.fhir.impl.ElementImpl implements org.hl7.fhir.SupplyStatus
 {
     private static final long serialVersionUID = 1L;
     
-    public ImmunizationForecastStatusImpl(org.apache.xmlbeans.SchemaType sType)
+    public SupplyStatusImpl(org.apache.xmlbeans.SchemaType sType)
     {
         super(sType);
     }
@@ -27,7 +27,7 @@ public class ImmunizationForecastStatusImpl extends org.hl7.fhir.impl.ElementImp
     /**
      * Gets the "value" attribute
      */
-    public org.hl7.fhir.ImmunizationForecastStatusList.Enum getValue()
+    public org.hl7.fhir.SupplyStatusList.Enum getValue()
     {
         synchronized (monitor())
         {
@@ -38,20 +38,20 @@ public class ImmunizationForecastStatusImpl extends org.hl7.fhir.impl.ElementImp
             {
                 return null;
             }
-            return (org.hl7.fhir.ImmunizationForecastStatusList.Enum)target.getEnumValue();
+            return (org.hl7.fhir.SupplyStatusList.Enum)target.getEnumValue();
         }
     }
     
     /**
      * Gets (as xml) the "value" attribute
      */
-    public org.hl7.fhir.ImmunizationForecastStatusList xgetValue()
+    public org.hl7.fhir.SupplyStatusList xgetValue()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ImmunizationForecastStatusList target = null;
-            target = (org.hl7.fhir.ImmunizationForecastStatusList)get_store().find_attribute_user(VALUE$0);
+            org.hl7.fhir.SupplyStatusList target = null;
+            target = (org.hl7.fhir.SupplyStatusList)get_store().find_attribute_user(VALUE$0);
             return target;
         }
     }
@@ -71,7 +71,7 @@ public class ImmunizationForecastStatusImpl extends org.hl7.fhir.impl.ElementImp
     /**
      * Sets the "value" attribute
      */
-    public void setValue(org.hl7.fhir.ImmunizationForecastStatusList.Enum value)
+    public void setValue(org.hl7.fhir.SupplyStatusList.Enum value)
     {
         synchronized (monitor())
         {
@@ -89,16 +89,16 @@ public class ImmunizationForecastStatusImpl extends org.hl7.fhir.impl.ElementImp
     /**
      * Sets (as xml) the "value" attribute
      */
-    public void xsetValue(org.hl7.fhir.ImmunizationForecastStatusList value)
+    public void xsetValue(org.hl7.fhir.SupplyStatusList value)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ImmunizationForecastStatusList target = null;
-            target = (org.hl7.fhir.ImmunizationForecastStatusList)get_store().find_attribute_user(VALUE$0);
+            org.hl7.fhir.SupplyStatusList target = null;
+            target = (org.hl7.fhir.SupplyStatusList)get_store().find_attribute_user(VALUE$0);
             if (target == null)
             {
-                target = (org.hl7.fhir.ImmunizationForecastStatusList)get_store().add_attribute_user(VALUE$0);
+                target = (org.hl7.fhir.SupplyStatusList)get_store().add_attribute_user(VALUE$0);
             }
             target.set(value);
         }

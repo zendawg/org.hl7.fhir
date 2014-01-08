@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ValueSetContains extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ValueSetContains.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("valuesetcontains2fd6type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ValueSetContains.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("valuesetcontains2fd6type");
     
     /**
      * Gets the "system" element

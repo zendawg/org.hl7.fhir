@@ -40,13 +40,15 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         new javax.xml.namespace.QName("http://hl7.org/fhir", "experimental");
     private static final javax.xml.namespace.QName DATE$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
-    private static final javax.xml.namespace.QName FHIRVERSION$20 = 
+    private static final javax.xml.namespace.QName REQUIREMENTS$20 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "requirements");
+    private static final javax.xml.namespace.QName FHIRVERSION$22 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "fhirVersion");
-    private static final javax.xml.namespace.QName MAPPING$22 = 
+    private static final javax.xml.namespace.QName MAPPING$24 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "mapping");
-    private static final javax.xml.namespace.QName STRUCTURE$24 = 
+    private static final javax.xml.namespace.QName STRUCTURE$26 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "structure");
-    private static final javax.xml.namespace.QName EXTENSIONDEFN$26 = 
+    private static final javax.xml.namespace.QName EXTENSIONDEFN$28 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "extensionDefn");
     
     
@@ -741,6 +743,70 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
     }
     
     /**
+     * Gets the "requirements" element
+     */
+    public org.hl7.fhir.String getRequirements()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.String target = null;
+            target = (org.hl7.fhir.String)get_store().find_element_user(REQUIREMENTS$20, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "requirements" element
+     */
+    public boolean isSetRequirements()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(REQUIREMENTS$20) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "requirements" element
+     */
+    public void setRequirements(org.hl7.fhir.String requirements)
+    {
+        generatedSetterHelperImpl(requirements, REQUIREMENTS$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "requirements" element
+     */
+    public org.hl7.fhir.String addNewRequirements()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.String target = null;
+            target = (org.hl7.fhir.String)get_store().add_element_user(REQUIREMENTS$20);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "requirements" element
+     */
+    public void unsetRequirements()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(REQUIREMENTS$20, 0);
+        }
+    }
+    
+    /**
      * Gets the "fhirVersion" element
      */
     public org.hl7.fhir.Id getFhirVersion()
@@ -749,7 +815,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.Id target = null;
-            target = (org.hl7.fhir.Id)get_store().find_element_user(FHIRVERSION$20, 0);
+            target = (org.hl7.fhir.Id)get_store().find_element_user(FHIRVERSION$22, 0);
             if (target == null)
             {
                 return null;
@@ -766,7 +832,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(FHIRVERSION$20) != 0;
+            return get_store().count_elements(FHIRVERSION$22) != 0;
         }
     }
     
@@ -775,7 +841,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
      */
     public void setFhirVersion(org.hl7.fhir.Id fhirVersion)
     {
-        generatedSetterHelperImpl(fhirVersion, FHIRVERSION$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(fhirVersion, FHIRVERSION$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -787,7 +853,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.Id target = null;
-            target = (org.hl7.fhir.Id)get_store().add_element_user(FHIRVERSION$20);
+            target = (org.hl7.fhir.Id)get_store().add_element_user(FHIRVERSION$22);
             return target;
         }
     }
@@ -800,7 +866,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(FHIRVERSION$20, 0);
+            get_store().remove_element(FHIRVERSION$22, 0);
         }
     }
     
@@ -813,7 +879,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(MAPPING$22, targetList);
+            get_store().find_all_element_users(MAPPING$24, targetList);
             org.hl7.fhir.ProfileMapping[] result = new org.hl7.fhir.ProfileMapping[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -829,7 +895,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileMapping target = null;
-            target = (org.hl7.fhir.ProfileMapping)get_store().find_element_user(MAPPING$22, i);
+            target = (org.hl7.fhir.ProfileMapping)get_store().find_element_user(MAPPING$24, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -846,7 +912,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(MAPPING$22);
+            return get_store().count_elements(MAPPING$24);
         }
     }
     
@@ -856,7 +922,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
     public void setMappingArray(org.hl7.fhir.ProfileMapping[] mappingArray)
     {
         check_orphaned();
-        arraySetterHelper(mappingArray, MAPPING$22);
+        arraySetterHelper(mappingArray, MAPPING$24);
     }
     
     /**
@@ -868,7 +934,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileMapping target = null;
-            target = (org.hl7.fhir.ProfileMapping)get_store().find_element_user(MAPPING$22, i);
+            target = (org.hl7.fhir.ProfileMapping)get_store().find_element_user(MAPPING$24, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -886,7 +952,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileMapping target = null;
-            target = (org.hl7.fhir.ProfileMapping)get_store().insert_element_user(MAPPING$22, i);
+            target = (org.hl7.fhir.ProfileMapping)get_store().insert_element_user(MAPPING$24, i);
             return target;
         }
     }
@@ -900,7 +966,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileMapping target = null;
-            target = (org.hl7.fhir.ProfileMapping)get_store().add_element_user(MAPPING$22);
+            target = (org.hl7.fhir.ProfileMapping)get_store().add_element_user(MAPPING$24);
             return target;
         }
     }
@@ -913,7 +979,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(MAPPING$22, i);
+            get_store().remove_element(MAPPING$24, i);
         }
     }
     
@@ -926,7 +992,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(STRUCTURE$24, targetList);
+            get_store().find_all_element_users(STRUCTURE$26, targetList);
             org.hl7.fhir.ProfileStructure[] result = new org.hl7.fhir.ProfileStructure[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -942,7 +1008,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileStructure target = null;
-            target = (org.hl7.fhir.ProfileStructure)get_store().find_element_user(STRUCTURE$24, i);
+            target = (org.hl7.fhir.ProfileStructure)get_store().find_element_user(STRUCTURE$26, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -959,7 +1025,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(STRUCTURE$24);
+            return get_store().count_elements(STRUCTURE$26);
         }
     }
     
@@ -969,7 +1035,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
     public void setStructureArray(org.hl7.fhir.ProfileStructure[] structureArray)
     {
         check_orphaned();
-        arraySetterHelper(structureArray, STRUCTURE$24);
+        arraySetterHelper(structureArray, STRUCTURE$26);
     }
     
     /**
@@ -981,7 +1047,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileStructure target = null;
-            target = (org.hl7.fhir.ProfileStructure)get_store().find_element_user(STRUCTURE$24, i);
+            target = (org.hl7.fhir.ProfileStructure)get_store().find_element_user(STRUCTURE$26, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -999,7 +1065,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileStructure target = null;
-            target = (org.hl7.fhir.ProfileStructure)get_store().insert_element_user(STRUCTURE$24, i);
+            target = (org.hl7.fhir.ProfileStructure)get_store().insert_element_user(STRUCTURE$26, i);
             return target;
         }
     }
@@ -1013,7 +1079,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileStructure target = null;
-            target = (org.hl7.fhir.ProfileStructure)get_store().add_element_user(STRUCTURE$24);
+            target = (org.hl7.fhir.ProfileStructure)get_store().add_element_user(STRUCTURE$26);
             return target;
         }
     }
@@ -1026,7 +1092,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(STRUCTURE$24, i);
+            get_store().remove_element(STRUCTURE$26, i);
         }
     }
     
@@ -1039,7 +1105,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(EXTENSIONDEFN$26, targetList);
+            get_store().find_all_element_users(EXTENSIONDEFN$28, targetList);
             org.hl7.fhir.ProfileExtensionDefn[] result = new org.hl7.fhir.ProfileExtensionDefn[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -1055,7 +1121,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileExtensionDefn target = null;
-            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().find_element_user(EXTENSIONDEFN$26, i);
+            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().find_element_user(EXTENSIONDEFN$28, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -1072,7 +1138,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(EXTENSIONDEFN$26);
+            return get_store().count_elements(EXTENSIONDEFN$28);
         }
     }
     
@@ -1082,7 +1148,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
     public void setExtensionDefnArray(org.hl7.fhir.ProfileExtensionDefn[] extensionDefnArray)
     {
         check_orphaned();
-        arraySetterHelper(extensionDefnArray, EXTENSIONDEFN$26);
+        arraySetterHelper(extensionDefnArray, EXTENSIONDEFN$28);
     }
     
     /**
@@ -1094,7 +1160,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileExtensionDefn target = null;
-            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().find_element_user(EXTENSIONDEFN$26, i);
+            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().find_element_user(EXTENSIONDEFN$28, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -1112,7 +1178,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileExtensionDefn target = null;
-            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().insert_element_user(EXTENSIONDEFN$26, i);
+            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().insert_element_user(EXTENSIONDEFN$28, i);
             return target;
         }
     }
@@ -1126,7 +1192,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             org.hl7.fhir.ProfileExtensionDefn target = null;
-            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().add_element_user(EXTENSIONDEFN$26);
+            target = (org.hl7.fhir.ProfileExtensionDefn)get_store().add_element_user(EXTENSIONDEFN$28);
             return target;
         }
     }
@@ -1139,7 +1205,7 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(EXTENSIONDEFN$26, i);
+            get_store().remove_element(EXTENSIONDEFN$28, i);
         }
     }
 }

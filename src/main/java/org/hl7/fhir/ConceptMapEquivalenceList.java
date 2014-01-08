@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ConceptMapEquivalenceList extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapEquivalenceList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("conceptmapequivalencelist5a3ftype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapEquivalenceList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conceptmapequivalencelist5a3ftype");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -24,7 +24,9 @@ public interface ConceptMapEquivalenceList extends org.apache.xmlbeans.XmlString
     static final Enum EQUAL = Enum.forString("equal");
     static final Enum EQUIVALENT = Enum.forString("equivalent");
     static final Enum WIDER = Enum.forString("wider");
+    static final Enum SUBSUMES = Enum.forString("subsumes");
     static final Enum NARROWER = Enum.forString("narrower");
+    static final Enum SPECIALISES = Enum.forString("specialises");
     static final Enum INEXACT = Enum.forString("inexact");
     static final Enum UNMATCHED = Enum.forString("unmatched");
     static final Enum DISJOINT = Enum.forString("disjoint");
@@ -32,7 +34,9 @@ public interface ConceptMapEquivalenceList extends org.apache.xmlbeans.XmlString
     static final int INT_EQUAL = Enum.INT_EQUAL;
     static final int INT_EQUIVALENT = Enum.INT_EQUIVALENT;
     static final int INT_WIDER = Enum.INT_WIDER;
+    static final int INT_SUBSUMES = Enum.INT_SUBSUMES;
     static final int INT_NARROWER = Enum.INT_NARROWER;
+    static final int INT_SPECIALISES = Enum.INT_SPECIALISES;
     static final int INT_INEXACT = Enum.INT_INEXACT;
     static final int INT_UNMATCHED = Enum.INT_UNMATCHED;
     static final int INT_DISJOINT = Enum.INT_DISJOINT;
@@ -71,10 +75,12 @@ public interface ConceptMapEquivalenceList extends org.apache.xmlbeans.XmlString
         static final int INT_EQUAL = 1;
         static final int INT_EQUIVALENT = 2;
         static final int INT_WIDER = 3;
-        static final int INT_NARROWER = 4;
-        static final int INT_INEXACT = 5;
-        static final int INT_UNMATCHED = 6;
-        static final int INT_DISJOINT = 7;
+        static final int INT_SUBSUMES = 4;
+        static final int INT_NARROWER = 5;
+        static final int INT_SPECIALISES = 6;
+        static final int INT_INEXACT = 7;
+        static final int INT_UNMATCHED = 8;
+        static final int INT_DISJOINT = 9;
         
         public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
             new org.apache.xmlbeans.StringEnumAbstractBase.Table
@@ -84,7 +90,9 @@ public interface ConceptMapEquivalenceList extends org.apache.xmlbeans.XmlString
                 new Enum("equal", INT_EQUAL),
                 new Enum("equivalent", INT_EQUIVALENT),
                 new Enum("wider", INT_WIDER),
+                new Enum("subsumes", INT_SUBSUMES),
                 new Enum("narrower", INT_NARROWER),
+                new Enum("specialises", INT_SPECIALISES),
                 new Enum("inexact", INT_INEXACT),
                 new Enum("unmatched", INT_UNMATCHED),
                 new Enum("disjoint", INT_DISJOINT),

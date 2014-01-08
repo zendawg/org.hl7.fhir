@@ -28,17 +28,21 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         new javax.xml.namespace.QName("http://hl7.org/fhir", "timingPeriod");
     private static final javax.xml.namespace.QName TIMINGSCHEDULE$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "timingSchedule");
-    private static final javax.xml.namespace.QName SITE$8 = 
+    private static final javax.xml.namespace.QName ASNEEDEDBOOLEAN$8 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "asNeededBoolean");
+    private static final javax.xml.namespace.QName ASNEEDEDCODEABLECONCEPT$10 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "asNeededCodeableConcept");
+    private static final javax.xml.namespace.QName SITE$12 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "site");
-    private static final javax.xml.namespace.QName ROUTE$10 = 
+    private static final javax.xml.namespace.QName ROUTE$14 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "route");
-    private static final javax.xml.namespace.QName METHOD$12 = 
+    private static final javax.xml.namespace.QName METHOD$16 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "method");
-    private static final javax.xml.namespace.QName QUANTITY$14 = 
+    private static final javax.xml.namespace.QName QUANTITY$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "quantity");
-    private static final javax.xml.namespace.QName RATE$16 = 
+    private static final javax.xml.namespace.QName RATE$20 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "rate");
-    private static final javax.xml.namespace.QName MAXDOSEPERPERIOD$18 = 
+    private static final javax.xml.namespace.QName MAXDOSEPERPERIOD$22 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "maxDosePerPeriod");
     
     
@@ -299,6 +303,134 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
     }
     
     /**
+     * Gets the "asNeededBoolean" element
+     */
+    public org.hl7.fhir.Boolean getAsNeededBoolean()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Boolean target = null;
+            target = (org.hl7.fhir.Boolean)get_store().find_element_user(ASNEEDEDBOOLEAN$8, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "asNeededBoolean" element
+     */
+    public boolean isSetAsNeededBoolean()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(ASNEEDEDBOOLEAN$8) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "asNeededBoolean" element
+     */
+    public void setAsNeededBoolean(org.hl7.fhir.Boolean asNeededBoolean)
+    {
+        generatedSetterHelperImpl(asNeededBoolean, ASNEEDEDBOOLEAN$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "asNeededBoolean" element
+     */
+    public org.hl7.fhir.Boolean addNewAsNeededBoolean()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Boolean target = null;
+            target = (org.hl7.fhir.Boolean)get_store().add_element_user(ASNEEDEDBOOLEAN$8);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "asNeededBoolean" element
+     */
+    public void unsetAsNeededBoolean()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(ASNEEDEDBOOLEAN$8, 0);
+        }
+    }
+    
+    /**
+     * Gets the "asNeededCodeableConcept" element
+     */
+    public org.hl7.fhir.CodeableConcept getAsNeededCodeableConcept()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.CodeableConcept target = null;
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ASNEEDEDCODEABLECONCEPT$10, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "asNeededCodeableConcept" element
+     */
+    public boolean isSetAsNeededCodeableConcept()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(ASNEEDEDCODEABLECONCEPT$10) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "asNeededCodeableConcept" element
+     */
+    public void setAsNeededCodeableConcept(org.hl7.fhir.CodeableConcept asNeededCodeableConcept)
+    {
+        generatedSetterHelperImpl(asNeededCodeableConcept, ASNEEDEDCODEABLECONCEPT$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "asNeededCodeableConcept" element
+     */
+    public org.hl7.fhir.CodeableConcept addNewAsNeededCodeableConcept()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.CodeableConcept target = null;
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ASNEEDEDCODEABLECONCEPT$10);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "asNeededCodeableConcept" element
+     */
+    public void unsetAsNeededCodeableConcept()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(ASNEEDEDCODEABLECONCEPT$10, 0);
+        }
+    }
+    
+    /**
      * Gets the "site" element
      */
     public org.hl7.fhir.CodeableConcept getSite()
@@ -307,7 +439,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SITE$8, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SITE$12, 0);
             if (target == null)
             {
                 return null;
@@ -324,7 +456,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SITE$8) != 0;
+            return get_store().count_elements(SITE$12) != 0;
         }
     }
     
@@ -333,7 +465,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
      */
     public void setSite(org.hl7.fhir.CodeableConcept site)
     {
-        generatedSetterHelperImpl(site, SITE$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(site, SITE$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -345,7 +477,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SITE$8);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SITE$12);
             return target;
         }
     }
@@ -358,7 +490,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SITE$8, 0);
+            get_store().remove_element(SITE$12, 0);
         }
     }
     
@@ -371,7 +503,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ROUTE$10, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ROUTE$14, 0);
             if (target == null)
             {
                 return null;
@@ -388,7 +520,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ROUTE$10) != 0;
+            return get_store().count_elements(ROUTE$14) != 0;
         }
     }
     
@@ -397,7 +529,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
      */
     public void setRoute(org.hl7.fhir.CodeableConcept route)
     {
-        generatedSetterHelperImpl(route, ROUTE$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(route, ROUTE$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -409,7 +541,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ROUTE$10);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ROUTE$14);
             return target;
         }
     }
@@ -422,7 +554,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ROUTE$10, 0);
+            get_store().remove_element(ROUTE$14, 0);
         }
     }
     
@@ -435,7 +567,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(METHOD$12, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(METHOD$16, 0);
             if (target == null)
             {
                 return null;
@@ -452,7 +584,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(METHOD$12) != 0;
+            return get_store().count_elements(METHOD$16) != 0;
         }
     }
     
@@ -461,7 +593,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
      */
     public void setMethod(org.hl7.fhir.CodeableConcept method)
     {
-        generatedSetterHelperImpl(method, METHOD$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(method, METHOD$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -473,7 +605,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(METHOD$12);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(METHOD$16);
             return target;
         }
     }
@@ -486,7 +618,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(METHOD$12, 0);
+            get_store().remove_element(METHOD$16, 0);
         }
     }
     
@@ -499,7 +631,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().find_element_user(QUANTITY$14, 0);
+            target = (org.hl7.fhir.Quantity)get_store().find_element_user(QUANTITY$18, 0);
             if (target == null)
             {
                 return null;
@@ -516,7 +648,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(QUANTITY$14) != 0;
+            return get_store().count_elements(QUANTITY$18) != 0;
         }
     }
     
@@ -525,7 +657,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
      */
     public void setQuantity(org.hl7.fhir.Quantity quantity)
     {
-        generatedSetterHelperImpl(quantity, QUANTITY$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(quantity, QUANTITY$18, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -537,7 +669,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().add_element_user(QUANTITY$14);
+            target = (org.hl7.fhir.Quantity)get_store().add_element_user(QUANTITY$18);
             return target;
         }
     }
@@ -550,7 +682,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(QUANTITY$14, 0);
+            get_store().remove_element(QUANTITY$18, 0);
         }
     }
     
@@ -563,7 +695,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().find_element_user(RATE$16, 0);
+            target = (org.hl7.fhir.Ratio)get_store().find_element_user(RATE$20, 0);
             if (target == null)
             {
                 return null;
@@ -580,7 +712,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(RATE$16) != 0;
+            return get_store().count_elements(RATE$20) != 0;
         }
     }
     
@@ -589,7 +721,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
      */
     public void setRate(org.hl7.fhir.Ratio rate)
     {
-        generatedSetterHelperImpl(rate, RATE$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(rate, RATE$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -601,7 +733,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().add_element_user(RATE$16);
+            target = (org.hl7.fhir.Ratio)get_store().add_element_user(RATE$20);
             return target;
         }
     }
@@ -614,7 +746,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(RATE$16, 0);
+            get_store().remove_element(RATE$20, 0);
         }
     }
     
@@ -627,7 +759,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().find_element_user(MAXDOSEPERPERIOD$18, 0);
+            target = (org.hl7.fhir.Ratio)get_store().find_element_user(MAXDOSEPERPERIOD$22, 0);
             if (target == null)
             {
                 return null;
@@ -644,7 +776,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(MAXDOSEPERPERIOD$18) != 0;
+            return get_store().count_elements(MAXDOSEPERPERIOD$22) != 0;
         }
     }
     
@@ -653,7 +785,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
      */
     public void setMaxDosePerPeriod(org.hl7.fhir.Ratio maxDosePerPeriod)
     {
-        generatedSetterHelperImpl(maxDosePerPeriod, MAXDOSEPERPERIOD$18, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(maxDosePerPeriod, MAXDOSEPERPERIOD$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -665,7 +797,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().add_element_user(MAXDOSEPERPERIOD$18);
+            target = (org.hl7.fhir.Ratio)get_store().add_element_user(MAXDOSEPERPERIOD$22);
             return target;
         }
     }
@@ -678,7 +810,7 @@ public class MedicationDispenseDosageImpl extends org.hl7.fhir.impl.BackboneElem
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(MAXDOSEPERPERIOD$18, 0);
+            get_store().remove_element(MAXDOSEPERPERIOD$22, 0);
         }
     }
 }

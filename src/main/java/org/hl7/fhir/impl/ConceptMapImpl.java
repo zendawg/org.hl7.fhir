@@ -412,6 +412,18 @@ public class ConceptMapImpl extends org.hl7.fhir.impl.ResourceImpl implements or
     }
     
     /**
+     * True if has "description" element
+     */
+    public boolean isSetDescription()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(DESCRIPTION$10) != 0;
+        }
+    }
+    
+    /**
      * Sets the "description" element
      */
     public void setDescription(org.hl7.fhir.String description)
@@ -430,6 +442,18 @@ public class ConceptMapImpl extends org.hl7.fhir.impl.ResourceImpl implements or
             org.hl7.fhir.String target = null;
             target = (org.hl7.fhir.String)get_store().add_element_user(DESCRIPTION$10);
             return target;
+        }
+    }
+    
+    /**
+     * Unsets the "description" element
+     */
+    public void unsetDescription()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(DESCRIPTION$10, 0);
         }
     }
     

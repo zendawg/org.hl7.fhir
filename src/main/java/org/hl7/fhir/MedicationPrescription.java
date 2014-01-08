@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface MedicationPrescription extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationPrescription.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("medicationprescription89b5type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationPrescription.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationprescription89b5type");
     
     /**
      * Gets array of all "identifier" elements
@@ -184,29 +184,54 @@ public interface MedicationPrescription extends org.hl7.fhir.Resource
     void unsetEncounter();
     
     /**
-     * Gets the "reasonForPrescribing" element
+     * Gets the "reasonCodeableConcept" element
      */
-    org.hl7.fhir.CodeableConcept getReasonForPrescribing();
+    org.hl7.fhir.CodeableConcept getReasonCodeableConcept();
     
     /**
-     * True if has "reasonForPrescribing" element
+     * True if has "reasonCodeableConcept" element
      */
-    boolean isSetReasonForPrescribing();
+    boolean isSetReasonCodeableConcept();
     
     /**
-     * Sets the "reasonForPrescribing" element
+     * Sets the "reasonCodeableConcept" element
      */
-    void setReasonForPrescribing(org.hl7.fhir.CodeableConcept reasonForPrescribing);
+    void setReasonCodeableConcept(org.hl7.fhir.CodeableConcept reasonCodeableConcept);
     
     /**
-     * Appends and returns a new empty "reasonForPrescribing" element
+     * Appends and returns a new empty "reasonCodeableConcept" element
      */
-    org.hl7.fhir.CodeableConcept addNewReasonForPrescribing();
+    org.hl7.fhir.CodeableConcept addNewReasonCodeableConcept();
     
     /**
-     * Unsets the "reasonForPrescribing" element
+     * Unsets the "reasonCodeableConcept" element
      */
-    void unsetReasonForPrescribing();
+    void unsetReasonCodeableConcept();
+    
+    /**
+     * Gets the "reasonResource" element
+     */
+    org.hl7.fhir.ResourceReference getReasonResource();
+    
+    /**
+     * True if has "reasonResource" element
+     */
+    boolean isSetReasonResource();
+    
+    /**
+     * Sets the "reasonResource" element
+     */
+    void setReasonResource(org.hl7.fhir.ResourceReference reasonResource);
+    
+    /**
+     * Appends and returns a new empty "reasonResource" element
+     */
+    org.hl7.fhir.ResourceReference addNewReasonResource();
+    
+    /**
+     * Unsets the "reasonResource" element
+     */
+    void unsetReasonResource();
     
     /**
      * Gets the "medication" element

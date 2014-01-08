@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Base64Binary extends org.hl7.fhir.Element
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Base64Binary.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("base64binary1cfctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Base64Binary.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("base64binary1cfctype");
     
     /**
      * Gets the "value" attribute

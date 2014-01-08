@@ -16,7 +16,47 @@ package org.hl7.fhir;
 public interface Order extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Order.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("order5248type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Order.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("order5248type");
+    
+    /**
+     * Gets array of all "identifier" elements
+     */
+    org.hl7.fhir.Identifier[] getIdentifierArray();
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    org.hl7.fhir.Identifier getIdentifierArray(int i);
+    
+    /**
+     * Returns number of "identifier" element
+     */
+    int sizeOfIdentifierArray();
+    
+    /**
+     * Sets array of all "identifier" element
+     */
+    void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray);
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    org.hl7.fhir.Identifier insertNewIdentifier(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
+     */
+    org.hl7.fhir.Identifier addNewIdentifier();
+    
+    /**
+     * Removes the ith "identifier" element
+     */
+    void removeIdentifier(int i);
     
     /**
      * Gets the "date" element
@@ -119,29 +159,54 @@ public interface Order extends org.hl7.fhir.Resource
     void unsetTarget();
     
     /**
-     * Gets the "reason" element
+     * Gets the "reasonCodeableConcept" element
      */
-    org.hl7.fhir.String getReason();
+    org.hl7.fhir.CodeableConcept getReasonCodeableConcept();
     
     /**
-     * True if has "reason" element
+     * True if has "reasonCodeableConcept" element
      */
-    boolean isSetReason();
+    boolean isSetReasonCodeableConcept();
     
     /**
-     * Sets the "reason" element
+     * Sets the "reasonCodeableConcept" element
      */
-    void setReason(org.hl7.fhir.String reason);
+    void setReasonCodeableConcept(org.hl7.fhir.CodeableConcept reasonCodeableConcept);
     
     /**
-     * Appends and returns a new empty "reason" element
+     * Appends and returns a new empty "reasonCodeableConcept" element
      */
-    org.hl7.fhir.String addNewReason();
+    org.hl7.fhir.CodeableConcept addNewReasonCodeableConcept();
     
     /**
-     * Unsets the "reason" element
+     * Unsets the "reasonCodeableConcept" element
      */
-    void unsetReason();
+    void unsetReasonCodeableConcept();
+    
+    /**
+     * Gets the "reasonResource" element
+     */
+    org.hl7.fhir.ResourceReference getReasonResource();
+    
+    /**
+     * True if has "reasonResource" element
+     */
+    boolean isSetReasonResource();
+    
+    /**
+     * Sets the "reasonResource" element
+     */
+    void setReasonResource(org.hl7.fhir.ResourceReference reasonResource);
+    
+    /**
+     * Appends and returns a new empty "reasonResource" element
+     */
+    org.hl7.fhir.ResourceReference addNewReasonResource();
+    
+    /**
+     * Unsets the "reasonResource" element
+     */
+    void unsetReasonResource();
     
     /**
      * Gets the "authority" element

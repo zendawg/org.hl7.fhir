@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Substance extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Substance.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("substance87eatype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Substance.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("substance87eatype");
     
     /**
      * Gets the "type" element
@@ -57,31 +57,6 @@ public interface Substance extends org.hl7.fhir.Resource
      * Unsets the "description" element
      */
     void unsetDescription();
-    
-    /**
-     * Gets the "status" element
-     */
-    org.hl7.fhir.CodeableConcept getStatus();
-    
-    /**
-     * True if has "status" element
-     */
-    boolean isSetStatus();
-    
-    /**
-     * Sets the "status" element
-     */
-    void setStatus(org.hl7.fhir.CodeableConcept status);
-    
-    /**
-     * Appends and returns a new empty "status" element
-     */
-    org.hl7.fhir.CodeableConcept addNewStatus();
-    
-    /**
-     * Unsets the "status" element
-     */
-    void unsetStatus();
     
     /**
      * Gets the "instance" element

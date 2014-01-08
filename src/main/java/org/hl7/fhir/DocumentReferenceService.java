@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface DocumentReferenceService extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DocumentReferenceService.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("documentreferenceservicef611type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DocumentReferenceService.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("documentreferenceservicef611type");
     
     /**
      * Gets the "type" element

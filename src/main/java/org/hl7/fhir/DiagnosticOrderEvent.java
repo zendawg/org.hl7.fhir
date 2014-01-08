@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface DiagnosticOrderEvent extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticOrderEvent.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("diagnosticorderevent2a2dtype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticOrderEvent.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("diagnosticorderevent2a2dtype");
     
     /**
      * Gets the "status" element
@@ -34,19 +34,44 @@ public interface DiagnosticOrderEvent extends org.hl7.fhir.BackboneElement
     org.hl7.fhir.DiagnosticOrderStatus addNewStatus();
     
     /**
-     * Gets the "date" element
+     * Gets the "description" element
      */
-    org.hl7.fhir.DateTime getDate();
+    org.hl7.fhir.CodeableConcept getDescription();
     
     /**
-     * Sets the "date" element
+     * True if has "description" element
      */
-    void setDate(org.hl7.fhir.DateTime date);
+    boolean isSetDescription();
     
     /**
-     * Appends and returns a new empty "date" element
+     * Sets the "description" element
      */
-    org.hl7.fhir.DateTime addNewDate();
+    void setDescription(org.hl7.fhir.CodeableConcept description);
+    
+    /**
+     * Appends and returns a new empty "description" element
+     */
+    org.hl7.fhir.CodeableConcept addNewDescription();
+    
+    /**
+     * Unsets the "description" element
+     */
+    void unsetDescription();
+    
+    /**
+     * Gets the "dateTime" element
+     */
+    org.hl7.fhir.DateTime getDateTime();
+    
+    /**
+     * Sets the "dateTime" element
+     */
+    void setDateTime(org.hl7.fhir.DateTime dateTime);
+    
+    /**
+     * Appends and returns a new empty "dateTime" element
+     */
+    org.hl7.fhir.DateTime addNewDateTime();
     
     /**
      * Gets the "actor" element

@@ -16,7 +16,47 @@ package org.hl7.fhir;
 public interface List extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(List.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("listc98atype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(List.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("listc98atype");
+    
+    /**
+     * Gets array of all "identifier" elements
+     */
+    org.hl7.fhir.Identifier[] getIdentifierArray();
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    org.hl7.fhir.Identifier getIdentifierArray(int i);
+    
+    /**
+     * Returns number of "identifier" element
+     */
+    int sizeOfIdentifierArray();
+    
+    /**
+     * Sets array of all "identifier" element
+     */
+    void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray);
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    org.hl7.fhir.Identifier insertNewIdentifier(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
+     */
+    org.hl7.fhir.Identifier addNewIdentifier();
+    
+    /**
+     * Removes the ith "identifier" element
+     */
+    void removeIdentifier(int i);
     
     /**
      * Gets the "code" element

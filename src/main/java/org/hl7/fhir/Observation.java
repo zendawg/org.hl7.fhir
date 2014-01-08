@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Observation extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Observation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("observationbae6type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Observation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("observationbae6type");
     
     /**
      * Gets the "name" element
@@ -259,31 +259,6 @@ public interface Observation extends org.hl7.fhir.Resource
     void unsetComments();
     
     /**
-     * Gets the "appliesPeriod" element
-     */
-    org.hl7.fhir.Period getAppliesPeriod();
-    
-    /**
-     * True if has "appliesPeriod" element
-     */
-    boolean isSetAppliesPeriod();
-    
-    /**
-     * Sets the "appliesPeriod" element
-     */
-    void setAppliesPeriod(org.hl7.fhir.Period appliesPeriod);
-    
-    /**
-     * Appends and returns a new empty "appliesPeriod" element
-     */
-    org.hl7.fhir.Period addNewAppliesPeriod();
-    
-    /**
-     * Unsets the "appliesPeriod" element
-     */
-    void unsetAppliesPeriod();
-    
-    /**
      * Gets the "appliesDateTime" element
      */
     org.hl7.fhir.DateTime getAppliesDateTime();
@@ -307,6 +282,31 @@ public interface Observation extends org.hl7.fhir.Resource
      * Unsets the "appliesDateTime" element
      */
     void unsetAppliesDateTime();
+    
+    /**
+     * Gets the "appliesPeriod" element
+     */
+    org.hl7.fhir.Period getAppliesPeriod();
+    
+    /**
+     * True if has "appliesPeriod" element
+     */
+    boolean isSetAppliesPeriod();
+    
+    /**
+     * Sets the "appliesPeriod" element
+     */
+    void setAppliesPeriod(org.hl7.fhir.Period appliesPeriod);
+    
+    /**
+     * Appends and returns a new empty "appliesPeriod" element
+     */
+    org.hl7.fhir.Period addNewAppliesPeriod();
+    
+    /**
+     * Unsets the "appliesPeriod" element
+     */
+    void unsetAppliesPeriod();
     
     /**
      * Gets the "issued" element

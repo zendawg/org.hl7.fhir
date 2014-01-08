@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface DiagnosticReport extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticReport.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("diagnosticreporte6a7type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticReport.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("diagnosticreporte6a7type");
     
     /**
      * Gets the "status" element
@@ -79,39 +79,39 @@ public interface DiagnosticReport extends org.hl7.fhir.Resource
     org.hl7.fhir.ResourceReference addNewPerformer();
     
     /**
-     * Gets the "reportId" element
+     * Gets the "identifier" element
      */
-    org.hl7.fhir.Identifier getReportId();
+    org.hl7.fhir.Identifier getIdentifier();
     
     /**
-     * True if has "reportId" element
+     * True if has "identifier" element
      */
-    boolean isSetReportId();
+    boolean isSetIdentifier();
     
     /**
-     * Sets the "reportId" element
+     * Sets the "identifier" element
      */
-    void setReportId(org.hl7.fhir.Identifier reportId);
+    void setIdentifier(org.hl7.fhir.Identifier identifier);
     
     /**
-     * Appends and returns a new empty "reportId" element
+     * Appends and returns a new empty "identifier" element
      */
-    org.hl7.fhir.Identifier addNewReportId();
+    org.hl7.fhir.Identifier addNewIdentifier();
     
     /**
-     * Unsets the "reportId" element
+     * Unsets the "identifier" element
      */
-    void unsetReportId();
+    void unsetIdentifier();
     
     /**
      * Gets array of all "requestDetail" elements
      */
-    org.hl7.fhir.DiagnosticReportRequestDetail[] getRequestDetailArray();
+    org.hl7.fhir.ResourceReference[] getRequestDetailArray();
     
     /**
      * Gets ith "requestDetail" element
      */
-    org.hl7.fhir.DiagnosticReportRequestDetail getRequestDetailArray(int i);
+    org.hl7.fhir.ResourceReference getRequestDetailArray(int i);
     
     /**
      * Returns number of "requestDetail" element
@@ -121,22 +121,22 @@ public interface DiagnosticReport extends org.hl7.fhir.Resource
     /**
      * Sets array of all "requestDetail" element
      */
-    void setRequestDetailArray(org.hl7.fhir.DiagnosticReportRequestDetail[] requestDetailArray);
+    void setRequestDetailArray(org.hl7.fhir.ResourceReference[] requestDetailArray);
     
     /**
      * Sets ith "requestDetail" element
      */
-    void setRequestDetailArray(int i, org.hl7.fhir.DiagnosticReportRequestDetail requestDetail);
+    void setRequestDetailArray(int i, org.hl7.fhir.ResourceReference requestDetail);
     
     /**
      * Inserts and returns a new empty value (as xml) as the ith "requestDetail" element
      */
-    org.hl7.fhir.DiagnosticReportRequestDetail insertNewRequestDetail(int i);
+    org.hl7.fhir.ResourceReference insertNewRequestDetail(int i);
     
     /**
      * Appends and returns a new empty value (as xml) as the last "requestDetail" element
      */
-    org.hl7.fhir.DiagnosticReportRequestDetail addNewRequestDetail();
+    org.hl7.fhir.ResourceReference addNewRequestDetail();
     
     /**
      * Removes the ith "requestDetail" element
@@ -234,14 +234,54 @@ public interface DiagnosticReport extends org.hl7.fhir.Resource
     org.hl7.fhir.DiagnosticReportResults addNewResults();
     
     /**
+     * Gets array of all "imagingStudy" elements
+     */
+    org.hl7.fhir.ResourceReference[] getImagingStudyArray();
+    
+    /**
+     * Gets ith "imagingStudy" element
+     */
+    org.hl7.fhir.ResourceReference getImagingStudyArray(int i);
+    
+    /**
+     * Returns number of "imagingStudy" element
+     */
+    int sizeOfImagingStudyArray();
+    
+    /**
+     * Sets array of all "imagingStudy" element
+     */
+    void setImagingStudyArray(org.hl7.fhir.ResourceReference[] imagingStudyArray);
+    
+    /**
+     * Sets ith "imagingStudy" element
+     */
+    void setImagingStudyArray(int i, org.hl7.fhir.ResourceReference imagingStudy);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "imagingStudy" element
+     */
+    org.hl7.fhir.ResourceReference insertNewImagingStudy(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "imagingStudy" element
+     */
+    org.hl7.fhir.ResourceReference addNewImagingStudy();
+    
+    /**
+     * Removes the ith "imagingStudy" element
+     */
+    void removeImagingStudy(int i);
+    
+    /**
      * Gets array of all "image" elements
      */
-    org.hl7.fhir.ResourceReference[] getImageArray();
+    org.hl7.fhir.DiagnosticReportImage[] getImageArray();
     
     /**
      * Gets ith "image" element
      */
-    org.hl7.fhir.ResourceReference getImageArray(int i);
+    org.hl7.fhir.DiagnosticReportImage getImageArray(int i);
     
     /**
      * Returns number of "image" element
@@ -251,22 +291,22 @@ public interface DiagnosticReport extends org.hl7.fhir.Resource
     /**
      * Sets array of all "image" element
      */
-    void setImageArray(org.hl7.fhir.ResourceReference[] imageArray);
+    void setImageArray(org.hl7.fhir.DiagnosticReportImage[] imageArray);
     
     /**
      * Sets ith "image" element
      */
-    void setImageArray(int i, org.hl7.fhir.ResourceReference image);
+    void setImageArray(int i, org.hl7.fhir.DiagnosticReportImage image);
     
     /**
      * Inserts and returns a new empty value (as xml) as the ith "image" element
      */
-    org.hl7.fhir.ResourceReference insertNewImage(int i);
+    org.hl7.fhir.DiagnosticReportImage insertNewImage(int i);
     
     /**
      * Appends and returns a new empty value (as xml) as the last "image" element
      */
-    org.hl7.fhir.ResourceReference addNewImage();
+    org.hl7.fhir.DiagnosticReportImage addNewImage();
     
     /**
      * Removes the ith "image" element
@@ -339,44 +379,44 @@ public interface DiagnosticReport extends org.hl7.fhir.Resource
     void removeCodedDiagnosis(int i);
     
     /**
-     * Gets array of all "representation" elements
+     * Gets array of all "presentedForm" elements
      */
-    org.hl7.fhir.Attachment[] getRepresentationArray();
+    org.hl7.fhir.Attachment[] getPresentedFormArray();
     
     /**
-     * Gets ith "representation" element
+     * Gets ith "presentedForm" element
      */
-    org.hl7.fhir.Attachment getRepresentationArray(int i);
+    org.hl7.fhir.Attachment getPresentedFormArray(int i);
     
     /**
-     * Returns number of "representation" element
+     * Returns number of "presentedForm" element
      */
-    int sizeOfRepresentationArray();
+    int sizeOfPresentedFormArray();
     
     /**
-     * Sets array of all "representation" element
+     * Sets array of all "presentedForm" element
      */
-    void setRepresentationArray(org.hl7.fhir.Attachment[] representationArray);
+    void setPresentedFormArray(org.hl7.fhir.Attachment[] presentedFormArray);
     
     /**
-     * Sets ith "representation" element
+     * Sets ith "presentedForm" element
      */
-    void setRepresentationArray(int i, org.hl7.fhir.Attachment representation);
+    void setPresentedFormArray(int i, org.hl7.fhir.Attachment presentedForm);
     
     /**
-     * Inserts and returns a new empty value (as xml) as the ith "representation" element
+     * Inserts and returns a new empty value (as xml) as the ith "presentedForm" element
      */
-    org.hl7.fhir.Attachment insertNewRepresentation(int i);
+    org.hl7.fhir.Attachment insertNewPresentedForm(int i);
     
     /**
-     * Appends and returns a new empty value (as xml) as the last "representation" element
+     * Appends and returns a new empty value (as xml) as the last "presentedForm" element
      */
-    org.hl7.fhir.Attachment addNewRepresentation();
+    org.hl7.fhir.Attachment addNewPresentedForm();
     
     /**
-     * Removes the ith "representation" element
+     * Removes the ith "presentedForm" element
      */
-    void removeRepresentation(int i);
+    void removePresentedForm(int i);
     
     /**
      * A factory class with static methods for creating instances

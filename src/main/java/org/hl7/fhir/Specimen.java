@@ -16,32 +16,47 @@ package org.hl7.fhir;
 public interface Specimen extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Specimen.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("specimend674type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Specimen.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("specimend674type");
     
     /**
-     * Gets the "identifier" element
+     * Gets array of all "identifier" elements
      */
-    org.hl7.fhir.Identifier getIdentifier();
+    org.hl7.fhir.Identifier[] getIdentifierArray();
     
     /**
-     * True if has "identifier" element
+     * Gets ith "identifier" element
      */
-    boolean isSetIdentifier();
+    org.hl7.fhir.Identifier getIdentifierArray(int i);
     
     /**
-     * Sets the "identifier" element
+     * Returns number of "identifier" element
      */
-    void setIdentifier(org.hl7.fhir.Identifier identifier);
+    int sizeOfIdentifierArray();
     
     /**
-     * Appends and returns a new empty "identifier" element
+     * Sets array of all "identifier" element
+     */
+    void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray);
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    org.hl7.fhir.Identifier insertNewIdentifier(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
      */
     org.hl7.fhir.Identifier addNewIdentifier();
     
     /**
-     * Unsets the "identifier" element
+     * Removes the ith "identifier" element
      */
-    void unsetIdentifier();
+    void removeIdentifier(int i);
     
     /**
      * Gets the "type" element
@@ -124,44 +139,29 @@ public interface Specimen extends org.hl7.fhir.Resource
     org.hl7.fhir.ResourceReference addNewSubject();
     
     /**
-     * Gets array of all "accessionIdentifier" elements
+     * Gets the "accessionIdentifier" element
      */
-    org.hl7.fhir.Identifier[] getAccessionIdentifierArray();
+    org.hl7.fhir.Identifier getAccessionIdentifier();
     
     /**
-     * Gets ith "accessionIdentifier" element
+     * True if has "accessionIdentifier" element
      */
-    org.hl7.fhir.Identifier getAccessionIdentifierArray(int i);
+    boolean isSetAccessionIdentifier();
     
     /**
-     * Returns number of "accessionIdentifier" element
+     * Sets the "accessionIdentifier" element
      */
-    int sizeOfAccessionIdentifierArray();
+    void setAccessionIdentifier(org.hl7.fhir.Identifier accessionIdentifier);
     
     /**
-     * Sets array of all "accessionIdentifier" element
-     */
-    void setAccessionIdentifierArray(org.hl7.fhir.Identifier[] accessionIdentifierArray);
-    
-    /**
-     * Sets ith "accessionIdentifier" element
-     */
-    void setAccessionIdentifierArray(int i, org.hl7.fhir.Identifier accessionIdentifier);
-    
-    /**
-     * Inserts and returns a new empty value (as xml) as the ith "accessionIdentifier" element
-     */
-    org.hl7.fhir.Identifier insertNewAccessionIdentifier(int i);
-    
-    /**
-     * Appends and returns a new empty value (as xml) as the last "accessionIdentifier" element
+     * Appends and returns a new empty "accessionIdentifier" element
      */
     org.hl7.fhir.Identifier addNewAccessionIdentifier();
     
     /**
-     * Removes the ith "accessionIdentifier" element
+     * Unsets the "accessionIdentifier" element
      */
-    void removeAccessionIdentifier(int i);
+    void unsetAccessionIdentifier();
     
     /**
      * Gets the "receivedTime" element

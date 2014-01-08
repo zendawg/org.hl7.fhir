@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface PractitionerQualification extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PractitionerQualification.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("practitionerqualification69a7type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(PractitionerQualification.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("practitionerqualification69a7type");
     
     /**
      * Gets the "code" element

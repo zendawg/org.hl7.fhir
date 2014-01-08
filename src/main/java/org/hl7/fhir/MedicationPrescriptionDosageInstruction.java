@@ -16,32 +16,32 @@ package org.hl7.fhir;
 public interface MedicationPrescriptionDosageInstruction extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationPrescriptionDosageInstruction.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("medicationprescriptiondosageinstructionb97etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationPrescriptionDosageInstruction.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationprescriptiondosageinstructionb97etype");
     
     /**
-     * Gets the "dosageInstructionsText" element
+     * Gets the "text" element
      */
-    org.hl7.fhir.String getDosageInstructionsText();
+    org.hl7.fhir.String getText();
     
     /**
-     * True if has "dosageInstructionsText" element
+     * True if has "text" element
      */
-    boolean isSetDosageInstructionsText();
+    boolean isSetText();
     
     /**
-     * Sets the "dosageInstructionsText" element
+     * Sets the "text" element
      */
-    void setDosageInstructionsText(org.hl7.fhir.String dosageInstructionsText);
+    void setText(org.hl7.fhir.String text);
     
     /**
-     * Appends and returns a new empty "dosageInstructionsText" element
+     * Appends and returns a new empty "text" element
      */
-    org.hl7.fhir.String addNewDosageInstructionsText();
+    org.hl7.fhir.String addNewText();
     
     /**
-     * Unsets the "dosageInstructionsText" element
+     * Unsets the "text" element
      */
-    void unsetDosageInstructionsText();
+    void unsetText();
     
     /**
      * Gets the "additionalInstructions" element
@@ -142,6 +142,56 @@ public interface MedicationPrescriptionDosageInstruction extends org.hl7.fhir.Ba
      * Unsets the "timingSchedule" element
      */
     void unsetTimingSchedule();
+    
+    /**
+     * Gets the "asNeededBoolean" element
+     */
+    org.hl7.fhir.Boolean getAsNeededBoolean();
+    
+    /**
+     * True if has "asNeededBoolean" element
+     */
+    boolean isSetAsNeededBoolean();
+    
+    /**
+     * Sets the "asNeededBoolean" element
+     */
+    void setAsNeededBoolean(org.hl7.fhir.Boolean asNeededBoolean);
+    
+    /**
+     * Appends and returns a new empty "asNeededBoolean" element
+     */
+    org.hl7.fhir.Boolean addNewAsNeededBoolean();
+    
+    /**
+     * Unsets the "asNeededBoolean" element
+     */
+    void unsetAsNeededBoolean();
+    
+    /**
+     * Gets the "asNeededCodeableConcept" element
+     */
+    org.hl7.fhir.CodeableConcept getAsNeededCodeableConcept();
+    
+    /**
+     * True if has "asNeededCodeableConcept" element
+     */
+    boolean isSetAsNeededCodeableConcept();
+    
+    /**
+     * Sets the "asNeededCodeableConcept" element
+     */
+    void setAsNeededCodeableConcept(org.hl7.fhir.CodeableConcept asNeededCodeableConcept);
+    
+    /**
+     * Appends and returns a new empty "asNeededCodeableConcept" element
+     */
+    org.hl7.fhir.CodeableConcept addNewAsNeededCodeableConcept();
+    
+    /**
+     * Unsets the "asNeededCodeableConcept" element
+     */
+    void unsetAsNeededCodeableConcept();
     
     /**
      * Gets the "site" element

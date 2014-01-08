@@ -16,12 +16,17 @@ package org.hl7.fhir;
 public interface ConceptMapMap extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapMap.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("conceptmapmapddcetype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapMap.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conceptmapmapddcetype");
     
     /**
      * Gets the "system" element
      */
     org.hl7.fhir.Uri getSystem();
+    
+    /**
+     * True if has "system" element
+     */
+    boolean isSetSystem();
     
     /**
      * Sets the "system" element
@@ -34,9 +39,14 @@ public interface ConceptMapMap extends org.hl7.fhir.BackboneElement
     org.hl7.fhir.Uri addNewSystem();
     
     /**
+     * Unsets the "system" element
+     */
+    void unsetSystem();
+    
+    /**
      * Gets the "code" element
      */
-    org.hl7.fhir.String getCode();
+    org.hl7.fhir.Code getCode();
     
     /**
      * True if has "code" element
@@ -46,12 +56,12 @@ public interface ConceptMapMap extends org.hl7.fhir.BackboneElement
     /**
      * Sets the "code" element
      */
-    void setCode(org.hl7.fhir.String code);
+    void setCode(org.hl7.fhir.Code code);
     
     /**
      * Appends and returns a new empty "code" element
      */
-    org.hl7.fhir.String addNewCode();
+    org.hl7.fhir.Code addNewCode();
     
     /**
      * Unsets the "code" element
@@ -97,6 +107,46 @@ public interface ConceptMapMap extends org.hl7.fhir.BackboneElement
      * Unsets the "comments" element
      */
     void unsetComments();
+    
+    /**
+     * Gets array of all "product" elements
+     */
+    org.hl7.fhir.ConceptMapDependsOn[] getProductArray();
+    
+    /**
+     * Gets ith "product" element
+     */
+    org.hl7.fhir.ConceptMapDependsOn getProductArray(int i);
+    
+    /**
+     * Returns number of "product" element
+     */
+    int sizeOfProductArray();
+    
+    /**
+     * Sets array of all "product" element
+     */
+    void setProductArray(org.hl7.fhir.ConceptMapDependsOn[] productArray);
+    
+    /**
+     * Sets ith "product" element
+     */
+    void setProductArray(int i, org.hl7.fhir.ConceptMapDependsOn product);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "product" element
+     */
+    org.hl7.fhir.ConceptMapDependsOn insertNewProduct(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "product" element
+     */
+    org.hl7.fhir.ConceptMapDependsOn addNewProduct();
+    
+    /**
+     * Removes the ith "product" element
+     */
+    void removeProduct(int i);
     
     /**
      * A factory class with static methods for creating instances

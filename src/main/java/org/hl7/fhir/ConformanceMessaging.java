@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ConformanceMessaging extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConformanceMessaging.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("conformancemessaging3c45type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConformanceMessaging.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conformancemessaging3c45type");
     
     /**
      * Gets the "endpoint" element

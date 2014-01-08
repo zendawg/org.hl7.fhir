@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Binary extends org.apache.xmlbeans.XmlBase64Binary
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Binary.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("binaryd72dtype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Binary.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("binaryd72dtype");
     
     /**
      * Gets the "contentType" attribute

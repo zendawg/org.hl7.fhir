@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ImmunizationVaccinationProtocol extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImmunizationVaccinationProtocol.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("immunizationvaccinationprotocol17ddtype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImmunizationVaccinationProtocol.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("immunizationvaccinationprotocol17ddtype");
     
     /**
      * Gets the "doseSequence" element
@@ -139,11 +139,6 @@ public interface ImmunizationVaccinationProtocol extends org.hl7.fhir.BackboneEl
     org.hl7.fhir.CodeableConcept getDoseTarget();
     
     /**
-     * True if has "doseTarget" element
-     */
-    boolean isSetDoseTarget();
-    
-    /**
      * Sets the "doseTarget" element
      */
     void setDoseTarget(org.hl7.fhir.CodeableConcept doseTarget);
@@ -152,11 +147,6 @@ public interface ImmunizationVaccinationProtocol extends org.hl7.fhir.BackboneEl
      * Appends and returns a new empty "doseTarget" element
      */
     org.hl7.fhir.CodeableConcept addNewDoseTarget();
-    
-    /**
-     * Unsets the "doseTarget" element
-     */
-    void unsetDoseTarget();
     
     /**
      * Gets the "doseStatus" element

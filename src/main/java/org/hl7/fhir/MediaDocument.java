@@ -17,7 +17,7 @@ package org.hl7.fhir;
 public interface MediaDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MediaDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("media07cedoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MediaDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("media07cedoctype");
     
     /**
      * Gets the "Media" element

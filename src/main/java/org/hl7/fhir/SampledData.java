@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface SampledData extends org.hl7.fhir.Element
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SampledData.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("sampleddatabd7etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SampledData.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("sampleddatabd7etype");
     
     /**
      * Gets the "origin" element
@@ -141,22 +141,17 @@ public interface SampledData extends org.hl7.fhir.Element
     /**
      * Gets the "data" element
      */
-    java.lang.String getData();
-    
-    /**
-     * Gets (as xml) the "data" element
-     */
-    org.hl7.fhir.SampledDataDataType xgetData();
+    org.hl7.fhir.SampledDataDataType getData();
     
     /**
      * Sets the "data" element
      */
-    void setData(java.lang.String data);
+    void setData(org.hl7.fhir.SampledDataDataType data);
     
     /**
-     * Sets (as xml) the "data" element
+     * Appends and returns a new empty "data" element
      */
-    void xsetData(org.hl7.fhir.SampledDataDataType data);
+    org.hl7.fhir.SampledDataDataType addNewData();
     
     /**
      * A factory class with static methods for creating instances

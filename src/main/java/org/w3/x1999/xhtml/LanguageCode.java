@@ -16,7 +16,7 @@ package org.w3.x1999.xhtml;
 public interface LanguageCode extends org.apache.xmlbeans.XmlLanguage
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(LanguageCode.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("languagecodee162type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(LanguageCode.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("languagecodee162type");
     
     /**
      * A factory class with static methods for creating instances

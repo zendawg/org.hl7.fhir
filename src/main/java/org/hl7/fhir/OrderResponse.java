@@ -16,7 +16,47 @@ package org.hl7.fhir;
 public interface OrderResponse extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(OrderResponse.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("orderresponse1b29type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(OrderResponse.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("orderresponse1b29type");
+    
+    /**
+     * Gets array of all "identifier" elements
+     */
+    org.hl7.fhir.Identifier[] getIdentifierArray();
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    org.hl7.fhir.Identifier getIdentifierArray(int i);
+    
+    /**
+     * Returns number of "identifier" element
+     */
+    int sizeOfIdentifierArray();
+    
+    /**
+     * Sets array of all "identifier" element
+     */
+    void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray);
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    org.hl7.fhir.Identifier insertNewIdentifier(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
+     */
+    org.hl7.fhir.Identifier addNewIdentifier();
+    
+    /**
+     * Removes the ith "identifier" element
+     */
+    void removeIdentifier(int i);
     
     /**
      * Gets the "request" element
@@ -84,54 +124,54 @@ public interface OrderResponse extends org.hl7.fhir.Resource
     void unsetWho();
     
     /**
-     * Gets the "authority" element
+     * Gets the "authorityCodeableConcept" element
      */
-    org.hl7.fhir.ResourceReference getAuthority();
+    org.hl7.fhir.CodeableConcept getAuthorityCodeableConcept();
     
     /**
-     * True if has "authority" element
+     * True if has "authorityCodeableConcept" element
      */
-    boolean isSetAuthority();
+    boolean isSetAuthorityCodeableConcept();
     
     /**
-     * Sets the "authority" element
+     * Sets the "authorityCodeableConcept" element
      */
-    void setAuthority(org.hl7.fhir.ResourceReference authority);
+    void setAuthorityCodeableConcept(org.hl7.fhir.CodeableConcept authorityCodeableConcept);
     
     /**
-     * Appends and returns a new empty "authority" element
+     * Appends and returns a new empty "authorityCodeableConcept" element
      */
-    org.hl7.fhir.ResourceReference addNewAuthority();
+    org.hl7.fhir.CodeableConcept addNewAuthorityCodeableConcept();
     
     /**
-     * Unsets the "authority" element
+     * Unsets the "authorityCodeableConcept" element
      */
-    void unsetAuthority();
+    void unsetAuthorityCodeableConcept();
     
     /**
-     * Gets the "cost" element
+     * Gets the "authorityResource" element
      */
-    org.hl7.fhir.Money getCost();
+    org.hl7.fhir.ResourceReference getAuthorityResource();
     
     /**
-     * True if has "cost" element
+     * True if has "authorityResource" element
      */
-    boolean isSetCost();
+    boolean isSetAuthorityResource();
     
     /**
-     * Sets the "cost" element
+     * Sets the "authorityResource" element
      */
-    void setCost(org.hl7.fhir.Money cost);
+    void setAuthorityResource(org.hl7.fhir.ResourceReference authorityResource);
     
     /**
-     * Appends and returns a new empty "cost" element
+     * Appends and returns a new empty "authorityResource" element
      */
-    org.hl7.fhir.Money addNewCost();
+    org.hl7.fhir.ResourceReference addNewAuthorityResource();
     
     /**
-     * Unsets the "cost" element
+     * Unsets the "authorityResource" element
      */
-    void unsetCost();
+    void unsetAuthorityResource();
     
     /**
      * Gets the "code" element

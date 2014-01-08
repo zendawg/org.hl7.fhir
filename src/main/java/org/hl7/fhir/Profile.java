@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Profile extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Profile.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("profile8f63type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Profile.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("profile8f63type");
     
     /**
      * Gets the "identifier" element
@@ -277,6 +277,31 @@ public interface Profile extends org.hl7.fhir.Resource
      * Unsets the "date" element
      */
     void unsetDate();
+    
+    /**
+     * Gets the "requirements" element
+     */
+    org.hl7.fhir.String getRequirements();
+    
+    /**
+     * True if has "requirements" element
+     */
+    boolean isSetRequirements();
+    
+    /**
+     * Sets the "requirements" element
+     */
+    void setRequirements(org.hl7.fhir.String requirements);
+    
+    /**
+     * Appends and returns a new empty "requirements" element
+     */
+    org.hl7.fhir.String addNewRequirements();
+    
+    /**
+     * Unsets the "requirements" element
+     */
+    void unsetRequirements();
     
     /**
      * Gets the "fhirVersion" element

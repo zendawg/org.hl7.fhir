@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ConceptMap extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMap.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("conceptmap9100type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMap.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conceptmap9100type");
     
     /**
      * Gets the "identifier" element
@@ -154,6 +154,11 @@ public interface ConceptMap extends org.hl7.fhir.Resource
     org.hl7.fhir.String getDescription();
     
     /**
+     * True if has "description" element
+     */
+    boolean isSetDescription();
+    
+    /**
      * Sets the "description" element
      */
     void setDescription(org.hl7.fhir.String description);
@@ -162,6 +167,11 @@ public interface ConceptMap extends org.hl7.fhir.Resource
      * Appends and returns a new empty "description" element
      */
     org.hl7.fhir.String addNewDescription();
+    
+    /**
+     * Unsets the "description" element
+     */
+    void unsetDescription();
     
     /**
      * Gets the "copyright" element

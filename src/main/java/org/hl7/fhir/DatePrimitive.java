@@ -26,7 +26,7 @@ public interface DatePrimitive extends org.apache.xmlbeans.XmlAnySimpleType
     void objectSet(java.lang.Object val);
     org.apache.xmlbeans.SchemaType instanceType();
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DatePrimitive.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("dateprimitive8a14type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DatePrimitive.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("dateprimitive8a14type");
     
     /**
      * A factory class with static methods for creating instances

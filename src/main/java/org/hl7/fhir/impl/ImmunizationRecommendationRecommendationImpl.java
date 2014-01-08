@@ -20,8 +20,8 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName RECOMMENDATIONDATE$0 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "recommendationDate");
+    private static final javax.xml.namespace.QName DATE$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
     private static final javax.xml.namespace.QName VACCINETYPE$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "vaccineType");
     private static final javax.xml.namespace.QName DOSENUMBER$4 = 
@@ -34,22 +34,20 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
         new javax.xml.namespace.QName("http://hl7.org/fhir", "protocol");
     private static final javax.xml.namespace.QName SUPPORTINGIMMUNIZATION$12 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "supportingImmunization");
-    private static final javax.xml.namespace.QName SUPPORTINGADVERSEEVENTREPORT$14 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "supportingAdverseEventReport");
-    private static final javax.xml.namespace.QName SUPPORTINGPATIENTOBSERVATION$16 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "supportingPatientObservation");
+    private static final javax.xml.namespace.QName SUPPORTINGPATIENTINFORMATION$14 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "supportingPatientInformation");
     
     
     /**
-     * Gets the "recommendationDate" element
+     * Gets the "date" element
      */
-    public org.hl7.fhir.DateTime getRecommendationDate()
+    public org.hl7.fhir.DateTime getDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(RECOMMENDATIONDATE$0, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$0, 0);
             if (target == null)
             {
                 return null;
@@ -59,23 +57,23 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     }
     
     /**
-     * Sets the "recommendationDate" element
+     * Sets the "date" element
      */
-    public void setRecommendationDate(org.hl7.fhir.DateTime recommendationDate)
+    public void setDate(org.hl7.fhir.DateTime date)
     {
-        generatedSetterHelperImpl(recommendationDate, RECOMMENDATIONDATE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(date, DATE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "recommendationDate" element
+     * Appends and returns a new empty "date" element
      */
-    public org.hl7.fhir.DateTime addNewRecommendationDate()
+    public org.hl7.fhir.DateTime addNewDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(RECOMMENDATIONDATE$0);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$0);
             return target;
         }
     }
@@ -187,13 +185,13 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     /**
      * Gets the "forecastStatus" element
      */
-    public org.hl7.fhir.ImmunizationForecastStatus getForecastStatus()
+    public org.hl7.fhir.CodeableConcept getForecastStatus()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ImmunizationForecastStatus target = null;
-            target = (org.hl7.fhir.ImmunizationForecastStatus)get_store().find_element_user(FORECASTSTATUS$6, 0);
+            org.hl7.fhir.CodeableConcept target = null;
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(FORECASTSTATUS$6, 0);
             if (target == null)
             {
                 return null;
@@ -205,7 +203,7 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     /**
      * Sets the "forecastStatus" element
      */
-    public void setForecastStatus(org.hl7.fhir.ImmunizationForecastStatus forecastStatus)
+    public void setForecastStatus(org.hl7.fhir.CodeableConcept forecastStatus)
     {
         generatedSetterHelperImpl(forecastStatus, FORECASTSTATUS$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -213,13 +211,13 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     /**
      * Appends and returns a new empty "forecastStatus" element
      */
-    public org.hl7.fhir.ImmunizationForecastStatus addNewForecastStatus()
+    public org.hl7.fhir.CodeableConcept addNewForecastStatus()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.ImmunizationForecastStatus target = null;
-            target = (org.hl7.fhir.ImmunizationForecastStatus)get_store().add_element_user(FORECASTSTATUS$6);
+            org.hl7.fhir.CodeableConcept target = null;
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(FORECASTSTATUS$6);
             return target;
         }
     }
@@ -515,128 +513,15 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     }
     
     /**
-     * Gets array of all "supportingAdverseEventReport" elements
+     * Gets array of all "supportingPatientInformation" elements
      */
-    public org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport[] getSupportingAdverseEventReportArray()
+    public org.hl7.fhir.ResourceReference[] getSupportingPatientInformationArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(SUPPORTINGADVERSEEVENTREPORT$14, targetList);
-            org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport[] result = new org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport[targetList.size()];
-            targetList.toArray(result);
-            return result;
-        }
-    }
-    
-    /**
-     * Gets ith "supportingAdverseEventReport" element
-     */
-    public org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport getSupportingAdverseEventReportArray(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport target = null;
-            target = (org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport)get_store().find_element_user(SUPPORTINGADVERSEEVENTREPORT$14, i);
-            if (target == null)
-            {
-                throw new IndexOutOfBoundsException();
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * Returns number of "supportingAdverseEventReport" element
-     */
-    public int sizeOfSupportingAdverseEventReportArray()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(SUPPORTINGADVERSEEVENTREPORT$14);
-        }
-    }
-    
-    /**
-     * Sets array of all "supportingAdverseEventReport" element  WARNING: This method is not atomicaly synchronized.
-     */
-    public void setSupportingAdverseEventReportArray(org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport[] supportingAdverseEventReportArray)
-    {
-        check_orphaned();
-        arraySetterHelper(supportingAdverseEventReportArray, SUPPORTINGADVERSEEVENTREPORT$14);
-    }
-    
-    /**
-     * Sets ith "supportingAdverseEventReport" element
-     */
-    public void setSupportingAdverseEventReportArray(int i, org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport supportingAdverseEventReport)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport target = null;
-            target = (org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport)get_store().find_element_user(SUPPORTINGADVERSEEVENTREPORT$14, i);
-            if (target == null)
-            {
-                throw new IndexOutOfBoundsException();
-            }
-            target.set(supportingAdverseEventReport);
-        }
-    }
-    
-    /**
-     * Inserts and returns a new empty value (as xml) as the ith "supportingAdverseEventReport" element
-     */
-    public org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport insertNewSupportingAdverseEventReport(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport target = null;
-            target = (org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport)get_store().insert_element_user(SUPPORTINGADVERSEEVENTREPORT$14, i);
-            return target;
-        }
-    }
-    
-    /**
-     * Appends and returns a new empty value (as xml) as the last "supportingAdverseEventReport" element
-     */
-    public org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport addNewSupportingAdverseEventReport()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport target = null;
-            target = (org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport)get_store().add_element_user(SUPPORTINGADVERSEEVENTREPORT$14);
-            return target;
-        }
-    }
-    
-    /**
-     * Removes the ith "supportingAdverseEventReport" element
-     */
-    public void removeSupportingAdverseEventReport(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(SUPPORTINGADVERSEEVENTREPORT$14, i);
-        }
-    }
-    
-    /**
-     * Gets array of all "supportingPatientObservation" elements
-     */
-    public org.hl7.fhir.ResourceReference[] getSupportingPatientObservationArray()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(SUPPORTINGPATIENTOBSERVATION$16, targetList);
+            get_store().find_all_element_users(SUPPORTINGPATIENTINFORMATION$14, targetList);
             org.hl7.fhir.ResourceReference[] result = new org.hl7.fhir.ResourceReference[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -644,15 +529,15 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     }
     
     /**
-     * Gets ith "supportingPatientObservation" element
+     * Gets ith "supportingPatientInformation" element
      */
-    public org.hl7.fhir.ResourceReference getSupportingPatientObservationArray(int i)
+    public org.hl7.fhir.ResourceReference getSupportingPatientInformationArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUPPORTINGPATIENTOBSERVATION$16, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUPPORTINGPATIENTINFORMATION$14, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -662,81 +547,81 @@ public class ImmunizationRecommendationRecommendationImpl extends org.hl7.fhir.i
     }
     
     /**
-     * Returns number of "supportingPatientObservation" element
+     * Returns number of "supportingPatientInformation" element
      */
-    public int sizeOfSupportingPatientObservationArray()
+    public int sizeOfSupportingPatientInformationArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SUPPORTINGPATIENTOBSERVATION$16);
+            return get_store().count_elements(SUPPORTINGPATIENTINFORMATION$14);
         }
     }
     
     /**
-     * Sets array of all "supportingPatientObservation" element  WARNING: This method is not atomicaly synchronized.
+     * Sets array of all "supportingPatientInformation" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setSupportingPatientObservationArray(org.hl7.fhir.ResourceReference[] supportingPatientObservationArray)
+    public void setSupportingPatientInformationArray(org.hl7.fhir.ResourceReference[] supportingPatientInformationArray)
     {
         check_orphaned();
-        arraySetterHelper(supportingPatientObservationArray, SUPPORTINGPATIENTOBSERVATION$16);
+        arraySetterHelper(supportingPatientInformationArray, SUPPORTINGPATIENTINFORMATION$14);
     }
     
     /**
-     * Sets ith "supportingPatientObservation" element
+     * Sets ith "supportingPatientInformation" element
      */
-    public void setSupportingPatientObservationArray(int i, org.hl7.fhir.ResourceReference supportingPatientObservation)
+    public void setSupportingPatientInformationArray(int i, org.hl7.fhir.ResourceReference supportingPatientInformation)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUPPORTINGPATIENTOBSERVATION$16, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUPPORTINGPATIENTINFORMATION$14, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
             }
-            target.set(supportingPatientObservation);
+            target.set(supportingPatientInformation);
         }
     }
     
     /**
-     * Inserts and returns a new empty value (as xml) as the ith "supportingPatientObservation" element
+     * Inserts and returns a new empty value (as xml) as the ith "supportingPatientInformation" element
      */
-    public org.hl7.fhir.ResourceReference insertNewSupportingPatientObservation(int i)
+    public org.hl7.fhir.ResourceReference insertNewSupportingPatientInformation(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(SUPPORTINGPATIENTOBSERVATION$16, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(SUPPORTINGPATIENTINFORMATION$14, i);
             return target;
         }
     }
     
     /**
-     * Appends and returns a new empty value (as xml) as the last "supportingPatientObservation" element
+     * Appends and returns a new empty value (as xml) as the last "supportingPatientInformation" element
      */
-    public org.hl7.fhir.ResourceReference addNewSupportingPatientObservation()
+    public org.hl7.fhir.ResourceReference addNewSupportingPatientInformation()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUPPORTINGPATIENTOBSERVATION$16);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUPPORTINGPATIENTINFORMATION$14);
             return target;
         }
     }
     
     /**
-     * Removes the ith "supportingPatientObservation" element
+     * Removes the ith "supportingPatientInformation" element
      */
-    public void removeSupportingPatientObservation(int i)
+    public void removeSupportingPatientInformation(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SUPPORTINGPATIENTOBSERVATION$16, i);
+            get_store().remove_element(SUPPORTINGPATIENTINFORMATION$14, i);
         }
     }
 }

@@ -16,32 +16,32 @@ package org.hl7.fhir;
 public interface Supply extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Supply.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("supplyb11btype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Supply.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("supplyb11btype");
     
     /**
-     * Gets the "name" element
+     * Gets the "kind" element
      */
-    org.hl7.fhir.CodeableConcept getName();
+    org.hl7.fhir.CodeableConcept getKind();
     
     /**
-     * True if has "name" element
+     * True if has "kind" element
      */
-    boolean isSetName();
+    boolean isSetKind();
     
     /**
-     * Sets the "name" element
+     * Sets the "kind" element
      */
-    void setName(org.hl7.fhir.CodeableConcept name);
+    void setKind(org.hl7.fhir.CodeableConcept kind);
     
     /**
-     * Appends and returns a new empty "name" element
+     * Appends and returns a new empty "kind" element
      */
-    org.hl7.fhir.CodeableConcept addNewName();
+    org.hl7.fhir.CodeableConcept addNewKind();
     
     /**
-     * Unsets the "name" element
+     * Unsets the "kind" element
      */
-    void unsetName();
+    void unsetKind();
     
     /**
      * Gets the "identifier" element
@@ -71,7 +71,7 @@ public interface Supply extends org.hl7.fhir.Resource
     /**
      * Gets the "status" element
      */
-    org.hl7.fhir.Code getStatus();
+    org.hl7.fhir.SupplyStatus getStatus();
     
     /**
      * True if has "status" element
@@ -81,12 +81,12 @@ public interface Supply extends org.hl7.fhir.Resource
     /**
      * Sets the "status" element
      */
-    void setStatus(org.hl7.fhir.Code status);
+    void setStatus(org.hl7.fhir.SupplyStatus status);
     
     /**
      * Appends and returns a new empty "status" element
      */
-    org.hl7.fhir.Code addNewStatus();
+    org.hl7.fhir.SupplyStatus addNewStatus();
     
     /**
      * Unsets the "status" element

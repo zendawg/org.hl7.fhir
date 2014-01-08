@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface OrderOutcomeStatusList extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(OrderOutcomeStatusList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("orderoutcomestatuslistd88ftype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(OrderOutcomeStatusList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("orderoutcomestatuslistd88ftype");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -27,6 +27,7 @@ public interface OrderOutcomeStatusList extends org.apache.xmlbeans.XmlString
     static final Enum ERROR = Enum.forString("error");
     static final Enum ACCEPTED = Enum.forString("accepted");
     static final Enum CANCELLED = Enum.forString("cancelled");
+    static final Enum REPLACED = Enum.forString("replaced");
     static final Enum ABORTED = Enum.forString("aborted");
     static final Enum COMPLETE = Enum.forString("complete");
     
@@ -36,6 +37,7 @@ public interface OrderOutcomeStatusList extends org.apache.xmlbeans.XmlString
     static final int INT_ERROR = Enum.INT_ERROR;
     static final int INT_ACCEPTED = Enum.INT_ACCEPTED;
     static final int INT_CANCELLED = Enum.INT_CANCELLED;
+    static final int INT_REPLACED = Enum.INT_REPLACED;
     static final int INT_ABORTED = Enum.INT_ABORTED;
     static final int INT_COMPLETE = Enum.INT_COMPLETE;
     
@@ -76,8 +78,9 @@ public interface OrderOutcomeStatusList extends org.apache.xmlbeans.XmlString
         static final int INT_ERROR = 4;
         static final int INT_ACCEPTED = 5;
         static final int INT_CANCELLED = 6;
-        static final int INT_ABORTED = 7;
-        static final int INT_COMPLETE = 8;
+        static final int INT_REPLACED = 7;
+        static final int INT_ABORTED = 8;
+        static final int INT_COMPLETE = 9;
         
         public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
             new org.apache.xmlbeans.StringEnumAbstractBase.Table
@@ -90,6 +93,7 @@ public interface OrderOutcomeStatusList extends org.apache.xmlbeans.XmlString
                 new Enum("error", INT_ERROR),
                 new Enum("accepted", INT_ACCEPTED),
                 new Enum("cancelled", INT_CANCELLED),
+                new Enum("replaced", INT_REPLACED),
                 new Enum("aborted", INT_ABORTED),
                 new Enum("complete", INT_COMPLETE),
             }

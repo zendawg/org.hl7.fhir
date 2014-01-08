@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface FilterOperatorList extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(FilterOperatorList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("filteroperatorlist43c9type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(FilterOperatorList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("filteroperatorlist43c9type");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -25,11 +25,15 @@ public interface FilterOperatorList extends org.apache.xmlbeans.XmlString
     static final Enum IS_A = Enum.forString("is-a");
     static final Enum IS_NOT_A = Enum.forString("is-not-a");
     static final Enum REGEX = Enum.forString("regex");
+    static final Enum IN = Enum.forString("in");
+    static final Enum NOT_IN = Enum.forString("not in");
     
     static final int INT_X = Enum.INT_X;
     static final int INT_IS_A = Enum.INT_IS_A;
     static final int INT_IS_NOT_A = Enum.INT_IS_NOT_A;
     static final int INT_REGEX = Enum.INT_REGEX;
+    static final int INT_IN = Enum.INT_IN;
+    static final int INT_NOT_IN = Enum.INT_NOT_IN;
     
     /**
      * Enumeration value class for org.hl7.fhir.FilterOperatorList.
@@ -66,6 +70,8 @@ public interface FilterOperatorList extends org.apache.xmlbeans.XmlString
         static final int INT_IS_A = 2;
         static final int INT_IS_NOT_A = 3;
         static final int INT_REGEX = 4;
+        static final int INT_IN = 5;
+        static final int INT_NOT_IN = 6;
         
         public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
             new org.apache.xmlbeans.StringEnumAbstractBase.Table
@@ -76,6 +82,8 @@ public interface FilterOperatorList extends org.apache.xmlbeans.XmlString
                 new Enum("is-a", INT_IS_A),
                 new Enum("is-not-a", INT_IS_NOT_A),
                 new Enum("regex", INT_REGEX),
+                new Enum("in", INT_IN),
+                new Enum("not in", INT_NOT_IN),
             }
         );
         private static final long serialVersionUID = 1L;

@@ -16,57 +16,57 @@ package org.hl7.fhir;
 public interface AdverseReactionExposure extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AdverseReactionExposure.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("adversereactionexposure82e6type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(AdverseReactionExposure.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("adversereactionexposure82e6type");
     
     /**
-     * Gets the "exposureDate" element
+     * Gets the "date" element
      */
-    org.hl7.fhir.DateTime getExposureDate();
+    org.hl7.fhir.DateTime getDate();
     
     /**
-     * True if has "exposureDate" element
+     * True if has "date" element
      */
-    boolean isSetExposureDate();
+    boolean isSetDate();
     
     /**
-     * Sets the "exposureDate" element
+     * Sets the "date" element
      */
-    void setExposureDate(org.hl7.fhir.DateTime exposureDate);
+    void setDate(org.hl7.fhir.DateTime date);
     
     /**
-     * Appends and returns a new empty "exposureDate" element
+     * Appends and returns a new empty "date" element
      */
-    org.hl7.fhir.DateTime addNewExposureDate();
+    org.hl7.fhir.DateTime addNewDate();
     
     /**
-     * Unsets the "exposureDate" element
+     * Unsets the "date" element
      */
-    void unsetExposureDate();
+    void unsetDate();
     
     /**
-     * Gets the "exposureType" element
+     * Gets the "type" element
      */
-    org.hl7.fhir.ExposureType getExposureType();
+    org.hl7.fhir.ExposureType getType();
     
     /**
-     * True if has "exposureType" element
+     * True if has "type" element
      */
-    boolean isSetExposureType();
+    boolean isSetType();
     
     /**
-     * Sets the "exposureType" element
+     * Sets the "type" element
      */
-    void setExposureType(org.hl7.fhir.ExposureType exposureType);
+    void setType(org.hl7.fhir.ExposureType type);
     
     /**
-     * Appends and returns a new empty "exposureType" element
+     * Appends and returns a new empty "type" element
      */
-    org.hl7.fhir.ExposureType addNewExposureType();
+    org.hl7.fhir.ExposureType addNewType();
     
     /**
-     * Unsets the "exposureType" element
+     * Unsets the "type" element
      */
-    void unsetExposureType();
+    void unsetType();
     
     /**
      * Gets the "causalityExpectation" element

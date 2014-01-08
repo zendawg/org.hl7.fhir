@@ -353,18 +353,6 @@ public class ImmunizationVaccinationProtocolImpl extends org.hl7.fhir.impl.Backb
     }
     
     /**
-     * True if has "doseTarget" element
-     */
-    public boolean isSetDoseTarget()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(DOSETARGET$10) != 0;
-        }
-    }
-    
-    /**
      * Sets the "doseTarget" element
      */
     public void setDoseTarget(org.hl7.fhir.CodeableConcept doseTarget)
@@ -383,18 +371,6 @@ public class ImmunizationVaccinationProtocolImpl extends org.hl7.fhir.impl.Backb
             org.hl7.fhir.CodeableConcept target = null;
             target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(DOSETARGET$10);
             return target;
-        }
-    }
-    
-    /**
-     * Unsets the "doseTarget" element
-     */
-    public void unsetDoseTarget()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(DOSETARGET$10, 0);
         }
     }
     

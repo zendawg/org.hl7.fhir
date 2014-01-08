@@ -20,41 +20,156 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName DATE$0 = 
+    private static final javax.xml.namespace.QName IDENTIFIER$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
+    private static final javax.xml.namespace.QName DATE$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
-    private static final javax.xml.namespace.QName VACCINETYPE$2 = 
+    private static final javax.xml.namespace.QName VACCINETYPE$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "vaccineType");
-    private static final javax.xml.namespace.QName SUBJECT$4 = 
+    private static final javax.xml.namespace.QName SUBJECT$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
-    private static final javax.xml.namespace.QName REFUSEDINDICATOR$6 = 
+    private static final javax.xml.namespace.QName REFUSEDINDICATOR$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "refusedIndicator");
-    private static final javax.xml.namespace.QName REPORTED$8 = 
+    private static final javax.xml.namespace.QName REPORTED$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "reported");
-    private static final javax.xml.namespace.QName PERFORMER$10 = 
+    private static final javax.xml.namespace.QName PERFORMER$12 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "performer");
-    private static final javax.xml.namespace.QName REQUESTER$12 = 
+    private static final javax.xml.namespace.QName REQUESTER$14 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "requester");
-    private static final javax.xml.namespace.QName MANUFACTURER$14 = 
+    private static final javax.xml.namespace.QName MANUFACTURER$16 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "manufacturer");
-    private static final javax.xml.namespace.QName LOCATION$16 = 
+    private static final javax.xml.namespace.QName LOCATION$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "location");
-    private static final javax.xml.namespace.QName LOTNUMBER$18 = 
+    private static final javax.xml.namespace.QName LOTNUMBER$20 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "lotNumber");
-    private static final javax.xml.namespace.QName EXPIRATIONDATE$20 = 
+    private static final javax.xml.namespace.QName EXPIRATIONDATE$22 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "expirationDate");
-    private static final javax.xml.namespace.QName SITE$22 = 
+    private static final javax.xml.namespace.QName SITE$24 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "site");
-    private static final javax.xml.namespace.QName ROUTE$24 = 
+    private static final javax.xml.namespace.QName ROUTE$26 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "route");
-    private static final javax.xml.namespace.QName DOSEQUANTITY$26 = 
+    private static final javax.xml.namespace.QName DOSEQUANTITY$28 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "doseQuantity");
-    private static final javax.xml.namespace.QName EXPLANATION$28 = 
+    private static final javax.xml.namespace.QName EXPLANATION$30 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "explanation");
-    private static final javax.xml.namespace.QName REACTION$30 = 
+    private static final javax.xml.namespace.QName REACTION$32 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "reaction");
-    private static final javax.xml.namespace.QName VACCINATIONPROTOCOL$32 = 
+    private static final javax.xml.namespace.QName VACCINATIONPROTOCOL$34 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "vaccinationProtocol");
     
+    
+    /**
+     * Gets array of all "identifier" elements
+     */
+    public org.hl7.fhir.Identifier[] getIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(IDENTIFIER$0, targetList);
+            org.hl7.fhir.Identifier[] result = new org.hl7.fhir.Identifier[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier getIdentifierArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "identifier" element
+     */
+    public int sizeOfIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(IDENTIFIER$0);
+        }
+    }
+    
+    /**
+     * Sets array of all "identifier" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray)
+    {
+        check_orphaned();
+        arraySetterHelper(identifierArray, IDENTIFIER$0);
+    }
+    
+    /**
+     * Sets ith "identifier" element
+     */
+    public void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(identifier);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier insertNewIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().insert_element_user(IDENTIFIER$0, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
+     */
+    public org.hl7.fhir.Identifier addNewIdentifier()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().add_element_user(IDENTIFIER$0);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "identifier" element
+     */
+    public void removeIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(IDENTIFIER$0, i);
+        }
+    }
     
     /**
      * Gets the "date" element
@@ -65,7 +180,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$0, 0);
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$2, 0);
             if (target == null)
             {
                 return null;
@@ -79,7 +194,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setDate(org.hl7.fhir.DateTime date)
     {
-        generatedSetterHelperImpl(date, DATE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(date, DATE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -91,7 +206,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.DateTime target = null;
-            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$0);
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$2);
             return target;
         }
     }
@@ -105,7 +220,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(VACCINETYPE$2, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(VACCINETYPE$4, 0);
             if (target == null)
             {
                 return null;
@@ -119,7 +234,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setVaccineType(org.hl7.fhir.CodeableConcept vaccineType)
     {
-        generatedSetterHelperImpl(vaccineType, VACCINETYPE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(vaccineType, VACCINETYPE$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -131,7 +246,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(VACCINETYPE$2);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(VACCINETYPE$4);
             return target;
         }
     }
@@ -145,7 +260,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$4, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$6, 0);
             if (target == null)
             {
                 return null;
@@ -159,7 +274,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setSubject(org.hl7.fhir.ResourceReference subject)
     {
-        generatedSetterHelperImpl(subject, SUBJECT$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(subject, SUBJECT$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -171,7 +286,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$4);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$6);
             return target;
         }
     }
@@ -185,7 +300,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().find_element_user(REFUSEDINDICATOR$6, 0);
+            target = (org.hl7.fhir.Boolean)get_store().find_element_user(REFUSEDINDICATOR$8, 0);
             if (target == null)
             {
                 return null;
@@ -199,7 +314,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setRefusedIndicator(org.hl7.fhir.Boolean refusedIndicator)
     {
-        generatedSetterHelperImpl(refusedIndicator, REFUSEDINDICATOR$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(refusedIndicator, REFUSEDINDICATOR$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -211,7 +326,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().add_element_user(REFUSEDINDICATOR$6);
+            target = (org.hl7.fhir.Boolean)get_store().add_element_user(REFUSEDINDICATOR$8);
             return target;
         }
     }
@@ -225,7 +340,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().find_element_user(REPORTED$8, 0);
+            target = (org.hl7.fhir.Boolean)get_store().find_element_user(REPORTED$10, 0);
             if (target == null)
             {
                 return null;
@@ -239,7 +354,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setReported(org.hl7.fhir.Boolean reported)
     {
-        generatedSetterHelperImpl(reported, REPORTED$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(reported, REPORTED$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -251,7 +366,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().add_element_user(REPORTED$8);
+            target = (org.hl7.fhir.Boolean)get_store().add_element_user(REPORTED$10);
             return target;
         }
     }
@@ -265,7 +380,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(PERFORMER$10, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(PERFORMER$12, 0);
             if (target == null)
             {
                 return null;
@@ -282,7 +397,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(PERFORMER$10) != 0;
+            return get_store().count_elements(PERFORMER$12) != 0;
         }
     }
     
@@ -291,7 +406,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setPerformer(org.hl7.fhir.ResourceReference performer)
     {
-        generatedSetterHelperImpl(performer, PERFORMER$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(performer, PERFORMER$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -303,7 +418,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(PERFORMER$10);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(PERFORMER$12);
             return target;
         }
     }
@@ -316,7 +431,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(PERFORMER$10, 0);
+            get_store().remove_element(PERFORMER$12, 0);
         }
     }
     
@@ -329,7 +444,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(REQUESTER$12, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(REQUESTER$14, 0);
             if (target == null)
             {
                 return null;
@@ -346,7 +461,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REQUESTER$12) != 0;
+            return get_store().count_elements(REQUESTER$14) != 0;
         }
     }
     
@@ -355,7 +470,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setRequester(org.hl7.fhir.ResourceReference requester)
     {
-        generatedSetterHelperImpl(requester, REQUESTER$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(requester, REQUESTER$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -367,7 +482,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(REQUESTER$12);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(REQUESTER$14);
             return target;
         }
     }
@@ -380,7 +495,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REQUESTER$12, 0);
+            get_store().remove_element(REQUESTER$14, 0);
         }
     }
     
@@ -393,7 +508,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(MANUFACTURER$14, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(MANUFACTURER$16, 0);
             if (target == null)
             {
                 return null;
@@ -410,7 +525,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(MANUFACTURER$14) != 0;
+            return get_store().count_elements(MANUFACTURER$16) != 0;
         }
     }
     
@@ -419,7 +534,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setManufacturer(org.hl7.fhir.ResourceReference manufacturer)
     {
-        generatedSetterHelperImpl(manufacturer, MANUFACTURER$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(manufacturer, MANUFACTURER$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -431,7 +546,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(MANUFACTURER$14);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(MANUFACTURER$16);
             return target;
         }
     }
@@ -444,7 +559,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(MANUFACTURER$14, 0);
+            get_store().remove_element(MANUFACTURER$16, 0);
         }
     }
     
@@ -457,7 +572,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(LOCATION$16, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(LOCATION$18, 0);
             if (target == null)
             {
                 return null;
@@ -474,7 +589,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(LOCATION$16) != 0;
+            return get_store().count_elements(LOCATION$18) != 0;
         }
     }
     
@@ -483,7 +598,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setLocation(org.hl7.fhir.ResourceReference location)
     {
-        generatedSetterHelperImpl(location, LOCATION$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(location, LOCATION$18, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -495,7 +610,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(LOCATION$16);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(LOCATION$18);
             return target;
         }
     }
@@ -508,7 +623,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(LOCATION$16, 0);
+            get_store().remove_element(LOCATION$18, 0);
         }
     }
     
@@ -521,7 +636,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(LOTNUMBER$18, 0);
+            target = (org.hl7.fhir.String)get_store().find_element_user(LOTNUMBER$20, 0);
             if (target == null)
             {
                 return null;
@@ -538,7 +653,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(LOTNUMBER$18) != 0;
+            return get_store().count_elements(LOTNUMBER$20) != 0;
         }
     }
     
@@ -547,7 +662,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setLotNumber(org.hl7.fhir.String lotNumber)
     {
-        generatedSetterHelperImpl(lotNumber, LOTNUMBER$18, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(lotNumber, LOTNUMBER$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -559,7 +674,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(LOTNUMBER$18);
+            target = (org.hl7.fhir.String)get_store().add_element_user(LOTNUMBER$20);
             return target;
         }
     }
@@ -572,7 +687,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(LOTNUMBER$18, 0);
+            get_store().remove_element(LOTNUMBER$20, 0);
         }
     }
     
@@ -585,7 +700,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Date target = null;
-            target = (org.hl7.fhir.Date)get_store().find_element_user(EXPIRATIONDATE$20, 0);
+            target = (org.hl7.fhir.Date)get_store().find_element_user(EXPIRATIONDATE$22, 0);
             if (target == null)
             {
                 return null;
@@ -602,7 +717,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(EXPIRATIONDATE$20) != 0;
+            return get_store().count_elements(EXPIRATIONDATE$22) != 0;
         }
     }
     
@@ -611,7 +726,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setExpirationDate(org.hl7.fhir.Date expirationDate)
     {
-        generatedSetterHelperImpl(expirationDate, EXPIRATIONDATE$20, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(expirationDate, EXPIRATIONDATE$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -623,7 +738,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Date target = null;
-            target = (org.hl7.fhir.Date)get_store().add_element_user(EXPIRATIONDATE$20);
+            target = (org.hl7.fhir.Date)get_store().add_element_user(EXPIRATIONDATE$22);
             return target;
         }
     }
@@ -636,7 +751,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(EXPIRATIONDATE$20, 0);
+            get_store().remove_element(EXPIRATIONDATE$22, 0);
         }
     }
     
@@ -649,7 +764,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SITE$22, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SITE$24, 0);
             if (target == null)
             {
                 return null;
@@ -666,7 +781,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SITE$22) != 0;
+            return get_store().count_elements(SITE$24) != 0;
         }
     }
     
@@ -675,7 +790,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setSite(org.hl7.fhir.CodeableConcept site)
     {
-        generatedSetterHelperImpl(site, SITE$22, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(site, SITE$24, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -687,7 +802,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SITE$22);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SITE$24);
             return target;
         }
     }
@@ -700,7 +815,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SITE$22, 0);
+            get_store().remove_element(SITE$24, 0);
         }
     }
     
@@ -713,7 +828,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ROUTE$24, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ROUTE$26, 0);
             if (target == null)
             {
                 return null;
@@ -730,7 +845,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ROUTE$24) != 0;
+            return get_store().count_elements(ROUTE$26) != 0;
         }
     }
     
@@ -739,7 +854,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setRoute(org.hl7.fhir.CodeableConcept route)
     {
-        generatedSetterHelperImpl(route, ROUTE$24, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(route, ROUTE$26, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -751,7 +866,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ROUTE$24);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ROUTE$26);
             return target;
         }
     }
@@ -764,7 +879,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ROUTE$24, 0);
+            get_store().remove_element(ROUTE$26, 0);
         }
     }
     
@@ -777,7 +892,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().find_element_user(DOSEQUANTITY$26, 0);
+            target = (org.hl7.fhir.Quantity)get_store().find_element_user(DOSEQUANTITY$28, 0);
             if (target == null)
             {
                 return null;
@@ -794,7 +909,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(DOSEQUANTITY$26) != 0;
+            return get_store().count_elements(DOSEQUANTITY$28) != 0;
         }
     }
     
@@ -803,7 +918,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setDoseQuantity(org.hl7.fhir.Quantity doseQuantity)
     {
-        generatedSetterHelperImpl(doseQuantity, DOSEQUANTITY$26, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(doseQuantity, DOSEQUANTITY$28, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -815,7 +930,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().add_element_user(DOSEQUANTITY$26);
+            target = (org.hl7.fhir.Quantity)get_store().add_element_user(DOSEQUANTITY$28);
             return target;
         }
     }
@@ -828,7 +943,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(DOSEQUANTITY$26, 0);
+            get_store().remove_element(DOSEQUANTITY$28, 0);
         }
     }
     
@@ -841,7 +956,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationExplanation target = null;
-            target = (org.hl7.fhir.ImmunizationExplanation)get_store().find_element_user(EXPLANATION$28, 0);
+            target = (org.hl7.fhir.ImmunizationExplanation)get_store().find_element_user(EXPLANATION$30, 0);
             if (target == null)
             {
                 return null;
@@ -858,7 +973,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(EXPLANATION$28) != 0;
+            return get_store().count_elements(EXPLANATION$30) != 0;
         }
     }
     
@@ -867,7 +982,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
      */
     public void setExplanation(org.hl7.fhir.ImmunizationExplanation explanation)
     {
-        generatedSetterHelperImpl(explanation, EXPLANATION$28, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(explanation, EXPLANATION$30, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -879,7 +994,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationExplanation target = null;
-            target = (org.hl7.fhir.ImmunizationExplanation)get_store().add_element_user(EXPLANATION$28);
+            target = (org.hl7.fhir.ImmunizationExplanation)get_store().add_element_user(EXPLANATION$30);
             return target;
         }
     }
@@ -892,7 +1007,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(EXPLANATION$28, 0);
+            get_store().remove_element(EXPLANATION$30, 0);
         }
     }
     
@@ -905,7 +1020,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(REACTION$30, targetList);
+            get_store().find_all_element_users(REACTION$32, targetList);
             org.hl7.fhir.ImmunizationReaction[] result = new org.hl7.fhir.ImmunizationReaction[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -921,7 +1036,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationReaction target = null;
-            target = (org.hl7.fhir.ImmunizationReaction)get_store().find_element_user(REACTION$30, i);
+            target = (org.hl7.fhir.ImmunizationReaction)get_store().find_element_user(REACTION$32, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -938,7 +1053,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(REACTION$30);
+            return get_store().count_elements(REACTION$32);
         }
     }
     
@@ -948,7 +1063,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
     public void setReactionArray(org.hl7.fhir.ImmunizationReaction[] reactionArray)
     {
         check_orphaned();
-        arraySetterHelper(reactionArray, REACTION$30);
+        arraySetterHelper(reactionArray, REACTION$32);
     }
     
     /**
@@ -960,7 +1075,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationReaction target = null;
-            target = (org.hl7.fhir.ImmunizationReaction)get_store().find_element_user(REACTION$30, i);
+            target = (org.hl7.fhir.ImmunizationReaction)get_store().find_element_user(REACTION$32, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -978,7 +1093,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationReaction target = null;
-            target = (org.hl7.fhir.ImmunizationReaction)get_store().insert_element_user(REACTION$30, i);
+            target = (org.hl7.fhir.ImmunizationReaction)get_store().insert_element_user(REACTION$32, i);
             return target;
         }
     }
@@ -992,7 +1107,7 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationReaction target = null;
-            target = (org.hl7.fhir.ImmunizationReaction)get_store().add_element_user(REACTION$30);
+            target = (org.hl7.fhir.ImmunizationReaction)get_store().add_element_user(REACTION$32);
             return target;
         }
     }
@@ -1005,50 +1120,99 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(REACTION$30, i);
+            get_store().remove_element(REACTION$32, i);
         }
     }
     
     /**
-     * Gets the "vaccinationProtocol" element
+     * Gets array of all "vaccinationProtocol" elements
      */
-    public org.hl7.fhir.ImmunizationVaccinationProtocol getVaccinationProtocol()
+    public org.hl7.fhir.ImmunizationVaccinationProtocol[] getVaccinationProtocolArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(VACCINATIONPROTOCOL$34, targetList);
+            org.hl7.fhir.ImmunizationVaccinationProtocol[] result = new org.hl7.fhir.ImmunizationVaccinationProtocol[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "vaccinationProtocol" element
+     */
+    public org.hl7.fhir.ImmunizationVaccinationProtocol getVaccinationProtocolArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationVaccinationProtocol target = null;
-            target = (org.hl7.fhir.ImmunizationVaccinationProtocol)get_store().find_element_user(VACCINATIONPROTOCOL$32, 0);
+            target = (org.hl7.fhir.ImmunizationVaccinationProtocol)get_store().find_element_user(VACCINATIONPROTOCOL$34, i);
             if (target == null)
             {
-                return null;
+                throw new IndexOutOfBoundsException();
             }
             return target;
         }
     }
     
     /**
-     * True if has "vaccinationProtocol" element
+     * Returns number of "vaccinationProtocol" element
      */
-    public boolean isSetVaccinationProtocol()
+    public int sizeOfVaccinationProtocolArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(VACCINATIONPROTOCOL$32) != 0;
+            return get_store().count_elements(VACCINATIONPROTOCOL$34);
         }
     }
     
     /**
-     * Sets the "vaccinationProtocol" element
+     * Sets array of all "vaccinationProtocol" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setVaccinationProtocol(org.hl7.fhir.ImmunizationVaccinationProtocol vaccinationProtocol)
+    public void setVaccinationProtocolArray(org.hl7.fhir.ImmunizationVaccinationProtocol[] vaccinationProtocolArray)
     {
-        generatedSetterHelperImpl(vaccinationProtocol, VACCINATIONPROTOCOL$32, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        check_orphaned();
+        arraySetterHelper(vaccinationProtocolArray, VACCINATIONPROTOCOL$34);
     }
     
     /**
-     * Appends and returns a new empty "vaccinationProtocol" element
+     * Sets ith "vaccinationProtocol" element
+     */
+    public void setVaccinationProtocolArray(int i, org.hl7.fhir.ImmunizationVaccinationProtocol vaccinationProtocol)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ImmunizationVaccinationProtocol target = null;
+            target = (org.hl7.fhir.ImmunizationVaccinationProtocol)get_store().find_element_user(VACCINATIONPROTOCOL$34, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(vaccinationProtocol);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "vaccinationProtocol" element
+     */
+    public org.hl7.fhir.ImmunizationVaccinationProtocol insertNewVaccinationProtocol(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ImmunizationVaccinationProtocol target = null;
+            target = (org.hl7.fhir.ImmunizationVaccinationProtocol)get_store().insert_element_user(VACCINATIONPROTOCOL$34, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "vaccinationProtocol" element
      */
     public org.hl7.fhir.ImmunizationVaccinationProtocol addNewVaccinationProtocol()
     {
@@ -1056,20 +1220,20 @@ public class ImmunizationImpl extends org.hl7.fhir.impl.ResourceImpl implements 
         {
             check_orphaned();
             org.hl7.fhir.ImmunizationVaccinationProtocol target = null;
-            target = (org.hl7.fhir.ImmunizationVaccinationProtocol)get_store().add_element_user(VACCINATIONPROTOCOL$32);
+            target = (org.hl7.fhir.ImmunizationVaccinationProtocol)get_store().add_element_user(VACCINATIONPROTOCOL$34);
             return target;
         }
     }
     
     /**
-     * Unsets the "vaccinationProtocol" element
+     * Removes the ith "vaccinationProtocol" element
      */
-    public void unsetVaccinationProtocol()
+    public void removeVaccinationProtocol(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(VACCINATIONPROTOCOL$32, 0);
+            get_store().remove_element(VACCINATIONPROTOCOL$34, i);
         }
     }
 }

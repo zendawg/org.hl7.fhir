@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface MedicationStatement extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationStatement.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("medicationstatement311atype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationStatement.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationstatement311atype");
     
     /**
      * Gets array of all "identifier" elements
@@ -199,44 +199,44 @@ public interface MedicationStatement extends org.hl7.fhir.Resource
     void unsetMedication();
     
     /**
-     * Gets array of all "administrationDevice" elements
+     * Gets array of all "device" elements
      */
-    org.hl7.fhir.ResourceReference[] getAdministrationDeviceArray();
+    org.hl7.fhir.ResourceReference[] getDeviceArray();
     
     /**
-     * Gets ith "administrationDevice" element
+     * Gets ith "device" element
      */
-    org.hl7.fhir.ResourceReference getAdministrationDeviceArray(int i);
+    org.hl7.fhir.ResourceReference getDeviceArray(int i);
     
     /**
-     * Returns number of "administrationDevice" element
+     * Returns number of "device" element
      */
-    int sizeOfAdministrationDeviceArray();
+    int sizeOfDeviceArray();
     
     /**
-     * Sets array of all "administrationDevice" element
+     * Sets array of all "device" element
      */
-    void setAdministrationDeviceArray(org.hl7.fhir.ResourceReference[] administrationDeviceArray);
+    void setDeviceArray(org.hl7.fhir.ResourceReference[] deviceArray);
     
     /**
-     * Sets ith "administrationDevice" element
+     * Sets ith "device" element
      */
-    void setAdministrationDeviceArray(int i, org.hl7.fhir.ResourceReference administrationDevice);
+    void setDeviceArray(int i, org.hl7.fhir.ResourceReference device);
     
     /**
-     * Inserts and returns a new empty value (as xml) as the ith "administrationDevice" element
+     * Inserts and returns a new empty value (as xml) as the ith "device" element
      */
-    org.hl7.fhir.ResourceReference insertNewAdministrationDevice(int i);
+    org.hl7.fhir.ResourceReference insertNewDevice(int i);
     
     /**
-     * Appends and returns a new empty value (as xml) as the last "administrationDevice" element
+     * Appends and returns a new empty value (as xml) as the last "device" element
      */
-    org.hl7.fhir.ResourceReference addNewAdministrationDevice();
+    org.hl7.fhir.ResourceReference addNewDevice();
     
     /**
-     * Removes the ith "administrationDevice" element
+     * Removes the ith "device" element
      */
-    void removeAdministrationDevice(int i);
+    void removeDevice(int i);
     
     /**
      * Gets array of all "dosage" elements

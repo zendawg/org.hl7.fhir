@@ -41,45 +41,94 @@ public class SpecimenImpl extends org.hl7.fhir.impl.ResourceImpl implements org.
     
     
     /**
-     * Gets the "identifier" element
+     * Gets array of all "identifier" elements
      */
-    public org.hl7.fhir.Identifier getIdentifier()
+    public org.hl7.fhir.Identifier[] getIdentifierArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(IDENTIFIER$0, targetList);
+            org.hl7.fhir.Identifier[] result = new org.hl7.fhir.Identifier[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier getIdentifierArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Identifier target = null;
-            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, 0);
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
             if (target == null)
             {
-                return null;
+                throw new IndexOutOfBoundsException();
             }
             return target;
         }
     }
     
     /**
-     * True if has "identifier" element
+     * Returns number of "identifier" element
      */
-    public boolean isSetIdentifier()
+    public int sizeOfIdentifierArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(IDENTIFIER$0) != 0;
+            return get_store().count_elements(IDENTIFIER$0);
         }
     }
     
     /**
-     * Sets the "identifier" element
+     * Sets array of all "identifier" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setIdentifier(org.hl7.fhir.Identifier identifier)
+    public void setIdentifierArray(org.hl7.fhir.Identifier[] identifierArray)
     {
-        generatedSetterHelperImpl(identifier, IDENTIFIER$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        check_orphaned();
+        arraySetterHelper(identifierArray, IDENTIFIER$0);
     }
     
     /**
-     * Appends and returns a new empty "identifier" element
+     * Sets ith "identifier" element
+     */
+    public void setIdentifierArray(int i, org.hl7.fhir.Identifier identifier)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(IDENTIFIER$0, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(identifier);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "identifier" element
+     */
+    public org.hl7.fhir.Identifier insertNewIdentifier(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Identifier target = null;
+            target = (org.hl7.fhir.Identifier)get_store().insert_element_user(IDENTIFIER$0, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "identifier" element
      */
     public org.hl7.fhir.Identifier addNewIdentifier()
     {
@@ -93,14 +142,14 @@ public class SpecimenImpl extends org.hl7.fhir.impl.ResourceImpl implements org.
     }
     
     /**
-     * Unsets the "identifier" element
+     * Removes the ith "identifier" element
      */
-    public void unsetIdentifier()
+    public void removeIdentifier(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(IDENTIFIER$0, 0);
+            get_store().remove_element(IDENTIFIER$0, i);
         }
     }
     
@@ -322,94 +371,45 @@ public class SpecimenImpl extends org.hl7.fhir.impl.ResourceImpl implements org.
     }
     
     /**
-     * Gets array of all "accessionIdentifier" elements
+     * Gets the "accessionIdentifier" element
      */
-    public org.hl7.fhir.Identifier[] getAccessionIdentifierArray()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(ACCESSIONIDENTIFIER$8, targetList);
-            org.hl7.fhir.Identifier[] result = new org.hl7.fhir.Identifier[targetList.size()];
-            targetList.toArray(result);
-            return result;
-        }
-    }
-    
-    /**
-     * Gets ith "accessionIdentifier" element
-     */
-    public org.hl7.fhir.Identifier getAccessionIdentifierArray(int i)
+    public org.hl7.fhir.Identifier getAccessionIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Identifier target = null;
-            target = (org.hl7.fhir.Identifier)get_store().find_element_user(ACCESSIONIDENTIFIER$8, i);
+            target = (org.hl7.fhir.Identifier)get_store().find_element_user(ACCESSIONIDENTIFIER$8, 0);
             if (target == null)
             {
-                throw new IndexOutOfBoundsException();
+                return null;
             }
             return target;
         }
     }
     
     /**
-     * Returns number of "accessionIdentifier" element
+     * True if has "accessionIdentifier" element
      */
-    public int sizeOfAccessionIdentifierArray()
+    public boolean isSetAccessionIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ACCESSIONIDENTIFIER$8);
+            return get_store().count_elements(ACCESSIONIDENTIFIER$8) != 0;
         }
     }
     
     /**
-     * Sets array of all "accessionIdentifier" element  WARNING: This method is not atomicaly synchronized.
+     * Sets the "accessionIdentifier" element
      */
-    public void setAccessionIdentifierArray(org.hl7.fhir.Identifier[] accessionIdentifierArray)
+    public void setAccessionIdentifier(org.hl7.fhir.Identifier accessionIdentifier)
     {
-        check_orphaned();
-        arraySetterHelper(accessionIdentifierArray, ACCESSIONIDENTIFIER$8);
+        generatedSetterHelperImpl(accessionIdentifier, ACCESSIONIDENTIFIER$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Sets ith "accessionIdentifier" element
-     */
-    public void setAccessionIdentifierArray(int i, org.hl7.fhir.Identifier accessionIdentifier)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.Identifier target = null;
-            target = (org.hl7.fhir.Identifier)get_store().find_element_user(ACCESSIONIDENTIFIER$8, i);
-            if (target == null)
-            {
-                throw new IndexOutOfBoundsException();
-            }
-            target.set(accessionIdentifier);
-        }
-    }
-    
-    /**
-     * Inserts and returns a new empty value (as xml) as the ith "accessionIdentifier" element
-     */
-    public org.hl7.fhir.Identifier insertNewAccessionIdentifier(int i)
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.Identifier target = null;
-            target = (org.hl7.fhir.Identifier)get_store().insert_element_user(ACCESSIONIDENTIFIER$8, i);
-            return target;
-        }
-    }
-    
-    /**
-     * Appends and returns a new empty value (as xml) as the last "accessionIdentifier" element
+     * Appends and returns a new empty "accessionIdentifier" element
      */
     public org.hl7.fhir.Identifier addNewAccessionIdentifier()
     {
@@ -423,14 +423,14 @@ public class SpecimenImpl extends org.hl7.fhir.impl.ResourceImpl implements org.
     }
     
     /**
-     * Removes the ith "accessionIdentifier" element
+     * Unsets the "accessionIdentifier" element
      */
-    public void removeAccessionIdentifier(int i)
+    public void unsetAccessionIdentifier()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ACCESSIONIDENTIFIER$8, i);
+            get_store().remove_element(ACCESSIONIDENTIFIER$8, 0);
         }
     }
     

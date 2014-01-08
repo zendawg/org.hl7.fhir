@@ -16,22 +16,22 @@ package org.hl7.fhir;
 public interface ImmunizationRecommendationRecommendation extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImmunizationRecommendationRecommendation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("immunizationrecommendationrecommendation6046type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ImmunizationRecommendationRecommendation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("immunizationrecommendationrecommendation6046type");
     
     /**
-     * Gets the "recommendationDate" element
+     * Gets the "date" element
      */
-    org.hl7.fhir.DateTime getRecommendationDate();
+    org.hl7.fhir.DateTime getDate();
     
     /**
-     * Sets the "recommendationDate" element
+     * Sets the "date" element
      */
-    void setRecommendationDate(org.hl7.fhir.DateTime recommendationDate);
+    void setDate(org.hl7.fhir.DateTime date);
     
     /**
-     * Appends and returns a new empty "recommendationDate" element
+     * Appends and returns a new empty "date" element
      */
-    org.hl7.fhir.DateTime addNewRecommendationDate();
+    org.hl7.fhir.DateTime addNewDate();
     
     /**
      * Gets the "vaccineType" element
@@ -76,17 +76,17 @@ public interface ImmunizationRecommendationRecommendation extends org.hl7.fhir.B
     /**
      * Gets the "forecastStatus" element
      */
-    org.hl7.fhir.ImmunizationForecastStatus getForecastStatus();
+    org.hl7.fhir.CodeableConcept getForecastStatus();
     
     /**
      * Sets the "forecastStatus" element
      */
-    void setForecastStatus(org.hl7.fhir.ImmunizationForecastStatus forecastStatus);
+    void setForecastStatus(org.hl7.fhir.CodeableConcept forecastStatus);
     
     /**
      * Appends and returns a new empty "forecastStatus" element
      */
-    org.hl7.fhir.ImmunizationForecastStatus addNewForecastStatus();
+    org.hl7.fhir.CodeableConcept addNewForecastStatus();
     
     /**
      * Gets array of all "dateCriterion" elements
@@ -194,84 +194,44 @@ public interface ImmunizationRecommendationRecommendation extends org.hl7.fhir.B
     void removeSupportingImmunization(int i);
     
     /**
-     * Gets array of all "supportingAdverseEventReport" elements
+     * Gets array of all "supportingPatientInformation" elements
      */
-    org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport[] getSupportingAdverseEventReportArray();
+    org.hl7.fhir.ResourceReference[] getSupportingPatientInformationArray();
     
     /**
-     * Gets ith "supportingAdverseEventReport" element
+     * Gets ith "supportingPatientInformation" element
      */
-    org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport getSupportingAdverseEventReportArray(int i);
+    org.hl7.fhir.ResourceReference getSupportingPatientInformationArray(int i);
     
     /**
-     * Returns number of "supportingAdverseEventReport" element
+     * Returns number of "supportingPatientInformation" element
      */
-    int sizeOfSupportingAdverseEventReportArray();
+    int sizeOfSupportingPatientInformationArray();
     
     /**
-     * Sets array of all "supportingAdverseEventReport" element
+     * Sets array of all "supportingPatientInformation" element
      */
-    void setSupportingAdverseEventReportArray(org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport[] supportingAdverseEventReportArray);
+    void setSupportingPatientInformationArray(org.hl7.fhir.ResourceReference[] supportingPatientInformationArray);
     
     /**
-     * Sets ith "supportingAdverseEventReport" element
+     * Sets ith "supportingPatientInformation" element
      */
-    void setSupportingAdverseEventReportArray(int i, org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport supportingAdverseEventReport);
+    void setSupportingPatientInformationArray(int i, org.hl7.fhir.ResourceReference supportingPatientInformation);
     
     /**
-     * Inserts and returns a new empty value (as xml) as the ith "supportingAdverseEventReport" element
+     * Inserts and returns a new empty value (as xml) as the ith "supportingPatientInformation" element
      */
-    org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport insertNewSupportingAdverseEventReport(int i);
+    org.hl7.fhir.ResourceReference insertNewSupportingPatientInformation(int i);
     
     /**
-     * Appends and returns a new empty value (as xml) as the last "supportingAdverseEventReport" element
+     * Appends and returns a new empty value (as xml) as the last "supportingPatientInformation" element
      */
-    org.hl7.fhir.ImmunizationRecommendationSupportingAdverseEventReport addNewSupportingAdverseEventReport();
+    org.hl7.fhir.ResourceReference addNewSupportingPatientInformation();
     
     /**
-     * Removes the ith "supportingAdverseEventReport" element
+     * Removes the ith "supportingPatientInformation" element
      */
-    void removeSupportingAdverseEventReport(int i);
-    
-    /**
-     * Gets array of all "supportingPatientObservation" elements
-     */
-    org.hl7.fhir.ResourceReference[] getSupportingPatientObservationArray();
-    
-    /**
-     * Gets ith "supportingPatientObservation" element
-     */
-    org.hl7.fhir.ResourceReference getSupportingPatientObservationArray(int i);
-    
-    /**
-     * Returns number of "supportingPatientObservation" element
-     */
-    int sizeOfSupportingPatientObservationArray();
-    
-    /**
-     * Sets array of all "supportingPatientObservation" element
-     */
-    void setSupportingPatientObservationArray(org.hl7.fhir.ResourceReference[] supportingPatientObservationArray);
-    
-    /**
-     * Sets ith "supportingPatientObservation" element
-     */
-    void setSupportingPatientObservationArray(int i, org.hl7.fhir.ResourceReference supportingPatientObservation);
-    
-    /**
-     * Inserts and returns a new empty value (as xml) as the ith "supportingPatientObservation" element
-     */
-    org.hl7.fhir.ResourceReference insertNewSupportingPatientObservation(int i);
-    
-    /**
-     * Appends and returns a new empty value (as xml) as the last "supportingPatientObservation" element
-     */
-    org.hl7.fhir.ResourceReference addNewSupportingPatientObservation();
-    
-    /**
-     * Removes the ith "supportingPatientObservation" element
-     */
-    void removeSupportingPatientObservation(int i);
+    void removeSupportingPatientInformation(int i);
     
     /**
      * A factory class with static methods for creating instances

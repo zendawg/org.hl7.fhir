@@ -40,8 +40,8 @@ public class MedicationAdministrationImpl extends org.hl7.fhir.impl.ResourceImpl
         new javax.xml.namespace.QName("http://hl7.org/fhir", "whenGiven");
     private static final javax.xml.namespace.QName MEDICATION$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "medication");
-    private static final javax.xml.namespace.QName ADMINISTRATIONDEVICE$20 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "administrationDevice");
+    private static final javax.xml.namespace.QName DEVICE$20 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "device");
     private static final javax.xml.namespace.QName DOSAGE$22 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "dosage");
     
@@ -665,15 +665,15 @@ public class MedicationAdministrationImpl extends org.hl7.fhir.impl.ResourceImpl
     }
     
     /**
-     * Gets array of all "administrationDevice" elements
+     * Gets array of all "device" elements
      */
-    public org.hl7.fhir.ResourceReference[] getAdministrationDeviceArray()
+    public org.hl7.fhir.ResourceReference[] getDeviceArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(ADMINISTRATIONDEVICE$20, targetList);
+            get_store().find_all_element_users(DEVICE$20, targetList);
             org.hl7.fhir.ResourceReference[] result = new org.hl7.fhir.ResourceReference[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -681,15 +681,15 @@ public class MedicationAdministrationImpl extends org.hl7.fhir.impl.ResourceImpl
     }
     
     /**
-     * Gets ith "administrationDevice" element
+     * Gets ith "device" element
      */
-    public org.hl7.fhir.ResourceReference getAdministrationDeviceArray(int i)
+    public org.hl7.fhir.ResourceReference getDeviceArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(ADMINISTRATIONDEVICE$20, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(DEVICE$20, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -699,81 +699,81 @@ public class MedicationAdministrationImpl extends org.hl7.fhir.impl.ResourceImpl
     }
     
     /**
-     * Returns number of "administrationDevice" element
+     * Returns number of "device" element
      */
-    public int sizeOfAdministrationDeviceArray()
+    public int sizeOfDeviceArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ADMINISTRATIONDEVICE$20);
+            return get_store().count_elements(DEVICE$20);
         }
     }
     
     /**
-     * Sets array of all "administrationDevice" element  WARNING: This method is not atomicaly synchronized.
+     * Sets array of all "device" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setAdministrationDeviceArray(org.hl7.fhir.ResourceReference[] administrationDeviceArray)
+    public void setDeviceArray(org.hl7.fhir.ResourceReference[] deviceArray)
     {
         check_orphaned();
-        arraySetterHelper(administrationDeviceArray, ADMINISTRATIONDEVICE$20);
+        arraySetterHelper(deviceArray, DEVICE$20);
     }
     
     /**
-     * Sets ith "administrationDevice" element
+     * Sets ith "device" element
      */
-    public void setAdministrationDeviceArray(int i, org.hl7.fhir.ResourceReference administrationDevice)
+    public void setDeviceArray(int i, org.hl7.fhir.ResourceReference device)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(ADMINISTRATIONDEVICE$20, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(DEVICE$20, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
             }
-            target.set(administrationDevice);
+            target.set(device);
         }
     }
     
     /**
-     * Inserts and returns a new empty value (as xml) as the ith "administrationDevice" element
+     * Inserts and returns a new empty value (as xml) as the ith "device" element
      */
-    public org.hl7.fhir.ResourceReference insertNewAdministrationDevice(int i)
+    public org.hl7.fhir.ResourceReference insertNewDevice(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(ADMINISTRATIONDEVICE$20, i);
+            target = (org.hl7.fhir.ResourceReference)get_store().insert_element_user(DEVICE$20, i);
             return target;
         }
     }
     
     /**
-     * Appends and returns a new empty value (as xml) as the last "administrationDevice" element
+     * Appends and returns a new empty value (as xml) as the last "device" element
      */
-    public org.hl7.fhir.ResourceReference addNewAdministrationDevice()
+    public org.hl7.fhir.ResourceReference addNewDevice()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(ADMINISTRATIONDEVICE$20);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(DEVICE$20);
             return target;
         }
     }
     
     /**
-     * Removes the ith "administrationDevice" element
+     * Removes the ith "device" element
      */
-    public void removeAdministrationDevice(int i)
+    public void removeDevice(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ADMINISTRATIONDEVICE$20, i);
+            get_store().remove_element(DEVICE$20, i);
         }
     }
     

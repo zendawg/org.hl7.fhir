@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface FamilyHistory extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(FamilyHistory.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sC0D81A460DAE2D55E8CE901A6C9B1A88").resolveHandle("familyhistory578atype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(FamilyHistory.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("familyhistory578atype");
     
     /**
      * Gets array of all "identifier" elements
