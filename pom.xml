@@ -31,11 +31,12 @@
   </dependencies>
   <build>
     <plugins>
-      <plugin>
+      <!-- Uncomment this section to re-build the sources via the XSD: -->
+<!--      <plugin>
         <artifactId>exec-maven-plugin</artifactId>
         <groupId>org.codehaus.mojo</groupId>
         <executions>
-          <execution><!-- Run our version calculation script -->
+          <execution> Run our version calculation script 
             <id>XML Beans</id>
             <phase>generate-sources</phase>
             <goals>
@@ -53,7 +54,7 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
+      </plugin>-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
