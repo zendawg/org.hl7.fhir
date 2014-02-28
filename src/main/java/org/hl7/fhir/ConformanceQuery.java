@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ConformanceQuery extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConformanceQuery.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conformancequeryb309type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConformanceQuery.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("conformancequeryb309type");
     
     /**
      * Gets the "name" element
@@ -34,9 +34,29 @@ public interface ConformanceQuery extends org.hl7.fhir.BackboneElement
     org.hl7.fhir.String addNewName();
     
     /**
+     * Gets the "definition" element
+     */
+    org.hl7.fhir.Uri getDefinition();
+    
+    /**
+     * Sets the "definition" element
+     */
+    void setDefinition(org.hl7.fhir.Uri definition);
+    
+    /**
+     * Appends and returns a new empty "definition" element
+     */
+    org.hl7.fhir.Uri addNewDefinition();
+    
+    /**
      * Gets the "documentation" element
      */
     org.hl7.fhir.String getDocumentation();
+    
+    /**
+     * True if has "documentation" element
+     */
+    boolean isSetDocumentation();
     
     /**
      * Sets the "documentation" element
@@ -47,6 +67,11 @@ public interface ConformanceQuery extends org.hl7.fhir.BackboneElement
      * Appends and returns a new empty "documentation" element
      */
     org.hl7.fhir.String addNewDocumentation();
+    
+    /**
+     * Unsets the "documentation" element
+     */
+    void unsetDocumentation();
     
     /**
      * Gets array of all "parameter" elements

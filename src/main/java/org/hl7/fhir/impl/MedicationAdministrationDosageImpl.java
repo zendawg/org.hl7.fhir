@@ -20,36 +20,38 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName TIMING$0 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "timing");
-    private static final javax.xml.namespace.QName ASNEEDEDBOOLEAN$2 = 
+    private static final javax.xml.namespace.QName TIMINGDATETIME$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "timingDateTime");
+    private static final javax.xml.namespace.QName TIMINGPERIOD$2 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "timingPeriod");
+    private static final javax.xml.namespace.QName ASNEEDEDBOOLEAN$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "asNeededBoolean");
-    private static final javax.xml.namespace.QName ASNEEDEDCODEABLECONCEPT$4 = 
+    private static final javax.xml.namespace.QName ASNEEDEDCODEABLECONCEPT$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "asNeededCodeableConcept");
-    private static final javax.xml.namespace.QName SITE$6 = 
+    private static final javax.xml.namespace.QName SITE$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "site");
-    private static final javax.xml.namespace.QName ROUTE$8 = 
+    private static final javax.xml.namespace.QName ROUTE$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "route");
-    private static final javax.xml.namespace.QName METHOD$10 = 
+    private static final javax.xml.namespace.QName METHOD$12 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "method");
-    private static final javax.xml.namespace.QName QUANTITY$12 = 
+    private static final javax.xml.namespace.QName QUANTITY$14 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "quantity");
-    private static final javax.xml.namespace.QName RATE$14 = 
+    private static final javax.xml.namespace.QName RATE$16 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "rate");
-    private static final javax.xml.namespace.QName MAXDOSEPERPERIOD$16 = 
+    private static final javax.xml.namespace.QName MAXDOSEPERPERIOD$18 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "maxDosePerPeriod");
     
     
     /**
-     * Gets the "timing" element
+     * Gets the "timingDateTime" element
      */
-    public org.hl7.fhir.Schedule getTiming()
+    public org.hl7.fhir.DateTime getTimingDateTime()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Schedule target = null;
-            target = (org.hl7.fhir.Schedule)get_store().find_element_user(TIMING$0, 0);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(TIMINGDATETIME$0, 0);
             if (target == null)
             {
                 return null;
@@ -59,48 +61,112 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
     }
     
     /**
-     * True if has "timing" element
+     * True if has "timingDateTime" element
      */
-    public boolean isSetTiming()
+    public boolean isSetTimingDateTime()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(TIMING$0) != 0;
+            return get_store().count_elements(TIMINGDATETIME$0) != 0;
         }
     }
     
     /**
-     * Sets the "timing" element
+     * Sets the "timingDateTime" element
      */
-    public void setTiming(org.hl7.fhir.Schedule timing)
+    public void setTimingDateTime(org.hl7.fhir.DateTime timingDateTime)
     {
-        generatedSetterHelperImpl(timing, TIMING$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(timingDateTime, TIMINGDATETIME$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "timing" element
+     * Appends and returns a new empty "timingDateTime" element
      */
-    public org.hl7.fhir.Schedule addNewTiming()
+    public org.hl7.fhir.DateTime addNewTimingDateTime()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Schedule target = null;
-            target = (org.hl7.fhir.Schedule)get_store().add_element_user(TIMING$0);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(TIMINGDATETIME$0);
             return target;
         }
     }
     
     /**
-     * Unsets the "timing" element
+     * Unsets the "timingDateTime" element
      */
-    public void unsetTiming()
+    public void unsetTimingDateTime()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(TIMING$0, 0);
+            get_store().remove_element(TIMINGDATETIME$0, 0);
+        }
+    }
+    
+    /**
+     * Gets the "timingPeriod" element
+     */
+    public org.hl7.fhir.Period getTimingPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Period target = null;
+            target = (org.hl7.fhir.Period)get_store().find_element_user(TIMINGPERIOD$2, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "timingPeriod" element
+     */
+    public boolean isSetTimingPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(TIMINGPERIOD$2) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "timingPeriod" element
+     */
+    public void setTimingPeriod(org.hl7.fhir.Period timingPeriod)
+    {
+        generatedSetterHelperImpl(timingPeriod, TIMINGPERIOD$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "timingPeriod" element
+     */
+    public org.hl7.fhir.Period addNewTimingPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Period target = null;
+            target = (org.hl7.fhir.Period)get_store().add_element_user(TIMINGPERIOD$2);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "timingPeriod" element
+     */
+    public void unsetTimingPeriod()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(TIMINGPERIOD$2, 0);
         }
     }
     
@@ -113,7 +179,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().find_element_user(ASNEEDEDBOOLEAN$2, 0);
+            target = (org.hl7.fhir.Boolean)get_store().find_element_user(ASNEEDEDBOOLEAN$4, 0);
             if (target == null)
             {
                 return null;
@@ -130,7 +196,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ASNEEDEDBOOLEAN$2) != 0;
+            return get_store().count_elements(ASNEEDEDBOOLEAN$4) != 0;
         }
     }
     
@@ -139,7 +205,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setAsNeededBoolean(org.hl7.fhir.Boolean asNeededBoolean)
     {
-        generatedSetterHelperImpl(asNeededBoolean, ASNEEDEDBOOLEAN$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(asNeededBoolean, ASNEEDEDBOOLEAN$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -151,7 +217,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().add_element_user(ASNEEDEDBOOLEAN$2);
+            target = (org.hl7.fhir.Boolean)get_store().add_element_user(ASNEEDEDBOOLEAN$4);
             return target;
         }
     }
@@ -164,7 +230,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ASNEEDEDBOOLEAN$2, 0);
+            get_store().remove_element(ASNEEDEDBOOLEAN$4, 0);
         }
     }
     
@@ -177,7 +243,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ASNEEDEDCODEABLECONCEPT$4, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ASNEEDEDCODEABLECONCEPT$6, 0);
             if (target == null)
             {
                 return null;
@@ -194,7 +260,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ASNEEDEDCODEABLECONCEPT$4) != 0;
+            return get_store().count_elements(ASNEEDEDCODEABLECONCEPT$6) != 0;
         }
     }
     
@@ -203,7 +269,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setAsNeededCodeableConcept(org.hl7.fhir.CodeableConcept asNeededCodeableConcept)
     {
-        generatedSetterHelperImpl(asNeededCodeableConcept, ASNEEDEDCODEABLECONCEPT$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(asNeededCodeableConcept, ASNEEDEDCODEABLECONCEPT$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -215,7 +281,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ASNEEDEDCODEABLECONCEPT$4);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ASNEEDEDCODEABLECONCEPT$6);
             return target;
         }
     }
@@ -228,7 +294,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ASNEEDEDCODEABLECONCEPT$4, 0);
+            get_store().remove_element(ASNEEDEDCODEABLECONCEPT$6, 0);
         }
     }
     
@@ -241,7 +307,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SITE$6, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(SITE$8, 0);
             if (target == null)
             {
                 return null;
@@ -258,7 +324,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SITE$6) != 0;
+            return get_store().count_elements(SITE$8) != 0;
         }
     }
     
@@ -267,7 +333,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setSite(org.hl7.fhir.CodeableConcept site)
     {
-        generatedSetterHelperImpl(site, SITE$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(site, SITE$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -279,7 +345,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SITE$6);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(SITE$8);
             return target;
         }
     }
@@ -292,7 +358,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SITE$6, 0);
+            get_store().remove_element(SITE$8, 0);
         }
     }
     
@@ -305,7 +371,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ROUTE$8, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(ROUTE$10, 0);
             if (target == null)
             {
                 return null;
@@ -322,7 +388,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(ROUTE$8) != 0;
+            return get_store().count_elements(ROUTE$10) != 0;
         }
     }
     
@@ -331,7 +397,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setRoute(org.hl7.fhir.CodeableConcept route)
     {
-        generatedSetterHelperImpl(route, ROUTE$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(route, ROUTE$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -343,7 +409,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ROUTE$8);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(ROUTE$10);
             return target;
         }
     }
@@ -356,7 +422,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(ROUTE$8, 0);
+            get_store().remove_element(ROUTE$10, 0);
         }
     }
     
@@ -369,7 +435,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(METHOD$10, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(METHOD$12, 0);
             if (target == null)
             {
                 return null;
@@ -386,7 +452,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(METHOD$10) != 0;
+            return get_store().count_elements(METHOD$12) != 0;
         }
     }
     
@@ -395,7 +461,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setMethod(org.hl7.fhir.CodeableConcept method)
     {
-        generatedSetterHelperImpl(method, METHOD$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(method, METHOD$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -407,7 +473,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(METHOD$10);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(METHOD$12);
             return target;
         }
     }
@@ -420,7 +486,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(METHOD$10, 0);
+            get_store().remove_element(METHOD$12, 0);
         }
     }
     
@@ -433,7 +499,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().find_element_user(QUANTITY$12, 0);
+            target = (org.hl7.fhir.Quantity)get_store().find_element_user(QUANTITY$14, 0);
             if (target == null)
             {
                 return null;
@@ -450,7 +516,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(QUANTITY$12) != 0;
+            return get_store().count_elements(QUANTITY$14) != 0;
         }
     }
     
@@ -459,7 +525,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setQuantity(org.hl7.fhir.Quantity quantity)
     {
-        generatedSetterHelperImpl(quantity, QUANTITY$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(quantity, QUANTITY$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -471,7 +537,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Quantity target = null;
-            target = (org.hl7.fhir.Quantity)get_store().add_element_user(QUANTITY$12);
+            target = (org.hl7.fhir.Quantity)get_store().add_element_user(QUANTITY$14);
             return target;
         }
     }
@@ -484,7 +550,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(QUANTITY$12, 0);
+            get_store().remove_element(QUANTITY$14, 0);
         }
     }
     
@@ -497,7 +563,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().find_element_user(RATE$14, 0);
+            target = (org.hl7.fhir.Ratio)get_store().find_element_user(RATE$16, 0);
             if (target == null)
             {
                 return null;
@@ -514,7 +580,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(RATE$14) != 0;
+            return get_store().count_elements(RATE$16) != 0;
         }
     }
     
@@ -523,7 +589,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setRate(org.hl7.fhir.Ratio rate)
     {
-        generatedSetterHelperImpl(rate, RATE$14, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(rate, RATE$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -535,7 +601,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().add_element_user(RATE$14);
+            target = (org.hl7.fhir.Ratio)get_store().add_element_user(RATE$16);
             return target;
         }
     }
@@ -548,7 +614,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(RATE$14, 0);
+            get_store().remove_element(RATE$16, 0);
         }
     }
     
@@ -561,7 +627,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().find_element_user(MAXDOSEPERPERIOD$16, 0);
+            target = (org.hl7.fhir.Ratio)get_store().find_element_user(MAXDOSEPERPERIOD$18, 0);
             if (target == null)
             {
                 return null;
@@ -578,7 +644,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(MAXDOSEPERPERIOD$16) != 0;
+            return get_store().count_elements(MAXDOSEPERPERIOD$18) != 0;
         }
     }
     
@@ -587,7 +653,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
      */
     public void setMaxDosePerPeriod(org.hl7.fhir.Ratio maxDosePerPeriod)
     {
-        generatedSetterHelperImpl(maxDosePerPeriod, MAXDOSEPERPERIOD$16, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(maxDosePerPeriod, MAXDOSEPERPERIOD$18, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -599,7 +665,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         {
             check_orphaned();
             org.hl7.fhir.Ratio target = null;
-            target = (org.hl7.fhir.Ratio)get_store().add_element_user(MAXDOSEPERPERIOD$16);
+            target = (org.hl7.fhir.Ratio)get_store().add_element_user(MAXDOSEPERPERIOD$18);
             return target;
         }
     }
@@ -612,7 +678,7 @@ public class MedicationAdministrationDosageImpl extends org.hl7.fhir.impl.Backbo
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(MAXDOSEPERPERIOD$16, 0);
+            get_store().remove_element(MAXDOSEPERPERIOD$18, 0);
         }
     }
 }

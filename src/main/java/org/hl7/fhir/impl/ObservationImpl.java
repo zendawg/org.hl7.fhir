@@ -64,6 +64,8 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         new javax.xml.namespace.QName("http://hl7.org/fhir", "performer");
     private static final javax.xml.namespace.QName REFERENCERANGE$42 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "referenceRange");
+    private static final javax.xml.namespace.QName RELATED$44 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "related");
     
     
     /**
@@ -1497,6 +1499,119 @@ public class ObservationImpl extends org.hl7.fhir.impl.ResourceImpl implements o
         {
             check_orphaned();
             get_store().remove_element(REFERENCERANGE$42, i);
+        }
+    }
+    
+    /**
+     * Gets array of all "related" elements
+     */
+    public org.hl7.fhir.ObservationRelated[] getRelatedArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(RELATED$44, targetList);
+            org.hl7.fhir.ObservationRelated[] result = new org.hl7.fhir.ObservationRelated[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "related" element
+     */
+    public org.hl7.fhir.ObservationRelated getRelatedArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ObservationRelated target = null;
+            target = (org.hl7.fhir.ObservationRelated)get_store().find_element_user(RELATED$44, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "related" element
+     */
+    public int sizeOfRelatedArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(RELATED$44);
+        }
+    }
+    
+    /**
+     * Sets array of all "related" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setRelatedArray(org.hl7.fhir.ObservationRelated[] relatedArray)
+    {
+        check_orphaned();
+        arraySetterHelper(relatedArray, RELATED$44);
+    }
+    
+    /**
+     * Sets ith "related" element
+     */
+    public void setRelatedArray(int i, org.hl7.fhir.ObservationRelated related)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ObservationRelated target = null;
+            target = (org.hl7.fhir.ObservationRelated)get_store().find_element_user(RELATED$44, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(related);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "related" element
+     */
+    public org.hl7.fhir.ObservationRelated insertNewRelated(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ObservationRelated target = null;
+            target = (org.hl7.fhir.ObservationRelated)get_store().insert_element_user(RELATED$44, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "related" element
+     */
+    public org.hl7.fhir.ObservationRelated addNewRelated()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ObservationRelated target = null;
+            target = (org.hl7.fhir.ObservationRelated)get_store().add_element_user(RELATED$44);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "related" element
+     */
+    public void removeRelated(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(RELATED$44, i);
         }
     }
 }

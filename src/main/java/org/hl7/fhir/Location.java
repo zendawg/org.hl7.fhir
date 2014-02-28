@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Location extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Location.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("location5aa1type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Location.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("location5aa1type");
     
     /**
      * Gets the "identifier" element
@@ -119,29 +119,44 @@ public interface Location extends org.hl7.fhir.Resource
     void unsetType();
     
     /**
-     * Gets the "telecom" element
+     * Gets array of all "telecom" elements
      */
-    org.hl7.fhir.Contact getTelecom();
+    org.hl7.fhir.Contact[] getTelecomArray();
     
     /**
-     * True if has "telecom" element
+     * Gets ith "telecom" element
      */
-    boolean isSetTelecom();
+    org.hl7.fhir.Contact getTelecomArray(int i);
     
     /**
-     * Sets the "telecom" element
+     * Returns number of "telecom" element
      */
-    void setTelecom(org.hl7.fhir.Contact telecom);
+    int sizeOfTelecomArray();
     
     /**
-     * Appends and returns a new empty "telecom" element
+     * Sets array of all "telecom" element
+     */
+    void setTelecomArray(org.hl7.fhir.Contact[] telecomArray);
+    
+    /**
+     * Sets ith "telecom" element
+     */
+    void setTelecomArray(int i, org.hl7.fhir.Contact telecom);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "telecom" element
+     */
+    org.hl7.fhir.Contact insertNewTelecom(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "telecom" element
      */
     org.hl7.fhir.Contact addNewTelecom();
     
     /**
-     * Unsets the "telecom" element
+     * Removes the ith "telecom" element
      */
-    void unsetTelecom();
+    void removeTelecom(int i);
     
     /**
      * Gets the "address" element

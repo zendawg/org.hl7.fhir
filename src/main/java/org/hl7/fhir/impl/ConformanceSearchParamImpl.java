@@ -22,17 +22,15 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     
     private static final javax.xml.namespace.QName NAME$0 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "name");
-    private static final javax.xml.namespace.QName SOURCE$2 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "source");
+    private static final javax.xml.namespace.QName DEFINITION$2 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "definition");
     private static final javax.xml.namespace.QName TYPE$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "type");
     private static final javax.xml.namespace.QName DOCUMENTATION$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "documentation");
-    private static final javax.xml.namespace.QName XPATH$8 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "xpath");
-    private static final javax.xml.namespace.QName TARGET$10 = 
+    private static final javax.xml.namespace.QName TARGET$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "target");
-    private static final javax.xml.namespace.QName CHAIN$12 = 
+    private static final javax.xml.namespace.QName CHAIN$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "chain");
     
     
@@ -77,15 +75,15 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     }
     
     /**
-     * Gets the "source" element
+     * Gets the "definition" element
      */
-    public org.hl7.fhir.Uri getSource()
+    public org.hl7.fhir.Uri getDefinition()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Uri target = null;
-            target = (org.hl7.fhir.Uri)get_store().find_element_user(SOURCE$2, 0);
+            target = (org.hl7.fhir.Uri)get_store().find_element_user(DEFINITION$2, 0);
             if (target == null)
             {
                 return null;
@@ -95,48 +93,48 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     }
     
     /**
-     * True if has "source" element
+     * True if has "definition" element
      */
-    public boolean isSetSource()
+    public boolean isSetDefinition()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SOURCE$2) != 0;
+            return get_store().count_elements(DEFINITION$2) != 0;
         }
     }
     
     /**
-     * Sets the "source" element
+     * Sets the "definition" element
      */
-    public void setSource(org.hl7.fhir.Uri source)
+    public void setDefinition(org.hl7.fhir.Uri definition)
     {
-        generatedSetterHelperImpl(source, SOURCE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(definition, DEFINITION$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "source" element
+     * Appends and returns a new empty "definition" element
      */
-    public org.hl7.fhir.Uri addNewSource()
+    public org.hl7.fhir.Uri addNewDefinition()
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Uri target = null;
-            target = (org.hl7.fhir.Uri)get_store().add_element_user(SOURCE$2);
+            target = (org.hl7.fhir.Uri)get_store().add_element_user(DEFINITION$2);
             return target;
         }
     }
     
     /**
-     * Unsets the "source" element
+     * Unsets the "definition" element
      */
-    public void unsetSource()
+    public void unsetDefinition()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SOURCE$2, 0);
+            get_store().remove_element(DEFINITION$2, 0);
         }
     }
     
@@ -199,6 +197,18 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     }
     
     /**
+     * True if has "documentation" element
+     */
+    public boolean isSetDocumentation()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(DOCUMENTATION$6) != 0;
+        }
+    }
+    
+    /**
      * Sets the "documentation" element
      */
     public void setDocumentation(org.hl7.fhir.String documentation)
@@ -221,66 +231,14 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     }
     
     /**
-     * Gets the "xpath" element
+     * Unsets the "documentation" element
      */
-    public org.hl7.fhir.String getXpath()
+    public void unsetDocumentation()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(XPATH$8, 0);
-            if (target == null)
-            {
-                return null;
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * True if has "xpath" element
-     */
-    public boolean isSetXpath()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(XPATH$8) != 0;
-        }
-    }
-    
-    /**
-     * Sets the "xpath" element
-     */
-    public void setXpath(org.hl7.fhir.String xpath)
-    {
-        generatedSetterHelperImpl(xpath, XPATH$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-    }
-    
-    /**
-     * Appends and returns a new empty "xpath" element
-     */
-    public org.hl7.fhir.String addNewXpath()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(XPATH$8);
-            return target;
-        }
-    }
-    
-    /**
-     * Unsets the "xpath" element
-     */
-    public void unsetXpath()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(XPATH$8, 0);
+            get_store().remove_element(DOCUMENTATION$6, 0);
         }
     }
     
@@ -293,7 +251,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(TARGET$10, targetList);
+            get_store().find_all_element_users(TARGET$8, targetList);
             org.hl7.fhir.Code[] result = new org.hl7.fhir.Code[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -309,7 +267,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().find_element_user(TARGET$10, i);
+            target = (org.hl7.fhir.Code)get_store().find_element_user(TARGET$8, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -326,7 +284,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(TARGET$10);
+            return get_store().count_elements(TARGET$8);
         }
     }
     
@@ -336,7 +294,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     public void setTargetArray(org.hl7.fhir.Code[] targetValueArray)
     {
         check_orphaned();
-        arraySetterHelper(targetValueArray, TARGET$10);
+        arraySetterHelper(targetValueArray, TARGET$8);
     }
     
     /**
@@ -348,7 +306,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().find_element_user(TARGET$10, i);
+            target = (org.hl7.fhir.Code)get_store().find_element_user(TARGET$8, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -366,7 +324,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().insert_element_user(TARGET$10, i);
+            target = (org.hl7.fhir.Code)get_store().insert_element_user(TARGET$8, i);
             return target;
         }
     }
@@ -380,7 +338,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.Code target = null;
-            target = (org.hl7.fhir.Code)get_store().add_element_user(TARGET$10);
+            target = (org.hl7.fhir.Code)get_store().add_element_user(TARGET$8);
             return target;
         }
     }
@@ -393,7 +351,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(TARGET$10, i);
+            get_store().remove_element(TARGET$8, i);
         }
     }
     
@@ -406,7 +364,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(CHAIN$12, targetList);
+            get_store().find_all_element_users(CHAIN$10, targetList);
             org.hl7.fhir.String[] result = new org.hl7.fhir.String[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -422,7 +380,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(CHAIN$12, i);
+            target = (org.hl7.fhir.String)get_store().find_element_user(CHAIN$10, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -439,7 +397,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CHAIN$12);
+            return get_store().count_elements(CHAIN$10);
         }
     }
     
@@ -449,7 +407,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
     public void setChainArray(org.hl7.fhir.String[] chainArray)
     {
         check_orphaned();
-        arraySetterHelper(chainArray, CHAIN$12);
+        arraySetterHelper(chainArray, CHAIN$10);
     }
     
     /**
@@ -461,7 +419,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().find_element_user(CHAIN$12, i);
+            target = (org.hl7.fhir.String)get_store().find_element_user(CHAIN$10, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -479,7 +437,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().insert_element_user(CHAIN$12, i);
+            target = (org.hl7.fhir.String)get_store().insert_element_user(CHAIN$10, i);
             return target;
         }
     }
@@ -493,7 +451,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         {
             check_orphaned();
             org.hl7.fhir.String target = null;
-            target = (org.hl7.fhir.String)get_store().add_element_user(CHAIN$12);
+            target = (org.hl7.fhir.String)get_store().add_element_user(CHAIN$10);
             return target;
         }
     }
@@ -506,7 +464,7 @@ public class ConformanceSearchParamImpl extends org.hl7.fhir.impl.BackboneElemen
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CHAIN$12, i);
+            get_store().remove_element(CHAIN$10, i);
         }
     }
 }

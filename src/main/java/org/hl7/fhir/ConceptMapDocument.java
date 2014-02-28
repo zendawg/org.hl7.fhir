@@ -17,7 +17,7 @@ package org.hl7.fhir;
 public interface ConceptMapDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conceptmap9310doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConceptMapDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("conceptmap9310doctype");
     
     /**
      * Gets the "ConceptMap" element

@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ConformanceSearchParam extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConformanceSearchParam.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("conformancesearchparame706type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConformanceSearchParam.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("conformancesearchparame706type");
     
     /**
      * Gets the "name" element
@@ -34,29 +34,29 @@ public interface ConformanceSearchParam extends org.hl7.fhir.BackboneElement
     org.hl7.fhir.String addNewName();
     
     /**
-     * Gets the "source" element
+     * Gets the "definition" element
      */
-    org.hl7.fhir.Uri getSource();
+    org.hl7.fhir.Uri getDefinition();
     
     /**
-     * True if has "source" element
+     * True if has "definition" element
      */
-    boolean isSetSource();
+    boolean isSetDefinition();
     
     /**
-     * Sets the "source" element
+     * Sets the "definition" element
      */
-    void setSource(org.hl7.fhir.Uri source);
+    void setDefinition(org.hl7.fhir.Uri definition);
     
     /**
-     * Appends and returns a new empty "source" element
+     * Appends and returns a new empty "definition" element
      */
-    org.hl7.fhir.Uri addNewSource();
+    org.hl7.fhir.Uri addNewDefinition();
     
     /**
-     * Unsets the "source" element
+     * Unsets the "definition" element
      */
-    void unsetSource();
+    void unsetDefinition();
     
     /**
      * Gets the "type" element
@@ -79,6 +79,11 @@ public interface ConformanceSearchParam extends org.hl7.fhir.BackboneElement
     org.hl7.fhir.String getDocumentation();
     
     /**
+     * True if has "documentation" element
+     */
+    boolean isSetDocumentation();
+    
+    /**
      * Sets the "documentation" element
      */
     void setDocumentation(org.hl7.fhir.String documentation);
@@ -89,29 +94,9 @@ public interface ConformanceSearchParam extends org.hl7.fhir.BackboneElement
     org.hl7.fhir.String addNewDocumentation();
     
     /**
-     * Gets the "xpath" element
+     * Unsets the "documentation" element
      */
-    org.hl7.fhir.String getXpath();
-    
-    /**
-     * True if has "xpath" element
-     */
-    boolean isSetXpath();
-    
-    /**
-     * Sets the "xpath" element
-     */
-    void setXpath(org.hl7.fhir.String xpath);
-    
-    /**
-     * Appends and returns a new empty "xpath" element
-     */
-    org.hl7.fhir.String addNewXpath();
-    
-    /**
-     * Unsets the "xpath" element
-     */
-    void unsetXpath();
+    void unsetDocumentation();
     
     /**
      * Gets array of all "target" elements

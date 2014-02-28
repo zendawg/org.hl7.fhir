@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface MedicationPrescription extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationPrescription.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationprescription89b5type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationPrescription.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("medicationprescription89b5type");
     
     /**
      * Gets array of all "identifier" elements

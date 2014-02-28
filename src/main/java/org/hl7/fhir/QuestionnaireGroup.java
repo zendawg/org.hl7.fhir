@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface QuestionnaireGroup extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(QuestionnaireGroup.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("questionnairegroupf20etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(QuestionnaireGroup.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("questionnairegroupf20etype");
     
     /**
      * Gets the "name" element
@@ -92,31 +92,6 @@ public interface QuestionnaireGroup extends org.hl7.fhir.BackboneElement
      * Unsets the "text" element
      */
     void unsetText();
-    
-    /**
-     * Gets the "ordered" element
-     */
-    org.hl7.fhir.Boolean getOrdered();
-    
-    /**
-     * True if has "ordered" element
-     */
-    boolean isSetOrdered();
-    
-    /**
-     * Sets the "ordered" element
-     */
-    void setOrdered(org.hl7.fhir.Boolean ordered);
-    
-    /**
-     * Appends and returns a new empty "ordered" element
-     */
-    org.hl7.fhir.Boolean addNewOrdered();
-    
-    /**
-     * Unsets the "ordered" element
-     */
-    void unsetOrdered();
     
     /**
      * Gets the "subject" element

@@ -26,13 +26,11 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         new javax.xml.namespace.QName("http://hl7.org/fhir", "header");
     private static final javax.xml.namespace.QName TEXT$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "text");
-    private static final javax.xml.namespace.QName ORDERED$6 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "ordered");
-    private static final javax.xml.namespace.QName SUBJECT$8 = 
+    private static final javax.xml.namespace.QName SUBJECT$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
-    private static final javax.xml.namespace.QName GROUP$10 = 
+    private static final javax.xml.namespace.QName GROUP$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "group");
-    private static final javax.xml.namespace.QName QUESTION$12 = 
+    private static final javax.xml.namespace.QName QUESTION$10 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "question");
     
     
@@ -229,70 +227,6 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
     }
     
     /**
-     * Gets the "ordered" element
-     */
-    public org.hl7.fhir.Boolean getOrdered()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().find_element_user(ORDERED$6, 0);
-            if (target == null)
-            {
-                return null;
-            }
-            return target;
-        }
-    }
-    
-    /**
-     * True if has "ordered" element
-     */
-    public boolean isSetOrdered()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            return get_store().count_elements(ORDERED$6) != 0;
-        }
-    }
-    
-    /**
-     * Sets the "ordered" element
-     */
-    public void setOrdered(org.hl7.fhir.Boolean ordered)
-    {
-        generatedSetterHelperImpl(ordered, ORDERED$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
-    }
-    
-    /**
-     * Appends and returns a new empty "ordered" element
-     */
-    public org.hl7.fhir.Boolean addNewOrdered()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            org.hl7.fhir.Boolean target = null;
-            target = (org.hl7.fhir.Boolean)get_store().add_element_user(ORDERED$6);
-            return target;
-        }
-    }
-    
-    /**
-     * Unsets the "ordered" element
-     */
-    public void unsetOrdered()
-    {
-        synchronized (monitor())
-        {
-            check_orphaned();
-            get_store().remove_element(ORDERED$6, 0);
-        }
-    }
-    
-    /**
      * Gets the "subject" element
      */
     public org.hl7.fhir.ResourceReference getSubject()
@@ -301,7 +235,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$8, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$6, 0);
             if (target == null)
             {
                 return null;
@@ -318,7 +252,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SUBJECT$8) != 0;
+            return get_store().count_elements(SUBJECT$6) != 0;
         }
     }
     
@@ -327,7 +261,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setSubject(org.hl7.fhir.ResourceReference subject)
     {
-        generatedSetterHelperImpl(subject, SUBJECT$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(subject, SUBJECT$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -339,7 +273,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$8);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$6);
             return target;
         }
     }
@@ -352,7 +286,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SUBJECT$8, 0);
+            get_store().remove_element(SUBJECT$6, 0);
         }
     }
     
@@ -365,7 +299,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(GROUP$10, targetList);
+            get_store().find_all_element_users(GROUP$8, targetList);
             org.hl7.fhir.QuestionnaireGroup[] result = new org.hl7.fhir.QuestionnaireGroup[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -381,7 +315,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireGroup target = null;
-            target = (org.hl7.fhir.QuestionnaireGroup)get_store().find_element_user(GROUP$10, i);
+            target = (org.hl7.fhir.QuestionnaireGroup)get_store().find_element_user(GROUP$8, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -398,7 +332,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(GROUP$10);
+            return get_store().count_elements(GROUP$8);
         }
     }
     
@@ -408,7 +342,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
     public void setGroupArray(org.hl7.fhir.QuestionnaireGroup[] groupArray)
     {
         check_orphaned();
-        arraySetterHelper(groupArray, GROUP$10);
+        arraySetterHelper(groupArray, GROUP$8);
     }
     
     /**
@@ -420,7 +354,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireGroup target = null;
-            target = (org.hl7.fhir.QuestionnaireGroup)get_store().find_element_user(GROUP$10, i);
+            target = (org.hl7.fhir.QuestionnaireGroup)get_store().find_element_user(GROUP$8, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -438,7 +372,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireGroup target = null;
-            target = (org.hl7.fhir.QuestionnaireGroup)get_store().insert_element_user(GROUP$10, i);
+            target = (org.hl7.fhir.QuestionnaireGroup)get_store().insert_element_user(GROUP$8, i);
             return target;
         }
     }
@@ -452,7 +386,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireGroup target = null;
-            target = (org.hl7.fhir.QuestionnaireGroup)get_store().add_element_user(GROUP$10);
+            target = (org.hl7.fhir.QuestionnaireGroup)get_store().add_element_user(GROUP$8);
             return target;
         }
     }
@@ -465,7 +399,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(GROUP$10, i);
+            get_store().remove_element(GROUP$8, i);
         }
     }
     
@@ -478,7 +412,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(QUESTION$12, targetList);
+            get_store().find_all_element_users(QUESTION$10, targetList);
             org.hl7.fhir.QuestionnaireQuestion[] result = new org.hl7.fhir.QuestionnaireQuestion[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -494,7 +428,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireQuestion target = null;
-            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().find_element_user(QUESTION$12, i);
+            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().find_element_user(QUESTION$10, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -511,7 +445,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(QUESTION$12);
+            return get_store().count_elements(QUESTION$10);
         }
     }
     
@@ -521,7 +455,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
     public void setQuestionArray(org.hl7.fhir.QuestionnaireQuestion[] questionArray)
     {
         check_orphaned();
-        arraySetterHelper(questionArray, QUESTION$12);
+        arraySetterHelper(questionArray, QUESTION$10);
     }
     
     /**
@@ -533,7 +467,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireQuestion target = null;
-            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().find_element_user(QUESTION$12, i);
+            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().find_element_user(QUESTION$10, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -551,7 +485,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireQuestion target = null;
-            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().insert_element_user(QUESTION$12, i);
+            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().insert_element_user(QUESTION$10, i);
             return target;
         }
     }
@@ -565,7 +499,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.QuestionnaireQuestion target = null;
-            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().add_element_user(QUESTION$12);
+            target = (org.hl7.fhir.QuestionnaireQuestion)get_store().add_element_user(QUESTION$10);
             return target;
         }
     }
@@ -578,7 +512,7 @@ public class QuestionnaireGroupImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(QUESTION$12, i);
+            get_store().remove_element(QUESTION$10, i);
         }
     }
 }

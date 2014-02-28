@@ -30,6 +30,8 @@ public class ProfileStructureImpl extends org.hl7.fhir.impl.BackboneElementImpl 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "purpose");
     private static final javax.xml.namespace.QName ELEMENT$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "element");
+    private static final javax.xml.namespace.QName SEARCHPARAM$10 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "searchParam");
     
     
     /**
@@ -374,6 +376,119 @@ public class ProfileStructureImpl extends org.hl7.fhir.impl.BackboneElementImpl 
         {
             check_orphaned();
             get_store().remove_element(ELEMENT$8, i);
+        }
+    }
+    
+    /**
+     * Gets array of all "searchParam" elements
+     */
+    public org.hl7.fhir.ProfileSearchParam[] getSearchParamArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(SEARCHPARAM$10, targetList);
+            org.hl7.fhir.ProfileSearchParam[] result = new org.hl7.fhir.ProfileSearchParam[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "searchParam" element
+     */
+    public org.hl7.fhir.ProfileSearchParam getSearchParamArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileSearchParam target = null;
+            target = (org.hl7.fhir.ProfileSearchParam)get_store().find_element_user(SEARCHPARAM$10, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "searchParam" element
+     */
+    public int sizeOfSearchParamArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(SEARCHPARAM$10);
+        }
+    }
+    
+    /**
+     * Sets array of all "searchParam" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setSearchParamArray(org.hl7.fhir.ProfileSearchParam[] searchParamArray)
+    {
+        check_orphaned();
+        arraySetterHelper(searchParamArray, SEARCHPARAM$10);
+    }
+    
+    /**
+     * Sets ith "searchParam" element
+     */
+    public void setSearchParamArray(int i, org.hl7.fhir.ProfileSearchParam searchParam)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileSearchParam target = null;
+            target = (org.hl7.fhir.ProfileSearchParam)get_store().find_element_user(SEARCHPARAM$10, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(searchParam);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "searchParam" element
+     */
+    public org.hl7.fhir.ProfileSearchParam insertNewSearchParam(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileSearchParam target = null;
+            target = (org.hl7.fhir.ProfileSearchParam)get_store().insert_element_user(SEARCHPARAM$10, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "searchParam" element
+     */
+    public org.hl7.fhir.ProfileSearchParam addNewSearchParam()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileSearchParam target = null;
+            target = (org.hl7.fhir.ProfileSearchParam)get_store().add_element_user(SEARCHPARAM$10);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "searchParam" element
+     */
+    public void removeSearchParam(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(SEARCHPARAM$10, i);
         }
     }
 }

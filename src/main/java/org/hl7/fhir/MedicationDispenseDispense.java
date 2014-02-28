@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface MedicationDispenseDispense extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationDispenseDispense.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationdispensedispense9919type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationDispenseDispense.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("medicationdispensedispense9919type");
     
     /**
      * Gets the "identifier" element
@@ -146,7 +146,7 @@ public interface MedicationDispenseDispense extends org.hl7.fhir.BackboneElement
     /**
      * Gets the "whenPrepared" element
      */
-    org.hl7.fhir.Period getWhenPrepared();
+    org.hl7.fhir.DateTime getWhenPrepared();
     
     /**
      * True if has "whenPrepared" element
@@ -156,12 +156,12 @@ public interface MedicationDispenseDispense extends org.hl7.fhir.BackboneElement
     /**
      * Sets the "whenPrepared" element
      */
-    void setWhenPrepared(org.hl7.fhir.Period whenPrepared);
+    void setWhenPrepared(org.hl7.fhir.DateTime whenPrepared);
     
     /**
      * Appends and returns a new empty "whenPrepared" element
      */
-    org.hl7.fhir.Period addNewWhenPrepared();
+    org.hl7.fhir.DateTime addNewWhenPrepared();
     
     /**
      * Unsets the "whenPrepared" element
@@ -171,7 +171,7 @@ public interface MedicationDispenseDispense extends org.hl7.fhir.BackboneElement
     /**
      * Gets the "whenHandedOver" element
      */
-    org.hl7.fhir.Period getWhenHandedOver();
+    org.hl7.fhir.DateTime getWhenHandedOver();
     
     /**
      * True if has "whenHandedOver" element
@@ -181,12 +181,12 @@ public interface MedicationDispenseDispense extends org.hl7.fhir.BackboneElement
     /**
      * Sets the "whenHandedOver" element
      */
-    void setWhenHandedOver(org.hl7.fhir.Period whenHandedOver);
+    void setWhenHandedOver(org.hl7.fhir.DateTime whenHandedOver);
     
     /**
      * Appends and returns a new empty "whenHandedOver" element
      */
-    org.hl7.fhir.Period addNewWhenHandedOver();
+    org.hl7.fhir.DateTime addNewWhenHandedOver();
     
     /**
      * Unsets the "whenHandedOver" element

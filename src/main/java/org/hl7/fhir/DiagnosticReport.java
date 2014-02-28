@@ -16,7 +16,22 @@ package org.hl7.fhir;
 public interface DiagnosticReport extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticReport.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("diagnosticreporte6a7type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(DiagnosticReport.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("diagnosticreporte6a7type");
+    
+    /**
+     * Gets the "name" element
+     */
+    org.hl7.fhir.CodeableConcept getName();
+    
+    /**
+     * Sets the "name" element
+     */
+    void setName(org.hl7.fhir.CodeableConcept name);
+    
+    /**
+     * Appends and returns a new empty "name" element
+     */
+    org.hl7.fhir.CodeableConcept addNewName();
     
     /**
      * Gets the "status" element
@@ -219,19 +234,84 @@ public interface DiagnosticReport extends org.hl7.fhir.Resource
     void unsetDiagnosticPeriod();
     
     /**
-     * Gets the "results" element
+     * Gets array of all "specimen" elements
      */
-    org.hl7.fhir.DiagnosticReportResults getResults();
+    org.hl7.fhir.ResourceReference[] getSpecimenArray();
     
     /**
-     * Sets the "results" element
+     * Gets ith "specimen" element
      */
-    void setResults(org.hl7.fhir.DiagnosticReportResults results);
+    org.hl7.fhir.ResourceReference getSpecimenArray(int i);
     
     /**
-     * Appends and returns a new empty "results" element
+     * Returns number of "specimen" element
      */
-    org.hl7.fhir.DiagnosticReportResults addNewResults();
+    int sizeOfSpecimenArray();
+    
+    /**
+     * Sets array of all "specimen" element
+     */
+    void setSpecimenArray(org.hl7.fhir.ResourceReference[] specimenArray);
+    
+    /**
+     * Sets ith "specimen" element
+     */
+    void setSpecimenArray(int i, org.hl7.fhir.ResourceReference specimen);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "specimen" element
+     */
+    org.hl7.fhir.ResourceReference insertNewSpecimen(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "specimen" element
+     */
+    org.hl7.fhir.ResourceReference addNewSpecimen();
+    
+    /**
+     * Removes the ith "specimen" element
+     */
+    void removeSpecimen(int i);
+    
+    /**
+     * Gets array of all "result" elements
+     */
+    org.hl7.fhir.ResourceReference[] getResultArray();
+    
+    /**
+     * Gets ith "result" element
+     */
+    org.hl7.fhir.ResourceReference getResultArray(int i);
+    
+    /**
+     * Returns number of "result" element
+     */
+    int sizeOfResultArray();
+    
+    /**
+     * Sets array of all "result" element
+     */
+    void setResultArray(org.hl7.fhir.ResourceReference[] resultArray);
+    
+    /**
+     * Sets ith "result" element
+     */
+    void setResultArray(int i, org.hl7.fhir.ResourceReference result);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "result" element
+     */
+    org.hl7.fhir.ResourceReference insertNewResult(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "result" element
+     */
+    org.hl7.fhir.ResourceReference addNewResult();
+    
+    /**
+     * Removes the ith "result" element
+     */
+    void removeResult(int i);
     
     /**
      * Gets array of all "imagingStudy" elements

@@ -225,13 +225,13 @@ public class ObservationReferenceRangeImpl extends org.hl7.fhir.impl.BackboneEle
     /**
      * Gets the "age" element
      */
-    public org.hl7.fhir.Period getAge()
+    public org.hl7.fhir.Range getAge()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().find_element_user(AGE$6, 0);
+            org.hl7.fhir.Range target = null;
+            target = (org.hl7.fhir.Range)get_store().find_element_user(AGE$6, 0);
             if (target == null)
             {
                 return null;
@@ -255,7 +255,7 @@ public class ObservationReferenceRangeImpl extends org.hl7.fhir.impl.BackboneEle
     /**
      * Sets the "age" element
      */
-    public void setAge(org.hl7.fhir.Period age)
+    public void setAge(org.hl7.fhir.Range age)
     {
         generatedSetterHelperImpl(age, AGE$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -263,13 +263,13 @@ public class ObservationReferenceRangeImpl extends org.hl7.fhir.impl.BackboneEle
     /**
      * Appends and returns a new empty "age" element
      */
-    public org.hl7.fhir.Period addNewAge()
+    public org.hl7.fhir.Range addNewAge()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().add_element_user(AGE$6);
+            org.hl7.fhir.Range target = null;
+            target = (org.hl7.fhir.Range)get_store().add_element_user(AGE$6);
             return target;
         }
     }

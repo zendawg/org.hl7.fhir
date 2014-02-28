@@ -17,7 +17,7 @@ package org.hl7.fhir;
 public interface ProvenanceDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ProvenanceDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("provenanceb2dddoctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ProvenanceDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("provenanceb2dddoctype");
     
     /**
      * Gets the "Provenance" element

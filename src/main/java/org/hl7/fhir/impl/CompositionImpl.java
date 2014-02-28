@@ -22,8 +22,8 @@ public class CompositionImpl extends org.hl7.fhir.impl.ResourceImpl implements o
     
     private static final javax.xml.namespace.QName IDENTIFIER$0 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "identifier");
-    private static final javax.xml.namespace.QName INSTANT$2 = 
-        new javax.xml.namespace.QName("http://hl7.org/fhir", "instant");
+    private static final javax.xml.namespace.QName DATE$2 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "date");
     private static final javax.xml.namespace.QName TYPE$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "type");
     private static final javax.xml.namespace.QName CLASS1$6 = 
@@ -115,15 +115,15 @@ public class CompositionImpl extends org.hl7.fhir.impl.ResourceImpl implements o
     }
     
     /**
-     * Gets the "instant" element
+     * Gets the "date" element
      */
-    public org.hl7.fhir.Instant getInstant()
+    public org.hl7.fhir.DateTime getDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Instant target = null;
-            target = (org.hl7.fhir.Instant)get_store().find_element_user(INSTANT$2, 0);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(DATE$2, 0);
             if (target == null)
             {
                 return null;
@@ -133,23 +133,23 @@ public class CompositionImpl extends org.hl7.fhir.impl.ResourceImpl implements o
     }
     
     /**
-     * Sets the "instant" element
+     * Sets the "date" element
      */
-    public void setInstant(org.hl7.fhir.Instant instant)
+    public void setDate(org.hl7.fhir.DateTime date)
     {
-        generatedSetterHelperImpl(instant, INSTANT$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(date, DATE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
-     * Appends and returns a new empty "instant" element
+     * Appends and returns a new empty "date" element
      */
-    public org.hl7.fhir.Instant addNewInstant()
+    public org.hl7.fhir.DateTime addNewDate()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Instant target = null;
-            target = (org.hl7.fhir.Instant)get_store().add_element_user(INSTANT$2);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(DATE$2);
             return target;
         }
     }

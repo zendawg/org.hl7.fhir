@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Profile extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Profile.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("profile8f63type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Profile.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("profile8f63type");
     
     /**
      * Gets the "identifier" element
@@ -447,6 +447,46 @@ public interface Profile extends org.hl7.fhir.Resource
      * Removes the ith "extensionDefn" element
      */
     void removeExtensionDefn(int i);
+    
+    /**
+     * Gets array of all "query" elements
+     */
+    org.hl7.fhir.ProfileQuery[] getQueryArray();
+    
+    /**
+     * Gets ith "query" element
+     */
+    org.hl7.fhir.ProfileQuery getQueryArray(int i);
+    
+    /**
+     * Returns number of "query" element
+     */
+    int sizeOfQueryArray();
+    
+    /**
+     * Sets array of all "query" element
+     */
+    void setQueryArray(org.hl7.fhir.ProfileQuery[] queryArray);
+    
+    /**
+     * Sets ith "query" element
+     */
+    void setQueryArray(int i, org.hl7.fhir.ProfileQuery query);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "query" element
+     */
+    org.hl7.fhir.ProfileQuery insertNewQuery(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "query" element
+     */
+    org.hl7.fhir.ProfileQuery addNewQuery();
+    
+    /**
+     * Removes the ith "query" element
+     */
+    void removeQuery(int i);
     
     /**
      * A factory class with static methods for creating instances

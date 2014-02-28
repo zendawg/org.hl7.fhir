@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface SpecimenCollection extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SpecimenCollection.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("specimencollectionc11etype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SpecimenCollection.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("specimencollectionc11etype");
     
     /**
      * Gets the "collector" element

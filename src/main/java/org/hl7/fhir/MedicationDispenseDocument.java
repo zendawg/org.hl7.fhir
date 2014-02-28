@@ -17,7 +17,7 @@ package org.hl7.fhir;
 public interface MedicationDispenseDocument extends org.apache.xmlbeans.XmlObject
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationDispenseDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationdispense7588doctype");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationDispenseDocument.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("medicationdispense7588doctype");
     
     /**
      * Gets the "MedicationDispense" element

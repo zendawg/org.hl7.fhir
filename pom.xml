@@ -31,30 +31,29 @@
   </dependencies>
   <build>
     <plugins>
-      <!-- Uncomment this section to re-build the sources via the XSD: -->
-<!--      <plugin>
+      <!--plugin>
         <artifactId>exec-maven-plugin</artifactId>
         <groupId>org.codehaus.mojo</groupId>
         <executions>
-          <execution> Run our version calculation script 
+          <execution>
             <id>XML Beans</id>
-            <phase>generate-sources</phase>
+            <phase>compile</phase>
             <goals>
               <goal>exec</goal>
             </goals>
             <configuration>
               <executable>scomp</executable>
               <arguments>
-                <argument>-dl</argument>
                 <argument>-src</argument>
                 <argument>src/main/java</argument>
-                <argument>-srconly</argument>
-                <argument>http://www.hl7.org/implement/standards/fhir/fhir-base.xsd</argument>
+                <argument>-d</argument>
+                <argument>target/generated-sources</argument>
+                <argument></argument>
               </arguments>
             </configuration>
           </execution>
         </executions>
-      </plugin>-->
+      </plugin-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>

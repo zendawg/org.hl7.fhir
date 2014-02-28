@@ -365,13 +365,13 @@ public class MedicationDispenseDispenseImpl extends org.hl7.fhir.impl.BackboneEl
     /**
      * Gets the "whenPrepared" element
      */
-    public org.hl7.fhir.Period getWhenPrepared()
+    public org.hl7.fhir.DateTime getWhenPrepared()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().find_element_user(WHENPREPARED$10, 0);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(WHENPREPARED$10, 0);
             if (target == null)
             {
                 return null;
@@ -395,7 +395,7 @@ public class MedicationDispenseDispenseImpl extends org.hl7.fhir.impl.BackboneEl
     /**
      * Sets the "whenPrepared" element
      */
-    public void setWhenPrepared(org.hl7.fhir.Period whenPrepared)
+    public void setWhenPrepared(org.hl7.fhir.DateTime whenPrepared)
     {
         generatedSetterHelperImpl(whenPrepared, WHENPREPARED$10, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -403,13 +403,13 @@ public class MedicationDispenseDispenseImpl extends org.hl7.fhir.impl.BackboneEl
     /**
      * Appends and returns a new empty "whenPrepared" element
      */
-    public org.hl7.fhir.Period addNewWhenPrepared()
+    public org.hl7.fhir.DateTime addNewWhenPrepared()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().add_element_user(WHENPREPARED$10);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(WHENPREPARED$10);
             return target;
         }
     }
@@ -429,13 +429,13 @@ public class MedicationDispenseDispenseImpl extends org.hl7.fhir.impl.BackboneEl
     /**
      * Gets the "whenHandedOver" element
      */
-    public org.hl7.fhir.Period getWhenHandedOver()
+    public org.hl7.fhir.DateTime getWhenHandedOver()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().find_element_user(WHENHANDEDOVER$12, 0);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().find_element_user(WHENHANDEDOVER$12, 0);
             if (target == null)
             {
                 return null;
@@ -459,7 +459,7 @@ public class MedicationDispenseDispenseImpl extends org.hl7.fhir.impl.BackboneEl
     /**
      * Sets the "whenHandedOver" element
      */
-    public void setWhenHandedOver(org.hl7.fhir.Period whenHandedOver)
+    public void setWhenHandedOver(org.hl7.fhir.DateTime whenHandedOver)
     {
         generatedSetterHelperImpl(whenHandedOver, WHENHANDEDOVER$12, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
@@ -467,13 +467,13 @@ public class MedicationDispenseDispenseImpl extends org.hl7.fhir.impl.BackboneEl
     /**
      * Appends and returns a new empty "whenHandedOver" element
      */
-    public org.hl7.fhir.Period addNewWhenHandedOver()
+    public org.hl7.fhir.DateTime addNewWhenHandedOver()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            org.hl7.fhir.Period target = null;
-            target = (org.hl7.fhir.Period)get_store().add_element_user(WHENHANDEDOVER$12);
+            org.hl7.fhir.DateTime target = null;
+            target = (org.hl7.fhir.DateTime)get_store().add_element_user(WHENHANDEDOVER$12);
             return target;
         }
     }

@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ProfileStructure extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ProfileStructure.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("profilestructure0bc8type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ProfileStructure.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("profilestructure0bc8type");
     
     /**
      * Gets the "type" element
@@ -147,6 +147,46 @@ public interface ProfileStructure extends org.hl7.fhir.BackboneElement
      * Removes the ith "element" element
      */
     void removeElement(int i);
+    
+    /**
+     * Gets array of all "searchParam" elements
+     */
+    org.hl7.fhir.ProfileSearchParam[] getSearchParamArray();
+    
+    /**
+     * Gets ith "searchParam" element
+     */
+    org.hl7.fhir.ProfileSearchParam getSearchParamArray(int i);
+    
+    /**
+     * Returns number of "searchParam" element
+     */
+    int sizeOfSearchParamArray();
+    
+    /**
+     * Sets array of all "searchParam" element
+     */
+    void setSearchParamArray(org.hl7.fhir.ProfileSearchParam[] searchParamArray);
+    
+    /**
+     * Sets ith "searchParam" element
+     */
+    void setSearchParamArray(int i, org.hl7.fhir.ProfileSearchParam searchParam);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "searchParam" element
+     */
+    org.hl7.fhir.ProfileSearchParam insertNewSearchParam(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "searchParam" element
+     */
+    org.hl7.fhir.ProfileSearchParam addNewSearchParam();
+    
+    /**
+     * Removes the ith "searchParam" element
+     */
+    void removeSearchParam(int i);
     
     /**
      * A factory class with static methods for creating instances

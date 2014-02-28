@@ -303,45 +303,94 @@ public class LocationImpl extends org.hl7.fhir.impl.ResourceImpl implements org.
     }
     
     /**
-     * Gets the "telecom" element
+     * Gets array of all "telecom" elements
      */
-    public org.hl7.fhir.Contact getTelecom()
+    public org.hl7.fhir.Contact[] getTelecomArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(TELECOM$8, targetList);
+            org.hl7.fhir.Contact[] result = new org.hl7.fhir.Contact[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "telecom" element
+     */
+    public org.hl7.fhir.Contact getTelecomArray(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
             org.hl7.fhir.Contact target = null;
-            target = (org.hl7.fhir.Contact)get_store().find_element_user(TELECOM$8, 0);
+            target = (org.hl7.fhir.Contact)get_store().find_element_user(TELECOM$8, i);
             if (target == null)
             {
-                return null;
+                throw new IndexOutOfBoundsException();
             }
             return target;
         }
     }
     
     /**
-     * True if has "telecom" element
+     * Returns number of "telecom" element
      */
-    public boolean isSetTelecom()
+    public int sizeOfTelecomArray()
     {
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(TELECOM$8) != 0;
+            return get_store().count_elements(TELECOM$8);
         }
     }
     
     /**
-     * Sets the "telecom" element
+     * Sets array of all "telecom" element  WARNING: This method is not atomicaly synchronized.
      */
-    public void setTelecom(org.hl7.fhir.Contact telecom)
+    public void setTelecomArray(org.hl7.fhir.Contact[] telecomArray)
     {
-        generatedSetterHelperImpl(telecom, TELECOM$8, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        check_orphaned();
+        arraySetterHelper(telecomArray, TELECOM$8);
     }
     
     /**
-     * Appends and returns a new empty "telecom" element
+     * Sets ith "telecom" element
+     */
+    public void setTelecomArray(int i, org.hl7.fhir.Contact telecom)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Contact target = null;
+            target = (org.hl7.fhir.Contact)get_store().find_element_user(TELECOM$8, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(telecom);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "telecom" element
+     */
+    public org.hl7.fhir.Contact insertNewTelecom(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.Contact target = null;
+            target = (org.hl7.fhir.Contact)get_store().insert_element_user(TELECOM$8, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "telecom" element
      */
     public org.hl7.fhir.Contact addNewTelecom()
     {
@@ -355,14 +404,14 @@ public class LocationImpl extends org.hl7.fhir.impl.ResourceImpl implements org.
     }
     
     /**
-     * Unsets the "telecom" element
+     * Removes the ith "telecom" element
      */
-    public void unsetTelecom()
+    public void removeTelecom(int i)
     {
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(TELECOM$8, 0);
+            get_store().remove_element(TELECOM$8, i);
         }
     }
     

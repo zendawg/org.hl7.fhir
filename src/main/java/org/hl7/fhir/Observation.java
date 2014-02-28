@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Observation extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Observation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("observationbae6type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Observation.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("observationbae6type");
     
     /**
      * Gets the "name" element
@@ -567,6 +567,46 @@ public interface Observation extends org.hl7.fhir.Resource
      * Removes the ith "referenceRange" element
      */
     void removeReferenceRange(int i);
+    
+    /**
+     * Gets array of all "related" elements
+     */
+    org.hl7.fhir.ObservationRelated[] getRelatedArray();
+    
+    /**
+     * Gets ith "related" element
+     */
+    org.hl7.fhir.ObservationRelated getRelatedArray(int i);
+    
+    /**
+     * Returns number of "related" element
+     */
+    int sizeOfRelatedArray();
+    
+    /**
+     * Sets array of all "related" element
+     */
+    void setRelatedArray(org.hl7.fhir.ObservationRelated[] relatedArray);
+    
+    /**
+     * Sets ith "related" element
+     */
+    void setRelatedArray(int i, org.hl7.fhir.ObservationRelated related);
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "related" element
+     */
+    org.hl7.fhir.ObservationRelated insertNewRelated(int i);
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "related" element
+     */
+    org.hl7.fhir.ObservationRelated addNewRelated();
+    
+    /**
+     * Removes the ith "related" element
+     */
+    void removeRelated(int i);
     
     /**
      * A factory class with static methods for creating instances

@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Oid extends org.hl7.fhir.Element
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Oid.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("oid04a4type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Oid.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("oid04a4type");
     
     /**
      * Gets the "value" attribute

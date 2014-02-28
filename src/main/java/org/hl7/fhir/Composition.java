@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface Composition extends org.hl7.fhir.Resource
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Composition.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("composition4164type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(Composition.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("composition4164type");
     
     /**
      * Gets the "identifier" element
@@ -44,19 +44,19 @@ public interface Composition extends org.hl7.fhir.Resource
     void unsetIdentifier();
     
     /**
-     * Gets the "instant" element
+     * Gets the "date" element
      */
-    org.hl7.fhir.Instant getInstant();
+    org.hl7.fhir.DateTime getDate();
     
     /**
-     * Sets the "instant" element
+     * Sets the "date" element
      */
-    void setInstant(org.hl7.fhir.Instant instant);
+    void setDate(org.hl7.fhir.DateTime date);
     
     /**
-     * Appends and returns a new empty "instant" element
+     * Appends and returns a new empty "date" element
      */
-    org.hl7.fhir.Instant addNewInstant();
+    org.hl7.fhir.DateTime addNewDate();
     
     /**
      * Gets the "type" element

@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface SearchParamTypeList extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SearchParamTypeList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("searchparamtypelist9cf8type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(SearchParamTypeList.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("searchparamtypelist9cf8type");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
@@ -27,6 +27,7 @@ public interface SearchParamTypeList extends org.apache.xmlbeans.XmlString
     static final Enum TOKEN = Enum.forString("token");
     static final Enum REFERENCE = Enum.forString("reference");
     static final Enum COMPOSITE = Enum.forString("composite");
+    static final Enum QUANTITY = Enum.forString("quantity");
     
     static final int INT_NUMBER = Enum.INT_NUMBER;
     static final int INT_DATE = Enum.INT_DATE;
@@ -34,6 +35,7 @@ public interface SearchParamTypeList extends org.apache.xmlbeans.XmlString
     static final int INT_TOKEN = Enum.INT_TOKEN;
     static final int INT_REFERENCE = Enum.INT_REFERENCE;
     static final int INT_COMPOSITE = Enum.INT_COMPOSITE;
+    static final int INT_QUANTITY = Enum.INT_QUANTITY;
     
     /**
      * Enumeration value class for org.hl7.fhir.SearchParamTypeList.
@@ -72,6 +74,7 @@ public interface SearchParamTypeList extends org.apache.xmlbeans.XmlString
         static final int INT_TOKEN = 4;
         static final int INT_REFERENCE = 5;
         static final int INT_COMPOSITE = 6;
+        static final int INT_QUANTITY = 7;
         
         public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
             new org.apache.xmlbeans.StringEnumAbstractBase.Table
@@ -84,6 +87,7 @@ public interface SearchParamTypeList extends org.apache.xmlbeans.XmlString
                 new Enum("token", INT_TOKEN),
                 new Enum("reference", INT_REFERENCE),
                 new Enum("composite", INT_COMPOSITE),
+                new Enum("quantity", INT_QUANTITY),
             }
         );
         private static final long serialVersionUID = 1L;

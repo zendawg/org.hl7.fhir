@@ -50,6 +50,8 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         new javax.xml.namespace.QName("http://hl7.org/fhir", "structure");
     private static final javax.xml.namespace.QName EXTENSIONDEFN$28 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "extensionDefn");
+    private static final javax.xml.namespace.QName QUERY$30 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "query");
     
     
     /**
@@ -1206,6 +1208,119 @@ public class ProfileImpl extends org.hl7.fhir.impl.ResourceImpl implements org.h
         {
             check_orphaned();
             get_store().remove_element(EXTENSIONDEFN$28, i);
+        }
+    }
+    
+    /**
+     * Gets array of all "query" elements
+     */
+    public org.hl7.fhir.ProfileQuery[] getQueryArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            java.util.List targetList = new java.util.ArrayList();
+            get_store().find_all_element_users(QUERY$30, targetList);
+            org.hl7.fhir.ProfileQuery[] result = new org.hl7.fhir.ProfileQuery[targetList.size()];
+            targetList.toArray(result);
+            return result;
+        }
+    }
+    
+    /**
+     * Gets ith "query" element
+     */
+    public org.hl7.fhir.ProfileQuery getQueryArray(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileQuery target = null;
+            target = (org.hl7.fhir.ProfileQuery)get_store().find_element_user(QUERY$30, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * Returns number of "query" element
+     */
+    public int sizeOfQueryArray()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(QUERY$30);
+        }
+    }
+    
+    /**
+     * Sets array of all "query" element  WARNING: This method is not atomicaly synchronized.
+     */
+    public void setQueryArray(org.hl7.fhir.ProfileQuery[] queryArray)
+    {
+        check_orphaned();
+        arraySetterHelper(queryArray, QUERY$30);
+    }
+    
+    /**
+     * Sets ith "query" element
+     */
+    public void setQueryArray(int i, org.hl7.fhir.ProfileQuery query)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileQuery target = null;
+            target = (org.hl7.fhir.ProfileQuery)get_store().find_element_user(QUERY$30, i);
+            if (target == null)
+            {
+                throw new IndexOutOfBoundsException();
+            }
+            target.set(query);
+        }
+    }
+    
+    /**
+     * Inserts and returns a new empty value (as xml) as the ith "query" element
+     */
+    public org.hl7.fhir.ProfileQuery insertNewQuery(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileQuery target = null;
+            target = (org.hl7.fhir.ProfileQuery)get_store().insert_element_user(QUERY$30, i);
+            return target;
+        }
+    }
+    
+    /**
+     * Appends and returns a new empty value (as xml) as the last "query" element
+     */
+    public org.hl7.fhir.ProfileQuery addNewQuery()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.ProfileQuery target = null;
+            target = (org.hl7.fhir.ProfileQuery)get_store().add_element_user(QUERY$30);
+            return target;
+        }
+    }
+    
+    /**
+     * Removes the ith "query" element
+     */
+    public void removeQuery(int i)
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(QUERY$30, i);
         }
     }
 }

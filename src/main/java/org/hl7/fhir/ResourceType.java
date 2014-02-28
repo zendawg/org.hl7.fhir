@@ -16,113 +16,107 @@ package org.hl7.fhir;
 public interface ResourceType extends org.apache.xmlbeans.XmlString
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ResourceType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("resourcetypec754type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ResourceType.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("resourcetypec754type");
     
     org.apache.xmlbeans.StringEnumAbstractBase enumValue();
     void set(org.apache.xmlbeans.StringEnumAbstractBase e);
     
-    static final Enum CONDITION = Enum.forString("Condition");
-    static final Enum SUPPLY = Enum.forString("Supply");
-    static final Enum ORGANIZATION = Enum.forString("Organization");
-    static final Enum GROUP = Enum.forString("Group");
-    static final Enum ASSESSMENT_DEFINITION = Enum.forString("AssessmentDefinition");
-    static final Enum VALUE_SET = Enum.forString("ValueSet");
-    static final Enum IMMUNIZATION_RECOMMENDATION = Enum.forString("ImmunizationRecommendation");
-    static final Enum MEDICATION_DISPENSE = Enum.forString("MedicationDispense");
-    static final Enum MEDICATION_PRESCRIPTION = Enum.forString("MedicationPrescription");
-    static final Enum MEDICATION_STATEMENT = Enum.forString("MedicationStatement");
-    static final Enum COMPOSITION = Enum.forString("Composition");
-    static final Enum QUESTIONNAIRE = Enum.forString("Questionnaire");
-    static final Enum OPERATION_OUTCOME = Enum.forString("OperationOutcome");
-    static final Enum CONFORMANCE = Enum.forString("Conformance");
-    static final Enum MEDIA = Enum.forString("Media");
-    static final Enum OTHER = Enum.forString("Other");
-    static final Enum PROFILE = Enum.forString("Profile");
-    static final Enum DOCUMENT_REFERENCE = Enum.forString("DocumentReference");
-    static final Enum IMMUNIZATION = Enum.forString("Immunization");
-    static final Enum ORDER_RESPONSE = Enum.forString("OrderResponse");
-    static final Enum CONCEPT_MAP = Enum.forString("ConceptMap");
-    static final Enum IMAGING_STUDY = Enum.forString("ImagingStudy");
-    static final Enum PRACTITIONER = Enum.forString("Practitioner");
-    static final Enum CARE_PLAN = Enum.forString("CarePlan");
     static final Enum PROVENANCE = Enum.forString("Provenance");
+    static final Enum CONDITION = Enum.forString("Condition");
+    static final Enum CARE_PLAN = Enum.forString("CarePlan");
+    static final Enum SUPPLY = Enum.forString("Supply");
     static final Enum DEVICE = Enum.forString("Device");
     static final Enum QUERY = Enum.forString("Query");
     static final Enum ORDER = Enum.forString("Order");
+    static final Enum ORGANIZATION = Enum.forString("Organization");
     static final Enum PROCEDURE = Enum.forString("Procedure");
     static final Enum SUBSTANCE = Enum.forString("Substance");
     static final Enum DIAGNOSTIC_REPORT = Enum.forString("DiagnosticReport");
+    static final Enum GROUP = Enum.forString("Group");
+    static final Enum VALUE_SET = Enum.forString("ValueSet");
     static final Enum MEDICATION = Enum.forString("Medication");
     static final Enum MESSAGE_HEADER = Enum.forString("MessageHeader");
+    static final Enum IMMUNIZATION_RECOMMENDATION = Enum.forString("ImmunizationRecommendation");
     static final Enum DOCUMENT_MANIFEST = Enum.forString("DocumentManifest");
+    static final Enum MEDICATION_DISPENSE = Enum.forString("MedicationDispense");
+    static final Enum MEDICATION_PRESCRIPTION = Enum.forString("MedicationPrescription");
     static final Enum MEDICATION_ADMINISTRATION = Enum.forString("MedicationAdministration");
     static final Enum ENCOUNTER = Enum.forString("Encounter");
     static final Enum SECURITY_EVENT = Enum.forString("SecurityEvent");
+    static final Enum MEDICATION_STATEMENT = Enum.forString("MedicationStatement");
     static final Enum LIST = Enum.forString("List");
+    static final Enum QUESTIONNAIRE = Enum.forString("Questionnaire");
+    static final Enum COMPOSITION = Enum.forString("Composition");
     static final Enum DEVICE_OBSERVATION_REPORT = Enum.forString("DeviceObservationReport");
+    static final Enum OPERATION_OUTCOME = Enum.forString("OperationOutcome");
+    static final Enum CONFORMANCE = Enum.forString("Conformance");
+    static final Enum MEDIA = Enum.forString("Media");
     static final Enum FAMILY_HISTORY = Enum.forString("FamilyHistory");
+    static final Enum OTHER = Enum.forString("Other");
+    static final Enum PROFILE = Enum.forString("Profile");
     static final Enum LOCATION = Enum.forString("Location");
-    static final Enum ALLERGY_INTOLERANCE = Enum.forString("AllergyIntolerance");
     static final Enum OBSERVATION = Enum.forString("Observation");
-    static final Enum APPOINTMENT = Enum.forString("Appointment");
+    static final Enum ALLERGY_INTOLERANCE = Enum.forString("AllergyIntolerance");
+    static final Enum DOCUMENT_REFERENCE = Enum.forString("DocumentReference");
+    static final Enum IMMUNIZATION = Enum.forString("Immunization");
     static final Enum RELATED_PERSON = Enum.forString("RelatedPerson");
     static final Enum SPECIMEN = Enum.forString("Specimen");
-    static final Enum INTEREST_OF_CARE = Enum.forString("InterestOfCare");
+    static final Enum ORDER_RESPONSE = Enum.forString("OrderResponse");
     static final Enum ALERT = Enum.forString("Alert");
+    static final Enum CONCEPT_MAP = Enum.forString("ConceptMap");
     static final Enum PATIENT = Enum.forString("Patient");
+    static final Enum PRACTITIONER = Enum.forString("Practitioner");
     static final Enum ADVERSE_REACTION = Enum.forString("AdverseReaction");
+    static final Enum IMAGING_STUDY = Enum.forString("ImagingStudy");
     static final Enum DIAGNOSTIC_ORDER = Enum.forString("DiagnosticOrder");
     
-    static final int INT_CONDITION = Enum.INT_CONDITION;
-    static final int INT_SUPPLY = Enum.INT_SUPPLY;
-    static final int INT_ORGANIZATION = Enum.INT_ORGANIZATION;
-    static final int INT_GROUP = Enum.INT_GROUP;
-    static final int INT_ASSESSMENT_DEFINITION = Enum.INT_ASSESSMENT_DEFINITION;
-    static final int INT_VALUE_SET = Enum.INT_VALUE_SET;
-    static final int INT_IMMUNIZATION_RECOMMENDATION = Enum.INT_IMMUNIZATION_RECOMMENDATION;
-    static final int INT_MEDICATION_DISPENSE = Enum.INT_MEDICATION_DISPENSE;
-    static final int INT_MEDICATION_PRESCRIPTION = Enum.INT_MEDICATION_PRESCRIPTION;
-    static final int INT_MEDICATION_STATEMENT = Enum.INT_MEDICATION_STATEMENT;
-    static final int INT_COMPOSITION = Enum.INT_COMPOSITION;
-    static final int INT_QUESTIONNAIRE = Enum.INT_QUESTIONNAIRE;
-    static final int INT_OPERATION_OUTCOME = Enum.INT_OPERATION_OUTCOME;
-    static final int INT_CONFORMANCE = Enum.INT_CONFORMANCE;
-    static final int INT_MEDIA = Enum.INT_MEDIA;
-    static final int INT_OTHER = Enum.INT_OTHER;
-    static final int INT_PROFILE = Enum.INT_PROFILE;
-    static final int INT_DOCUMENT_REFERENCE = Enum.INT_DOCUMENT_REFERENCE;
-    static final int INT_IMMUNIZATION = Enum.INT_IMMUNIZATION;
-    static final int INT_ORDER_RESPONSE = Enum.INT_ORDER_RESPONSE;
-    static final int INT_CONCEPT_MAP = Enum.INT_CONCEPT_MAP;
-    static final int INT_IMAGING_STUDY = Enum.INT_IMAGING_STUDY;
-    static final int INT_PRACTITIONER = Enum.INT_PRACTITIONER;
-    static final int INT_CARE_PLAN = Enum.INT_CARE_PLAN;
     static final int INT_PROVENANCE = Enum.INT_PROVENANCE;
+    static final int INT_CONDITION = Enum.INT_CONDITION;
+    static final int INT_CARE_PLAN = Enum.INT_CARE_PLAN;
+    static final int INT_SUPPLY = Enum.INT_SUPPLY;
     static final int INT_DEVICE = Enum.INT_DEVICE;
     static final int INT_QUERY = Enum.INT_QUERY;
     static final int INT_ORDER = Enum.INT_ORDER;
+    static final int INT_ORGANIZATION = Enum.INT_ORGANIZATION;
     static final int INT_PROCEDURE = Enum.INT_PROCEDURE;
     static final int INT_SUBSTANCE = Enum.INT_SUBSTANCE;
     static final int INT_DIAGNOSTIC_REPORT = Enum.INT_DIAGNOSTIC_REPORT;
+    static final int INT_GROUP = Enum.INT_GROUP;
+    static final int INT_VALUE_SET = Enum.INT_VALUE_SET;
     static final int INT_MEDICATION = Enum.INT_MEDICATION;
     static final int INT_MESSAGE_HEADER = Enum.INT_MESSAGE_HEADER;
+    static final int INT_IMMUNIZATION_RECOMMENDATION = Enum.INT_IMMUNIZATION_RECOMMENDATION;
     static final int INT_DOCUMENT_MANIFEST = Enum.INT_DOCUMENT_MANIFEST;
+    static final int INT_MEDICATION_DISPENSE = Enum.INT_MEDICATION_DISPENSE;
+    static final int INT_MEDICATION_PRESCRIPTION = Enum.INT_MEDICATION_PRESCRIPTION;
     static final int INT_MEDICATION_ADMINISTRATION = Enum.INT_MEDICATION_ADMINISTRATION;
     static final int INT_ENCOUNTER = Enum.INT_ENCOUNTER;
     static final int INT_SECURITY_EVENT = Enum.INT_SECURITY_EVENT;
+    static final int INT_MEDICATION_STATEMENT = Enum.INT_MEDICATION_STATEMENT;
     static final int INT_LIST = Enum.INT_LIST;
+    static final int INT_QUESTIONNAIRE = Enum.INT_QUESTIONNAIRE;
+    static final int INT_COMPOSITION = Enum.INT_COMPOSITION;
     static final int INT_DEVICE_OBSERVATION_REPORT = Enum.INT_DEVICE_OBSERVATION_REPORT;
+    static final int INT_OPERATION_OUTCOME = Enum.INT_OPERATION_OUTCOME;
+    static final int INT_CONFORMANCE = Enum.INT_CONFORMANCE;
+    static final int INT_MEDIA = Enum.INT_MEDIA;
     static final int INT_FAMILY_HISTORY = Enum.INT_FAMILY_HISTORY;
+    static final int INT_OTHER = Enum.INT_OTHER;
+    static final int INT_PROFILE = Enum.INT_PROFILE;
     static final int INT_LOCATION = Enum.INT_LOCATION;
-    static final int INT_ALLERGY_INTOLERANCE = Enum.INT_ALLERGY_INTOLERANCE;
     static final int INT_OBSERVATION = Enum.INT_OBSERVATION;
-    static final int INT_APPOINTMENT = Enum.INT_APPOINTMENT;
+    static final int INT_ALLERGY_INTOLERANCE = Enum.INT_ALLERGY_INTOLERANCE;
+    static final int INT_DOCUMENT_REFERENCE = Enum.INT_DOCUMENT_REFERENCE;
+    static final int INT_IMMUNIZATION = Enum.INT_IMMUNIZATION;
     static final int INT_RELATED_PERSON = Enum.INT_RELATED_PERSON;
     static final int INT_SPECIMEN = Enum.INT_SPECIMEN;
-    static final int INT_INTEREST_OF_CARE = Enum.INT_INTEREST_OF_CARE;
+    static final int INT_ORDER_RESPONSE = Enum.INT_ORDER_RESPONSE;
     static final int INT_ALERT = Enum.INT_ALERT;
+    static final int INT_CONCEPT_MAP = Enum.INT_CONCEPT_MAP;
     static final int INT_PATIENT = Enum.INT_PATIENT;
+    static final int INT_PRACTITIONER = Enum.INT_PRACTITIONER;
     static final int INT_ADVERSE_REACTION = Enum.INT_ADVERSE_REACTION;
+    static final int INT_IMAGING_STUDY = Enum.INT_IMAGING_STUDY;
     static final int INT_DIAGNOSTIC_ORDER = Enum.INT_DIAGNOSTIC_ORDER;
     
     /**
@@ -131,7 +125,7 @@ public interface ResourceType extends org.apache.xmlbeans.XmlString
      * <pre>
      * enum.toString(); // returns the string value of the enum
      * enum.intValue(); // returns an int value, useful for switches
-     * // e.g., case Enum.INT_CONDITION
+     * // e.g., case Enum.INT_PROVENANCE
      * Enum.forString(s); // returns the enum value for a string
      * Enum.forInt(i); // returns the enum value for an int
      * </pre>
@@ -156,113 +150,107 @@ public interface ResourceType extends org.apache.xmlbeans.XmlString
         private Enum(java.lang.String s, int i)
             { super(s, i); }
         
-        static final int INT_CONDITION = 1;
-        static final int INT_SUPPLY = 2;
-        static final int INT_ORGANIZATION = 3;
-        static final int INT_GROUP = 4;
-        static final int INT_ASSESSMENT_DEFINITION = 5;
-        static final int INT_VALUE_SET = 6;
-        static final int INT_IMMUNIZATION_RECOMMENDATION = 7;
-        static final int INT_MEDICATION_DISPENSE = 8;
-        static final int INT_MEDICATION_PRESCRIPTION = 9;
-        static final int INT_MEDICATION_STATEMENT = 10;
-        static final int INT_COMPOSITION = 11;
-        static final int INT_QUESTIONNAIRE = 12;
-        static final int INT_OPERATION_OUTCOME = 13;
-        static final int INT_CONFORMANCE = 14;
-        static final int INT_MEDIA = 15;
-        static final int INT_OTHER = 16;
-        static final int INT_PROFILE = 17;
-        static final int INT_DOCUMENT_REFERENCE = 18;
-        static final int INT_IMMUNIZATION = 19;
-        static final int INT_ORDER_RESPONSE = 20;
-        static final int INT_CONCEPT_MAP = 21;
-        static final int INT_IMAGING_STUDY = 22;
-        static final int INT_PRACTITIONER = 23;
-        static final int INT_CARE_PLAN = 24;
-        static final int INT_PROVENANCE = 25;
-        static final int INT_DEVICE = 26;
-        static final int INT_QUERY = 27;
-        static final int INT_ORDER = 28;
-        static final int INT_PROCEDURE = 29;
-        static final int INT_SUBSTANCE = 30;
-        static final int INT_DIAGNOSTIC_REPORT = 31;
-        static final int INT_MEDICATION = 32;
-        static final int INT_MESSAGE_HEADER = 33;
-        static final int INT_DOCUMENT_MANIFEST = 34;
-        static final int INT_MEDICATION_ADMINISTRATION = 35;
-        static final int INT_ENCOUNTER = 36;
-        static final int INT_SECURITY_EVENT = 37;
-        static final int INT_LIST = 38;
-        static final int INT_DEVICE_OBSERVATION_REPORT = 39;
-        static final int INT_FAMILY_HISTORY = 40;
-        static final int INT_LOCATION = 41;
-        static final int INT_ALLERGY_INTOLERANCE = 42;
-        static final int INT_OBSERVATION = 43;
-        static final int INT_APPOINTMENT = 44;
-        static final int INT_RELATED_PERSON = 45;
-        static final int INT_SPECIMEN = 46;
-        static final int INT_INTEREST_OF_CARE = 47;
-        static final int INT_ALERT = 48;
-        static final int INT_PATIENT = 49;
-        static final int INT_ADVERSE_REACTION = 50;
-        static final int INT_DIAGNOSTIC_ORDER = 51;
+        static final int INT_PROVENANCE = 1;
+        static final int INT_CONDITION = 2;
+        static final int INT_CARE_PLAN = 3;
+        static final int INT_SUPPLY = 4;
+        static final int INT_DEVICE = 5;
+        static final int INT_QUERY = 6;
+        static final int INT_ORDER = 7;
+        static final int INT_ORGANIZATION = 8;
+        static final int INT_PROCEDURE = 9;
+        static final int INT_SUBSTANCE = 10;
+        static final int INT_DIAGNOSTIC_REPORT = 11;
+        static final int INT_GROUP = 12;
+        static final int INT_VALUE_SET = 13;
+        static final int INT_MEDICATION = 14;
+        static final int INT_MESSAGE_HEADER = 15;
+        static final int INT_IMMUNIZATION_RECOMMENDATION = 16;
+        static final int INT_DOCUMENT_MANIFEST = 17;
+        static final int INT_MEDICATION_DISPENSE = 18;
+        static final int INT_MEDICATION_PRESCRIPTION = 19;
+        static final int INT_MEDICATION_ADMINISTRATION = 20;
+        static final int INT_ENCOUNTER = 21;
+        static final int INT_SECURITY_EVENT = 22;
+        static final int INT_MEDICATION_STATEMENT = 23;
+        static final int INT_LIST = 24;
+        static final int INT_QUESTIONNAIRE = 25;
+        static final int INT_COMPOSITION = 26;
+        static final int INT_DEVICE_OBSERVATION_REPORT = 27;
+        static final int INT_OPERATION_OUTCOME = 28;
+        static final int INT_CONFORMANCE = 29;
+        static final int INT_MEDIA = 30;
+        static final int INT_FAMILY_HISTORY = 31;
+        static final int INT_OTHER = 32;
+        static final int INT_PROFILE = 33;
+        static final int INT_LOCATION = 34;
+        static final int INT_OBSERVATION = 35;
+        static final int INT_ALLERGY_INTOLERANCE = 36;
+        static final int INT_DOCUMENT_REFERENCE = 37;
+        static final int INT_IMMUNIZATION = 38;
+        static final int INT_RELATED_PERSON = 39;
+        static final int INT_SPECIMEN = 40;
+        static final int INT_ORDER_RESPONSE = 41;
+        static final int INT_ALERT = 42;
+        static final int INT_CONCEPT_MAP = 43;
+        static final int INT_PATIENT = 44;
+        static final int INT_PRACTITIONER = 45;
+        static final int INT_ADVERSE_REACTION = 46;
+        static final int INT_IMAGING_STUDY = 47;
+        static final int INT_DIAGNOSTIC_ORDER = 48;
         
         public static final org.apache.xmlbeans.StringEnumAbstractBase.Table table =
             new org.apache.xmlbeans.StringEnumAbstractBase.Table
         (
             new Enum[]
             {
-                new Enum("Condition", INT_CONDITION),
-                new Enum("Supply", INT_SUPPLY),
-                new Enum("Organization", INT_ORGANIZATION),
-                new Enum("Group", INT_GROUP),
-                new Enum("AssessmentDefinition", INT_ASSESSMENT_DEFINITION),
-                new Enum("ValueSet", INT_VALUE_SET),
-                new Enum("ImmunizationRecommendation", INT_IMMUNIZATION_RECOMMENDATION),
-                new Enum("MedicationDispense", INT_MEDICATION_DISPENSE),
-                new Enum("MedicationPrescription", INT_MEDICATION_PRESCRIPTION),
-                new Enum("MedicationStatement", INT_MEDICATION_STATEMENT),
-                new Enum("Composition", INT_COMPOSITION),
-                new Enum("Questionnaire", INT_QUESTIONNAIRE),
-                new Enum("OperationOutcome", INT_OPERATION_OUTCOME),
-                new Enum("Conformance", INT_CONFORMANCE),
-                new Enum("Media", INT_MEDIA),
-                new Enum("Other", INT_OTHER),
-                new Enum("Profile", INT_PROFILE),
-                new Enum("DocumentReference", INT_DOCUMENT_REFERENCE),
-                new Enum("Immunization", INT_IMMUNIZATION),
-                new Enum("OrderResponse", INT_ORDER_RESPONSE),
-                new Enum("ConceptMap", INT_CONCEPT_MAP),
-                new Enum("ImagingStudy", INT_IMAGING_STUDY),
-                new Enum("Practitioner", INT_PRACTITIONER),
-                new Enum("CarePlan", INT_CARE_PLAN),
                 new Enum("Provenance", INT_PROVENANCE),
+                new Enum("Condition", INT_CONDITION),
+                new Enum("CarePlan", INT_CARE_PLAN),
+                new Enum("Supply", INT_SUPPLY),
                 new Enum("Device", INT_DEVICE),
                 new Enum("Query", INT_QUERY),
                 new Enum("Order", INT_ORDER),
+                new Enum("Organization", INT_ORGANIZATION),
                 new Enum("Procedure", INT_PROCEDURE),
                 new Enum("Substance", INT_SUBSTANCE),
                 new Enum("DiagnosticReport", INT_DIAGNOSTIC_REPORT),
+                new Enum("Group", INT_GROUP),
+                new Enum("ValueSet", INT_VALUE_SET),
                 new Enum("Medication", INT_MEDICATION),
                 new Enum("MessageHeader", INT_MESSAGE_HEADER),
+                new Enum("ImmunizationRecommendation", INT_IMMUNIZATION_RECOMMENDATION),
                 new Enum("DocumentManifest", INT_DOCUMENT_MANIFEST),
+                new Enum("MedicationDispense", INT_MEDICATION_DISPENSE),
+                new Enum("MedicationPrescription", INT_MEDICATION_PRESCRIPTION),
                 new Enum("MedicationAdministration", INT_MEDICATION_ADMINISTRATION),
                 new Enum("Encounter", INT_ENCOUNTER),
                 new Enum("SecurityEvent", INT_SECURITY_EVENT),
+                new Enum("MedicationStatement", INT_MEDICATION_STATEMENT),
                 new Enum("List", INT_LIST),
+                new Enum("Questionnaire", INT_QUESTIONNAIRE),
+                new Enum("Composition", INT_COMPOSITION),
                 new Enum("DeviceObservationReport", INT_DEVICE_OBSERVATION_REPORT),
+                new Enum("OperationOutcome", INT_OPERATION_OUTCOME),
+                new Enum("Conformance", INT_CONFORMANCE),
+                new Enum("Media", INT_MEDIA),
                 new Enum("FamilyHistory", INT_FAMILY_HISTORY),
+                new Enum("Other", INT_OTHER),
+                new Enum("Profile", INT_PROFILE),
                 new Enum("Location", INT_LOCATION),
-                new Enum("AllergyIntolerance", INT_ALLERGY_INTOLERANCE),
                 new Enum("Observation", INT_OBSERVATION),
-                new Enum("Appointment", INT_APPOINTMENT),
+                new Enum("AllergyIntolerance", INT_ALLERGY_INTOLERANCE),
+                new Enum("DocumentReference", INT_DOCUMENT_REFERENCE),
+                new Enum("Immunization", INT_IMMUNIZATION),
                 new Enum("RelatedPerson", INT_RELATED_PERSON),
                 new Enum("Specimen", INT_SPECIMEN),
-                new Enum("InterestOfCare", INT_INTEREST_OF_CARE),
+                new Enum("OrderResponse", INT_ORDER_RESPONSE),
                 new Enum("Alert", INT_ALERT),
+                new Enum("ConceptMap", INT_CONCEPT_MAP),
                 new Enum("Patient", INT_PATIENT),
+                new Enum("Practitioner", INT_PRACTITIONER),
                 new Enum("AdverseReaction", INT_ADVERSE_REACTION),
+                new Enum("ImagingStudy", INT_IMAGING_STUDY),
                 new Enum("DiagnosticOrder", INT_DIAGNOSTIC_ORDER),
             }
         );

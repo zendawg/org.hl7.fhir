@@ -16,32 +16,57 @@ package org.hl7.fhir;
 public interface MedicationAdministrationDosage extends org.hl7.fhir.BackboneElement
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationAdministrationDosage.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("medicationadministrationdosage0a12type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(MedicationAdministrationDosage.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("medicationadministrationdosage0a12type");
     
     /**
-     * Gets the "timing" element
+     * Gets the "timingDateTime" element
      */
-    org.hl7.fhir.Schedule getTiming();
+    org.hl7.fhir.DateTime getTimingDateTime();
     
     /**
-     * True if has "timing" element
+     * True if has "timingDateTime" element
      */
-    boolean isSetTiming();
+    boolean isSetTimingDateTime();
     
     /**
-     * Sets the "timing" element
+     * Sets the "timingDateTime" element
      */
-    void setTiming(org.hl7.fhir.Schedule timing);
+    void setTimingDateTime(org.hl7.fhir.DateTime timingDateTime);
     
     /**
-     * Appends and returns a new empty "timing" element
+     * Appends and returns a new empty "timingDateTime" element
      */
-    org.hl7.fhir.Schedule addNewTiming();
+    org.hl7.fhir.DateTime addNewTimingDateTime();
     
     /**
-     * Unsets the "timing" element
+     * Unsets the "timingDateTime" element
      */
-    void unsetTiming();
+    void unsetTimingDateTime();
+    
+    /**
+     * Gets the "timingPeriod" element
+     */
+    org.hl7.fhir.Period getTimingPeriod();
+    
+    /**
+     * True if has "timingPeriod" element
+     */
+    boolean isSetTimingPeriod();
+    
+    /**
+     * Sets the "timingPeriod" element
+     */
+    void setTimingPeriod(org.hl7.fhir.Period timingPeriod);
+    
+    /**
+     * Appends and returns a new empty "timingPeriod" element
+     */
+    org.hl7.fhir.Period addNewTimingPeriod();
+    
+    /**
+     * Unsets the "timingPeriod" element
+     */
+    void unsetTimingPeriod();
     
     /**
      * Gets the "asNeededBoolean" element

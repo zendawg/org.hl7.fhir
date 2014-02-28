@@ -16,7 +16,7 @@ package org.hl7.fhir;
 public interface ConstraintSeverity extends org.hl7.fhir.Element
 {
     public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConstraintSeverity.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s92E42043E21BA03841BD964CC980A9AA").resolveHandle("constraintseveritycf26type");
+        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(ConstraintSeverity.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.s9E39DC3B416F07EA0C8EBAFDA46576CE").resolveHandle("constraintseveritycf26type");
     
     /**
      * Gets the "value" attribute

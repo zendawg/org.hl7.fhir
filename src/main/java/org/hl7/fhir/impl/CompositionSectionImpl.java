@@ -20,15 +20,81 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         super(sType);
     }
     
-    private static final javax.xml.namespace.QName CODE$0 = 
+    private static final javax.xml.namespace.QName TITLE$0 = 
+        new javax.xml.namespace.QName("http://hl7.org/fhir", "title");
+    private static final javax.xml.namespace.QName CODE$2 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "code");
-    private static final javax.xml.namespace.QName SUBJECT$2 = 
+    private static final javax.xml.namespace.QName SUBJECT$4 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "subject");
-    private static final javax.xml.namespace.QName CONTENT$4 = 
+    private static final javax.xml.namespace.QName CONTENT$6 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "content");
-    private static final javax.xml.namespace.QName SECTION$6 = 
+    private static final javax.xml.namespace.QName SECTION$8 = 
         new javax.xml.namespace.QName("http://hl7.org/fhir", "section");
     
+    
+    /**
+     * Gets the "title" element
+     */
+    public org.hl7.fhir.String getTitle()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.String target = null;
+            target = (org.hl7.fhir.String)get_store().find_element_user(TITLE$0, 0);
+            if (target == null)
+            {
+                return null;
+            }
+            return target;
+        }
+    }
+    
+    /**
+     * True if has "title" element
+     */
+    public boolean isSetTitle()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            return get_store().count_elements(TITLE$0) != 0;
+        }
+    }
+    
+    /**
+     * Sets the "title" element
+     */
+    public void setTitle(org.hl7.fhir.String title)
+    {
+        generatedSetterHelperImpl(title, TITLE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+    }
+    
+    /**
+     * Appends and returns a new empty "title" element
+     */
+    public org.hl7.fhir.String addNewTitle()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            org.hl7.fhir.String target = null;
+            target = (org.hl7.fhir.String)get_store().add_element_user(TITLE$0);
+            return target;
+        }
+    }
+    
+    /**
+     * Unsets the "title" element
+     */
+    public void unsetTitle()
+    {
+        synchronized (monitor())
+        {
+            check_orphaned();
+            get_store().remove_element(TITLE$0, 0);
+        }
+    }
     
     /**
      * Gets the "code" element
@@ -39,7 +105,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CODE$0, 0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().find_element_user(CODE$2, 0);
             if (target == null)
             {
                 return null;
@@ -56,7 +122,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CODE$0) != 0;
+            return get_store().count_elements(CODE$2) != 0;
         }
     }
     
@@ -65,7 +131,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setCode(org.hl7.fhir.CodeableConcept code)
     {
-        generatedSetterHelperImpl(code, CODE$0, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(code, CODE$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -77,7 +143,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CodeableConcept target = null;
-            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(CODE$0);
+            target = (org.hl7.fhir.CodeableConcept)get_store().add_element_user(CODE$2);
             return target;
         }
     }
@@ -90,7 +156,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CODE$0, 0);
+            get_store().remove_element(CODE$2, 0);
         }
     }
     
@@ -103,7 +169,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$2, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(SUBJECT$4, 0);
             if (target == null)
             {
                 return null;
@@ -120,7 +186,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SUBJECT$2) != 0;
+            return get_store().count_elements(SUBJECT$4) != 0;
         }
     }
     
@@ -129,7 +195,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setSubject(org.hl7.fhir.ResourceReference subject)
     {
-        generatedSetterHelperImpl(subject, SUBJECT$2, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(subject, SUBJECT$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -141,7 +207,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$2);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(SUBJECT$4);
             return target;
         }
     }
@@ -154,7 +220,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SUBJECT$2, 0);
+            get_store().remove_element(SUBJECT$4, 0);
         }
     }
     
@@ -167,7 +233,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(CONTENT$4, 0);
+            target = (org.hl7.fhir.ResourceReference)get_store().find_element_user(CONTENT$6, 0);
             if (target == null)
             {
                 return null;
@@ -184,7 +250,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(CONTENT$4) != 0;
+            return get_store().count_elements(CONTENT$6) != 0;
         }
     }
     
@@ -193,7 +259,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
      */
     public void setContent(org.hl7.fhir.ResourceReference content)
     {
-        generatedSetterHelperImpl(content, CONTENT$4, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
+        generatedSetterHelperImpl(content, CONTENT$6, 0, org.apache.xmlbeans.impl.values.XmlObjectBase.KIND_SETTERHELPER_SINGLETON);
     }
     
     /**
@@ -205,7 +271,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.ResourceReference target = null;
-            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(CONTENT$4);
+            target = (org.hl7.fhir.ResourceReference)get_store().add_element_user(CONTENT$6);
             return target;
         }
     }
@@ -218,7 +284,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(CONTENT$4, 0);
+            get_store().remove_element(CONTENT$6, 0);
         }
     }
     
@@ -231,7 +297,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             java.util.List targetList = new java.util.ArrayList();
-            get_store().find_all_element_users(SECTION$6, targetList);
+            get_store().find_all_element_users(SECTION$8, targetList);
             org.hl7.fhir.CompositionSection[] result = new org.hl7.fhir.CompositionSection[targetList.size()];
             targetList.toArray(result);
             return result;
@@ -247,7 +313,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CompositionSection target = null;
-            target = (org.hl7.fhir.CompositionSection)get_store().find_element_user(SECTION$6, i);
+            target = (org.hl7.fhir.CompositionSection)get_store().find_element_user(SECTION$8, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -264,7 +330,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            return get_store().count_elements(SECTION$6);
+            return get_store().count_elements(SECTION$8);
         }
     }
     
@@ -274,7 +340,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
     public void setSectionArray(org.hl7.fhir.CompositionSection[] sectionArray)
     {
         check_orphaned();
-        arraySetterHelper(sectionArray, SECTION$6);
+        arraySetterHelper(sectionArray, SECTION$8);
     }
     
     /**
@@ -286,7 +352,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CompositionSection target = null;
-            target = (org.hl7.fhir.CompositionSection)get_store().find_element_user(SECTION$6, i);
+            target = (org.hl7.fhir.CompositionSection)get_store().find_element_user(SECTION$8, i);
             if (target == null)
             {
                 throw new IndexOutOfBoundsException();
@@ -304,7 +370,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CompositionSection target = null;
-            target = (org.hl7.fhir.CompositionSection)get_store().insert_element_user(SECTION$6, i);
+            target = (org.hl7.fhir.CompositionSection)get_store().insert_element_user(SECTION$8, i);
             return target;
         }
     }
@@ -318,7 +384,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         {
             check_orphaned();
             org.hl7.fhir.CompositionSection target = null;
-            target = (org.hl7.fhir.CompositionSection)get_store().add_element_user(SECTION$6);
+            target = (org.hl7.fhir.CompositionSection)get_store().add_element_user(SECTION$8);
             return target;
         }
     }
@@ -331,7 +397,7 @@ public class CompositionSectionImpl extends org.hl7.fhir.impl.BackboneElementImp
         synchronized (monitor())
         {
             check_orphaned();
-            get_store().remove_element(SECTION$6, i);
+            get_store().remove_element(SECTION$8, i);
         }
     }
 }
